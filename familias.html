@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fotos para las familias · El Candor</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#8fcdfb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
+<style>
+/* Layout: la misma hoja de dibujo de la página principal. Arriba el cielo; abajo, la entrada con contraseña o el álbum: semanas y grupos como solapas de colores y las fotos pegadas en una grilla. */
+:root {
+  --paper: #fffefb; --card: #ffffff; --ink: #2b2733; --ink-soft: #5d5868; --grid: #d3e4fa;
+  --rojo: #e63946; --naranja: #f2780c; --amarillo: #ffc22e; --verde: #3a9d47; --azul: #2f7fd8; --violeta: #8d4fc4; --rosa: #f2609a;
+  --cielo: #8fcdfb; --amarillo-suave: #ffe7a3; --celeste-suave: #cfe8ff; --rosa-suave: #ffd3e4; --verde-suave: #d4f2d2;
+  --cinta: rgba(244, 222, 150, 0.8); --polaroid: #ffffff; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(43, 39, 51, 0.16);
+  --display: "Gochi Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --body: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --borde: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  --borde-chico: 8px 22px 10px 26px / 22px 8px 26px 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1e2b25; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3; --grid: rgba(243, 240, 230, 0.1);
+    --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --violeta: #d3b0ff; --rosa: #ffa9cb;
+    --cielo: #3f6f93; --amarillo-suave: #4d4628; --celeste-suave: #2b4659; --rosa-suave: #553342; --verde-suave: #2f4d36;
+    --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1e2b25; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3; --grid: rgba(243, 240, 230, 0.1);
+  --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --violeta: #d3b0ff; --rosa: #ffa9cb;
+  --cielo: #3f6f93; --amarillo-suave: #4d4628; --celeste-suave: #2b4659; --rosa-suave: #553342; --verde-suave: #2f4d36;
+  --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 20px; line-height: 1.45; overflow-x: hidden; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--azul); text-underline-offset: 3px; }
+.envoltura { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.c-amarillo { fill: var(--amarillo); } .c-cielo { fill: var(--cielo); } .c-papel { fill: var(--card); } .c-tinta { fill: var(--ink); } .c-rosa { fill: var(--rosa); }
+.t { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.t-fino { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.t-naranja { fill: none; stroke: var(--naranja); stroke-width: 9; stroke-linecap: round; }
+
+.portada { position: relative; }
+.cielo { display: block; width: 100%; height: clamp(56px, 7vw, 90px); }
+.sol { position: absolute; top: 0; right: max(4px, env(safe-area-inset-right, 0px)); width: clamp(92px, 13vw, 150px); height: auto; pointer-events: none; }
+.rayos { transform-origin: 120px 120px; animation: girar 70s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; padding-block: 12px 0; padding-right: clamp(92px, 13vw, 150px); }
+.marca { font-family: var(--display); font-size: 28px; color: var(--ink); text-decoration: none; margin-right: auto; }
+.marca b { color: var(--rojo); font-weight: 400; }
+.menu a:not(.marca) { font-family: var(--display); font-size: 22px; color: var(--ink); text-decoration: underline wavy var(--verde) 2px; text-underline-offset: 6px; }
+
+main { padding-block: clamp(24px, 4vw, 44px) 64px; }
+.titular { font-size: clamp(44px, 7vw, 74px); display: inline-block; text-decoration: underline wavy var(--naranja) 3px; text-underline-offset: 12px; text-decoration-skip-ink: none; }
+.bajada { margin-top: 14px; max-width: 60ch; font-size: 21px; color: var(--ink-soft); }
+.chiquito { font-size: 18px; color: var(--ink-soft); }
+
+/* entrada */
+.entrada { position: relative; margin-top: 30px; max-width: 560px; background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: clamp(22px, 4vw, 34px); box-shadow: 0 8px 20px var(--sombra); transform: rotate(-0.6deg); display: grid; gap: 16px; }
+.entrada::before { content: ""; position: absolute; top: -16px; left: 50%; width: 120px; height: 30px; margin-left: -60px; background: var(--cinta); transform: rotate(-3deg); }
+.campo { display: grid; gap: 4px; }
+.campo > span { font-family: var(--display); font-size: 22px; }
+input[type="password"], input[type="text"] { font: inherit; font-size: 22px; color: var(--ink); background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--borde-chico); padding: 8px 12px; width: 100%; min-width: 0; }
+input:focus-visible { outline: 3px dashed var(--azul); outline-offset: 2px; }
+.fila-clave { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.fila-clave input { flex: 1 1 220px; }
+.check { display: flex; gap: 10px; align-items: center; font-size: 19px; cursor: pointer; }
+.check input { width: 20px; height: 20px; accent-color: var(--verde); }
+.error { color: var(--rojo); font-size: 20px; }
+
+.boton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--display); font-size: 24px; line-height: 1.1; color: var(--ink); background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 9px 22px 11px; text-decoration: none; cursor: pointer; box-shadow: 3px 4px 0 var(--ink); transition: transform 0.15s; }
+.boton:hover { transform: translate(-1px, -2px) rotate(-1.5deg); }
+.boton:active { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.boton.amarillo { background: var(--amarillo); color: var(--on-color); }
+.boton:disabled { opacity: 0.55; cursor: wait; transform: none; }
+.boton:focus-visible, .solapa:focus-visible, .mini:focus-visible, .menu a:focus-visible, .check input:focus-visible { outline: 3px dashed var(--azul); outline-offset: 3px; }
+
+/* álbum */
+.album-cabeza { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: flex-end; justify-content: space-between; }
+.filtro { margin-top: 22px; }
+.filtro .nombre { font-family: var(--display); font-size: 22px; display: block; margin-bottom: 6px; }
+.solapas { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.solapa { font-family: var(--display); font-size: 21px; padding: 4px 16px 6px; border: 2.5px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); color: var(--ink); cursor: pointer; }
+.solapa[aria-pressed="true"] { background: var(--amarillo); color: var(--on-color); box-shadow: 2px 3px 0 var(--ink); }
+.solapas.grupos .solapa[aria-pressed="true"] { background: var(--verde-suave); color: var(--ink); }
+.solapa small { font-family: var(--body); font-size: 16px; opacity: 0.75; }
+.estado { margin-top: 18px; font-size: 19px; color: var(--ink-soft); min-height: 1.5em; }
+.grilla { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 26px 20px; }
+.mini { display: block; width: 100%; padding: 8px 8px 10px; border: 0; background: var(--polaroid); box-shadow: 0 6px 14px var(--sombra); cursor: zoom-in; font: inherit; color: var(--polaroid-ink); transform: rotate(var(--giro, -1deg)); transition: transform 0.15s; }
+.mini:hover { transform: rotate(0deg) scale(1.03); }
+.mini .marco { display: block; aspect-ratio: 1 / 1; background: repeating-linear-gradient(-35deg, #eef4fb 0 6px, #ffffff 6px 10px); overflow: hidden; }
+.mini img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s; }
+.mini img.lista { opacity: 1; }
+.mini .pie { display: block; font-family: var(--display); font-size: 17px; padding-top: 6px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vacio { margin-top: 26px; background: var(--card); border: 3px dashed var(--ink-soft); border-radius: var(--borde); padding: 26px; max-width: 640px; }
+.vacio h3 { font-size: 34px; margin-bottom: 6px; }
+
+/* visor */
+dialog.visor { border: 0; padding: 0; background: transparent; max-width: min(1100px, calc(100vw - 20px)); width: 100%; max-height: calc(100vh - 20px); overflow: visible; }
+dialog.visor::backdrop { background: rgba(20, 24, 22, 0.82); }
+.visor-hoja { background: var(--polaroid); color: var(--polaroid-ink); padding: 12px 12px 14px; display: grid; gap: 10px; box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+.visor-hoja .lugar { position: relative; display: grid; place-items: center; min-height: 200px; background: #f1f1ee; }
+.visor-hoja img { display: block; max-width: 100%; max-height: calc(100vh - 170px); width: auto; height: auto; margin: 0 auto; }
+.visor-hoja .cargando { position: absolute; inset: auto 0 12px; text-align: center; font-family: var(--display); font-size: 20px; color: #2b2733; }
+.visor-barra { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; }
+.visor-barra .texto { font-family: var(--display); font-size: 21px; color: #2b2733; min-width: 0; }
+.visor-barra .botones { display: flex; flex-wrap: wrap; gap: 10px; }
+.visor .boton { font-size: 20px; padding: 6px 16px 8px; color: #2b2733; background: #ffffff; border-color: #2b2733; box-shadow: 2px 3px 0 #2b2733; }
+.visor .boton.amarillo { background: #ffc22e; }
+
+@media (max-width: 620px) {
+  .menu { padding-right: 92px; }
+  .grilla { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+  .mini .pie { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .rayos { animation: none; } .boton, .mini, .mini img { transition: none; } }
+</style>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="lapiz" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="4" xChannelSelector="R" yChannelSelector="G" result="temblor"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="11" result="grano"/>
+      <feColorMatrix in="grano" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  5 0 0 0 -1.3" result="mascara"/>
+      <feComposite in="temblor" in2="mascara" operator="in"/>
+    </filter>
+    <pattern id="rAmarillo" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="4.6" height="7" class="c-amarillo"/></pattern>
+    <pattern id="rCielo" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)"><rect width="5.6" height="8" class="c-cielo"/></pattern>
+  </defs>
+</svg>
+
+<div class="portada">
+  <svg class="cielo" viewBox="0 0 1200 110" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
+    <g filter="url(#lapiz)">
+      <path fill="url(#rCielo)" d="M0 0H1200V82Q1170 98 1140 84T1080 86T1020 80T960 90T900 82T840 88T780 80T720 90T660 82T600 88T540 80T480 90T420 82T360 88T300 80T240 90T180 82T120 88T60 80T0 86Z"/>
+      <path class="c-papel" d="M314 62q-24 0-24-16q0-18 24-16q6-20 30-15q18-15 38 2q24-2 24 16q0 17-24 17z"/><path class="t-fino" d="M314 62q-24 0-24-16q0-18 24-16q6-20 30-15q18-15 38 2q24-2 24 16q0 17-24 17z"/>
+      <path class="c-papel" d="M724 70q-22 0-22-14q0-16 22-14q6-18 28-13q16-13 34 2q22-2 22 14q0 15-22 15z"/><path class="t-fino" d="M724 70q-22 0-22-14q0-16 22-14q6-18 28-13q16-13 34 2q22-2 22 14q0 15-22 15z"/>
+    </g>
+  </svg>
+  <svg class="sol" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
+    <g filter="url(#lapiz)">
+      <g class="rayos"><path class="t-naranja" d="M198 120H228M187.5 159L213.5 174M159 187.5L174 213.5M120 198V228M81 187.5L66 213.5M52.5 159L26.5 174M42 120H12M52.5 81L26.5 66M81 52.5L66 26.5M120 42V12M159 52.5L174 26.5M187.5 81L213.5 66"/></g>
+      <circle cx="120" cy="120" r="64" fill="url(#rAmarillo)"/>
+      <circle cx="120" cy="120" r="64" fill="none" stroke="var(--naranja)" stroke-width="5"/>
+      <ellipse class="c-rosa" cx="86" cy="132" rx="10" ry="6" opacity="0.75"/><ellipse class="c-rosa" cx="154" cy="132" rx="10" ry="6" opacity="0.75"/>
+      <ellipse class="c-tinta" cx="99" cy="108" rx="5" ry="7"/><ellipse class="c-tinta" cx="141" cy="108" rx="5" ry="7"/>
+      <path class="t" d="M93 132Q120 158 147 132"/>
+    </g>
+  </svg>
+  <header class="envoltura">
+    <nav class="menu" aria-label="Secciones">
+      <a class="marca" href="index.html">El <b>Candor</b></a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#inscripcion">Inscripción</a>
+    </nav>
+  </header>
+</div>
+
+<main class="envoltura">
+  <section id="entrar">
+    <h1 class="titular">Fotos para las familias</h1>
+    <p class="bajada">Acá subimos las fotos de cada semana de la colonia, ordenadas por grupo. Para verlas, entrá con la contraseña que les pasamos a las familias.</p>
+    <form class="entrada" id="form-clave" autocomplete="off">
+      <label class="campo"><span>Contraseña</span>
+        <span class="fila-clave"><input type="password" id="clave" autocomplete="current-password" required maxlength="100"><button type="submit" class="boton amarillo" id="btn-entrar">Entrar</button></span>
+      </label>
+      <label class="check"><input type="checkbox" id="ver-clave"> Mostrar la contraseña</label>
+      <p class="error" id="error" role="alert" hidden></p>
+      <p class="chiquito">Las fotos son solo para las familias de la colonia. Antes de compartirlas en redes, pedí permiso a las familias de los otros chicos que aparecen.</p>
+    </form>
+  </section>
+
+  <section id="album" hidden>
+    <div class="album-cabeza">
+      <h1 class="titular" id="album-titulo">Fotos</h1>
+      <button type="button" class="boton" id="salir">Salir</button>
+    </div>
+    <div class="filtro">
+      <span class="nombre" id="f-semanas-l">Semana</span>
+      <div class="solapas" id="f-semanas" role="group" aria-labelledby="f-semanas-l"></div>
+    </div>
+    <div class="filtro" id="filtro-grupos">
+      <span class="nombre" id="f-grupos-l">Grupo</span>
+      <div class="solapas grupos" id="f-grupos" role="group" aria-labelledby="f-grupos-l"></div>
+    </div>
+    <p class="estado" id="estado" aria-live="polite"></p>
+    <div class="grilla" id="grilla"></div>
+    <div class="vacio" id="vacio" hidden>
+      <h3>Todavía no hay fotos</h3>
+      <p>Las vamos subiendo a medida que pasan las semanas. Volvé a entrar en unos días.</p>
+    </div>
+  </section>
+</main>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <div class="visor-hoja">
+    <div class="lugar"><img id="visor-img" alt=""><span class="cargando" id="visor-cargando" hidden>Cargando la foto grande…</span></div>
+    <div class="visor-barra">
+      <span class="texto" id="visor-texto"></span>
+      <span class="botones">
+        <button type="button" class="boton" id="visor-ant" aria-label="Foto anterior">← Anterior</button>
+        <button type="button" class="boton" id="visor-sig" aria-label="Foto siguiente">Siguiente →</button>
+        <a class="boton amarillo" id="visor-bajar" href="#" download hidden>Descargar</a>
+        <button type="button" class="boton" id="visor-cerrar">Cerrar</button>
+      </span>
+    </div>
+  </div>
+</dialog>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var AJ = window.EL_CANDOR || {};
+  var API_URL = AJ.api || "";
+  try { var mApi = /[?&]api=([^&]+)/.exec(location.search); if (mApi) API_URL = decodeURIComponent(mApi[1]); } catch (e) {}
+  var CLAVE_GUARDADA = "elcandor-familias";
+  var LOTE = 12;
+
+  var clave = "", arbol = null, semanaSel = "", grupoSel = "", visibles = [], minis = {}, enCola = [], pidiendo = 0, abierta = -1, grandes = {};
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function guardar(v) { try { if (v) sessionStorage.setItem(CLAVE_GUARDADA, v); else sessionStorage.removeItem(CLAVE_GUARDADA); } catch (e) {} }
+  function leer() { try { return sessionStorage.getItem(CLAVE_GUARDADA) || ""; } catch (e) { return ""; } }
+  function error(msg) { $("error").textContent = msg || ""; $("error").hidden = !msg; }
+
+  function llamar(cuerpo) {
+    cuerpo.clave = clave;
+    return fetch(API_URL, { method: "POST", body: JSON.stringify(cuerpo) })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (res) {
+        if (!res || !res.ok) { var e = new Error((res && res.error) || "sin respuesta"); e.codigo = res && res.codigo; throw e; }
+        return res;
+      });
+  }
+  function mensaje(e) {
+    if (e && e.codigo === "clave") return "La contraseña no es correcta. Revisala y probá de nuevo.";
+    if (e && e.codigo === "bloqueado") return "Hubo muchos intentos seguidos. Esperá 15 minutos y probá de nuevo.";
+    return "No pudimos conectar con el álbum. Revisá tu conexión y probá de nuevo en un rato.";
+  }
+
+  /* ---------- entrar y salir ---------- */
+  function entrar(v, silencioso) {
+    if (!API_URL) { error("El álbum de fotos todavía no está conectado."); return; }
+    clave = v;
+    $("btn-entrar").disabled = true; $("btn-entrar").textContent = "Entrando…"; error("");
+    llamar({ accion: "fotos" }).then(function (res) {
+      arbol = res; guardar(v);
+      $("entrar").hidden = true; $("album").hidden = false;
+      elegirSemana(ultimaSemana(), true);
+    }).catch(function (e) {
+      guardar("");
+      if (!silencioso || e.codigo !== "clave") error(mensaje(e));
+      $("clave").focus();
+    }).then(function () { $("btn-entrar").disabled = false; $("btn-entrar").textContent = "Entrar"; });
+  }
+  $("form-clave").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var v = $("clave").value.trim();
+    if (!v) { error("Escribí la contraseña."); $("clave").focus(); return; }
+    entrar(v, false);
+  });
+  $("ver-clave").addEventListener("change", function () { $("clave").type = this.checked ? "text" : "password"; });
+  $("salir").addEventListener("click", function () {
+    guardar(""); clave = ""; arbol = null; minis = {}; grandes = {}; enCola = [];
+    $("grilla").innerHTML = ""; $("album").hidden = true; $("entrar").hidden = false; $("clave").value = ""; $("clave").focus();
+  });
+
+  /* ---------- semanas y grupos (los nombres son los de las carpetas de Drive) ---------- */
+  function semanas() { return (arbol && arbol.semanas) || []; }
+  function ultimaSemana() { var s = semanas(); return s.length ? s[s.length - 1].nombre : ""; }
+  function fotosDe(nomSemana, nomGrupo) {
+    var out = [];
+    semanas().forEach(function (s) {
+      if (nomSemana !== "*" && s.nombre !== nomSemana) return;
+      (s.grupos || []).forEach(function (g) {
+        if (nomGrupo && g.nombre !== nomGrupo) return;
+        (g.fotos || []).forEach(function (f) { out.push({ id: f.id, nombre: f.nombre, semana: s.nombre, grupo: g.nombre }); });
+      });
+    });
+    return out;
+  }
+  function gruposDe(nomSemana) {
+    var vistos = {}, out = [];
+    semanas().forEach(function (s) {
+      if (nomSemana !== "*" && s.nombre !== nomSemana) return;
+      (s.grupos || []).forEach(function (g) { if (g.nombre && !vistos[g.nombre]) { vistos[g.nombre] = 1; out.push(g.nombre); } });
+    });
+    return out.sort(function (a, b) { return a.localeCompare(b, "es", { numeric: true }); });
+  }
+  function solapa(valor, texto, cuantas, activa) {
+    return '<button type="button" class="solapa" data-v="' + esc(valor) + '" aria-pressed="' + (activa ? "true" : "false") + '">' + esc(texto) + ' <small>' + cuantas + '</small></button>';
+  }
+  function pintarFiltros() {
+    var s = semanas();
+    var h = s.map(function (x) { return solapa(x.nombre, x.nombre, fotosDe(x.nombre, "").length, x.nombre === semanaSel); }).join("");
+    if (s.length > 1) h += solapa("*", "Todas", fotosDe("*", "").length, semanaSel === "*");
+    $("f-semanas").innerHTML = h;
+    var gs = gruposDe(semanaSel);
+    $("filtro-grupos").hidden = !gs.length;
+    $("f-grupos").innerHTML = solapa("", "Todos", fotosDe(semanaSel, "").length, !grupoSel) +
+      gs.map(function (g) { return solapa(g, g, fotosDe(semanaSel, g).length, g === grupoSel); }).join("");
+  }
+  function elegirSemana(nom, inicio) {
+    semanaSel = nom; if (gruposDe(nom).indexOf(grupoSel) < 0) grupoSel = "";
+    pintar(inicio);
+  }
+  $("f-semanas").addEventListener("click", function (ev) { var b = ev.target.closest(".solapa"); if (b) elegirSemana(b.getAttribute("data-v"), false); });
+  $("f-grupos").addEventListener("click", function (ev) { var b = ev.target.closest(".solapa"); if (b) { grupoSel = b.getAttribute("data-v"); pintar(false); } });
+
+  /* ---------- grilla ---------- */
+  var observador = "IntersectionObserver" in window ? new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (en) { if (en.isIntersecting) { observador.unobserve(en.target); pedirMini(en.target.getAttribute("data-id")); } });
+  }, { rootMargin: "400px 0px" }) : null;
+
+  function pintar(inicio) {
+    pintarFiltros();
+    visibles = fotosDe(semanaSel, grupoSel);
+    $("album-titulo").textContent = semanaSel === "*" ? "Todas las fotos" : semanaSel || "Fotos";
+    var total = fotosDe("*", "").length;
+    $("vacio").hidden = total > 0;
+    $("estado").textContent = !total ? "" : visibles.length === 1 ? "1 foto" : visibles.length + " fotos" + (grupoSel ? " del grupo " + grupoSel : "");
+    $("grilla").innerHTML = visibles.map(function (f, i) {
+      var giro = [-1.6, 1.2, -0.6, 1.8, -1.1, 0.7][i % 6];
+      var pie = semanaSel === "*" ? f.semana + (f.grupo ? " · " + f.grupo : "") : f.grupo || f.semana;
+      return '<button type="button" class="mini" data-i="' + i + '" data-id="' + esc(f.id) + '" style="--giro:' + giro + 'deg" aria-label="Ver foto ' + (i + 1) + ' de ' + visibles.length + '">' +
+        '<span class="marco"><img alt="" data-id="' + esc(f.id) + '"></span><span class="pie">' + esc(pie) + '</span></button>';
+    }).join("");
+    $("grilla").querySelectorAll(".mini").forEach(function (b) {
+      var id = b.getAttribute("data-id");
+      if (minis[id]) ponerMini(id);
+      else if (observador) observador.observe(b);
+      else pedirMini(id);
+    });
+    if (!inicio) $("estado").scrollIntoView({ block: "nearest" });
+  }
+  function ponerMini(id) {
+    document.querySelectorAll('img[data-id="' + CSS.escape(id) + '"]').forEach(function (img) {
+      if (img.getAttribute("src") !== minis[id]) { img.onload = function () { img.classList.add("lista"); }; img.src = minis[id]; }
+    });
+  }
+  function pedirMini(id) {
+    if (minis[id] || enCola.indexOf(id) >= 0) return;
+    enCola.push(id);
+    siguienteLote();
+  }
+  function siguienteLote() {
+    if (pidiendo >= 2 || !enCola.length) return;
+    var ids = enCola.splice(0, LOTE);
+    pidiendo++;
+    llamar({ accion: "miniaturas", ids: ids }).then(function (res) {
+      var imgs = res.imagenes || {};
+      ids.forEach(function (id) { if (imgs[id]) { minis[id] = imgs[id]; ponerMini(id); } });
+    }).catch(function (e) {
+      if (e.codigo === "clave") { $("salir").click(); error("La contraseña cambió. Pedí la nueva y volvé a entrar."); return; }
+      $("estado").textContent = "Algunas fotos no cargaron. Probá de nuevo en un rato.";
+    }).then(function () { pidiendo--; siguienteLote(); });
+  }
+  $("grilla").addEventListener("click", function (ev) { var b = ev.target.closest(".mini"); if (b) abrir(+b.getAttribute("data-i")); });
+
+  /* ---------- visor ---------- */
+  var visor = $("visor");
+  function nombreArchivo(f) { return ("El Candor - " + f.semana + (f.grupo ? " - " + f.grupo : "") + " - " + f.nombre).replace(/[\\/:*?"<>|]+/g, " ").replace(/\.(jpe?g|png|heic|webp)$/i, "") + ".jpg"; }
+  function abrir(i) {
+    if (i < 0 || i >= visibles.length) return;
+    abierta = i;
+    var f = visibles[i], img = $("visor-img");
+    img.alt = "Foto " + (i + 1) + " de " + visibles.length + (f.grupo ? ", grupo " + f.grupo : "") + ", " + f.semana;
+    img.src = grandes[f.id] || minis[f.id] || "";
+    $("visor-texto").textContent = f.semana + (f.grupo ? " · " + f.grupo : "") + " · " + (i + 1) + " de " + visibles.length;
+    $("visor-ant").disabled = i === 0; $("visor-sig").disabled = i === visibles.length - 1;
+    var bajar = $("visor-bajar");
+    bajar.hidden = !grandes[f.id];
+    if (grandes[f.id]) { bajar.href = grandes[f.id]; bajar.setAttribute("download", nombreArchivo(f)); }
+    if (!visor.open) { if (visor.showModal) visor.showModal(); else visor.setAttribute("open", ""); }
+    if (!grandes[f.id]) {
+      $("visor-cargando").hidden = false;
+      llamar({ accion: "foto", id: f.id }).then(function (res) {
+        if (!res.imagen) return;
+        grandes[f.id] = res.imagen;
+        if (abierta === i) { img.src = res.imagen; bajar.href = res.imagen; bajar.setAttribute("download", nombreArchivo(f)); bajar.hidden = false; }
+      }).catch(function () {}).then(function () { if (abierta === i) $("visor-cargando").hidden = true; });
+    } else $("visor-cargando").hidden = true;
+  }
+  function cerrar() { abierta = -1; if (visor.close) visor.close(); else visor.removeAttribute("open"); }
+  $("visor-ant").addEventListener("click", function () { abrir(abierta - 1); });
+  $("visor-sig").addEventListener("click", function () { abrir(abierta + 1); });
+  $("visor-cerrar").addEventListener("click", cerrar);
+  visor.addEventListener("close", function () { abierta = -1; });
+  visor.addEventListener("click", function (ev) { if (ev.target === visor) cerrar(); });
+  document.addEventListener("keydown", function (ev) {
+    if (!visor.open) return;
+    if (ev.key === "ArrowLeft") abrir(abierta - 1);
+    if (ev.key === "ArrowRight") abrir(abierta + 1);
+  });
+
+  var previa = leer();
+  if (previa) entrar(previa, true);
+  else if (!API_URL) error("El álbum de fotos todavía no está conectado.");
+})();
+</script>

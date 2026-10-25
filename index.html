@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- vista previa: desde acá -->
+<title>Colonia El Candor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Colonia de verano El Candor en el Colegio Armenio de Florida, Vicente López: del 4 de enero al 19 de febrero de 2027, jornada completa o media jornada. Manualidades, cocina, plantines y juego. Que brille lo que sos.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Colonia El Candor · Que brille lo que sos">
+<meta property="og:description" content="Colonia de verano 2027, del 4 de enero al 19 de febrero en Florida, Vicente López. Un verano para jugar, descubrir y crecer. Inscripciones abiertas.">
+<meta property="og:image" content="https://espacioelcandor.github.io/fotos/cocina-mesa.jpg">
+<meta name="theme-color" content="#8fcdfb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
+<style>
+/* Layout: una hoja de dibujo de un chico. Cielo arriba con el sol en la esquina, pasto abajo, y el contenido pegado con cinta en una columna que se abre a dos en pantallas anchas. En modo oscuro la hoja pasa a ser un pizarrón con tizas. */
+:root {
+  --paper: #fffefb;
+  --paper-alt: #f3f8ff;
+  --card: #ffffff;
+  --ink: #2b2733;
+  --ink-soft: #5d5868;
+  --grid: #d3e4fa;
+  --rojo: #e63946;
+  --naranja: #f2780c;
+  --amarillo: #ffc22e;
+  --verde: #3a9d47;
+  --azul: #2f7fd8;
+  --violeta: #8d4fc4;
+  --rosa: #f2609a;
+  --marron: #9c6b3f;
+  --cielo: #8fcdfb;
+  --pasto: #63c06a;
+  --amarillo-suave: #ffe7a3;
+  --celeste-suave: #cfe8ff;
+  --rosa-suave: #ffd3e4;
+  --verde-suave: #d4f2d2;
+  --cinta: rgba(244, 222, 150, 0.8);
+  --polaroid: #ffffff;
+  --polaroid-ink: #2b2733;
+  --on-color: #2b2733;
+  --sombra: rgba(43, 39, 51, 0.16);
+  --display: "Gochi Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --body: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --borde: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  --borde-chico: 8px 22px 10px 26px / 22px 8px 26px 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1e2b25; --paper-alt: #223129; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3; --grid: rgba(243, 240, 230, 0.1);
+    --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --violeta: #d3b0ff; --rosa: #ffa9cb; --marron: #d9a877;
+    --cielo: #3f6f93; --pasto: #3d8452;
+    --amarillo-suave: #4d4628; --celeste-suave: #2b4659; --rosa-suave: #553342; --verde-suave: #2f4d36;
+    --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1e2b25; --paper-alt: #223129; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3; --grid: rgba(243, 240, 230, 0.1);
+  --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --violeta: #d3b0ff; --rosa: #ffa9cb; --marron: #d9a877;
+  --cielo: #3f6f93; --pasto: #3d8452;
+  --amarillo-suave: #4d4628; --celeste-suave: #2b4659; --rosa-suave: #553342; --verde-suave: #2f4d36;
+  --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 20px; line-height: 1.45; overflow-x: hidden; }
+img { max-width: 100%; }
+a { color: var(--azul); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.envoltura { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* colores de los dibujos */
+.c-amarillo { fill: var(--amarillo); } .c-rojo { fill: var(--rojo); } .c-naranja { fill: var(--naranja); } .c-verde { fill: var(--verde); }
+.c-azul { fill: var(--azul); } .c-violeta { fill: var(--violeta); } .c-rosa { fill: var(--rosa); } .c-marron { fill: var(--marron); }
+.c-cielo { fill: var(--cielo); } .c-pasto { fill: var(--pasto); } .c-tinta { fill: var(--ink); } .c-papel { fill: var(--card); }
+.t { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.t-fino { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.t-naranja { fill: none; stroke: var(--naranja); stroke-width: 9; stroke-linecap: round; }
+.t-azul { fill: none; stroke: var(--azul); stroke-width: 7; stroke-linecap: round; }
+.t-verde { fill: none; stroke: var(--verde); stroke-width: 4; stroke-linecap: round; }
+.t-suave { fill: none; stroke: var(--ink-soft); stroke-width: 3; stroke-linecap: round; }
+
+/* ---------- cielo, sol y pasto ---------- */
+.cielo { display: block; width: 100%; height: clamp(64px, 9vw, 110px); }
+.sol { position: absolute; top: 2px; right: max(4px, env(safe-area-inset-right, 0px)); width: clamp(112px, 19vw, 230px); height: auto; z-index: 1; pointer-events: none; }
+.rayos { transform-origin: 120px 120px; animation: girar 70s linear infinite; }
+.nube { animation: flotar 9s ease-in-out infinite alternate; }
+.nube.otra { animation-duration: 12s; animation-delay: -4s; }
+@keyframes girar { to { transform: rotate(360deg); } }
+@keyframes flotar { from { transform: translateX(-10px); } to { transform: translateX(14px); } }
+.pasto { display: block; width: 100%; height: clamp(124px, 17vw, 220px); margin-top: -6px; }
+
+/* ---------- encabezado ---------- */
+.portada { position: relative; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; padding-block: 14px 0; position: relative; z-index: 2; padding-right: clamp(112px, 19vw, 230px); }
+.marca { font-family: var(--display); font-size: 28px; color: var(--ink); text-decoration: none; margin-right: auto; }
+.marca b { color: var(--rojo); font-weight: 400; }
+.menu a:not(.marca) { font-family: var(--display); font-size: 22px; color: var(--ink); text-decoration: underline wavy var(--verde) 2px; text-underline-offset: 6px; }
+.menu a:not(.marca):hover { text-decoration-color: var(--naranja); }
+.hero { padding-block: clamp(18px, 4vw, 44px) 6px; position: relative; z-index: 2; }
+.antetitulo { font-family: var(--display); font-size: clamp(20px, 2.6vw, 26px); color: var(--ink-soft); }
+.titulo { margin-top: 6px; font-size: clamp(66px, 15vw, 168px); letter-spacing: 0.01em; line-height: 0.92; }
+.titulo i { font-style: normal; display: inline-block; }
+.titulo i:nth-child(8n+1) { color: var(--rojo); transform: rotate(-6deg); }
+.titulo i:nth-child(8n+2) { color: var(--naranja); transform: rotate(4deg) translateY(4px); }
+.titulo i:nth-child(8n+3) { color: var(--verde); transform: rotate(-3deg) translateY(-3px); }
+.titulo i:nth-child(8n+4) { color: var(--azul); transform: rotate(5deg); }
+.titulo i:nth-child(8n+5) { color: var(--violeta); transform: rotate(-5deg) translateY(5px); }
+.titulo i:nth-child(8n+6) { color: var(--rosa); transform: rotate(3deg) translateY(-4px); }
+.titulo i:nth-child(8n+7) { color: var(--amarillo); transform: rotate(-4deg); -webkit-text-stroke: 1.5px var(--naranja); }
+.titulo i:nth-child(8n+8) { color: var(--verde); transform: rotate(6deg) translateY(2px); }
+.titulo .espacio { display: inline-block; width: 0.28em; }
+.eslogan { margin-top: 14px; font-family: var(--display); font-size: clamp(32px, 5.4vw, 58px); line-height: 1.1; display: inline-block; padding: 0 10px; background: linear-gradient(transparent 52%, var(--amarillo-suave) 52%, var(--amarillo-suave) 92%, transparent 92%); transform: rotate(-1.5deg); }
+.hero .bajada { margin-top: 16px; max-width: 36ch; font-size: 22px; }
+.acciones { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+
+/* botones dibujados */
+.boton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--display); font-size: 24px; line-height: 1.1; color: var(--ink); background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 10px 22px 12px; text-decoration: none; cursor: pointer; box-shadow: 3px 4px 0 var(--ink); transition: transform 0.15s; }
+.boton:hover { transform: translate(-1px, -2px) rotate(-1.5deg); }
+.boton:active { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.boton:focus-visible, .menu a:focus-visible, .opcion input:focus-visible + span, .check input:focus-visible { outline: 3px dashed var(--azul); outline-offset: 3px; }
+.boton.amarillo { background: var(--amarillo); color: var(--on-color); }
+.boton.grande { font-size: 28px; padding: 12px 30px 14px; }
+.boton:disabled { opacity: 0.55; cursor: wait; transform: none; }
+.boton.link { background: none; border: 0; box-shadow: none; padding: 4px 6px; font-size: 20px; color: var(--rojo); text-decoration: underline; }
+
+/* ---------- secciones ---------- */
+.seccion { padding-block: clamp(48px, 7vw, 84px); }
+.seccion > .envoltura > h2, .titular { font-size: clamp(42px, 6.4vw, 66px); }
+.titular { display: inline-block; text-decoration: underline wavy var(--naranja) 3px; text-underline-offset: 12px; text-decoration-skip-ink: none; }
+.bajada { margin-top: 14px; max-width: 60ch; font-size: 21px; color: var(--ink-soft); }
+.dos { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(28px, 5vw, 56px); align-items: center; }
+
+/* ¿por qué El Candor? */
+.nota { position: relative; background-color: var(--card); background-image: linear-gradient(90deg, transparent 46px, var(--rosa-suave) 46px, var(--rosa-suave) 48px, transparent 48px), repeating-linear-gradient(transparent 0 33px, var(--grid) 33px 35px); border: 3px solid var(--ink); border-radius: var(--borde); padding: 30px 26px 30px 64px; box-shadow: 0 8px 20px var(--sombra); transform: rotate(-0.8deg); }
+.nota h2 { font-size: clamp(38px, 5.4vw, 56px); margin-bottom: 14px; }
+.nota h2 span { color: var(--rojo); }
+.nota p { line-height: 35px; font-size: 21px; }
+.nota p + p { margin-top: 35px; }
+.cinta::before { content: ""; position: absolute; top: -16px; left: 50%; width: 120px; height: 30px; margin-left: -60px; background: var(--cinta); transform: rotate(-3deg); }
+.definicion { position: relative; background: var(--celeste-suave); border: 3px dashed var(--azul); border-radius: var(--borde); padding: 26px 24px; transform: rotate(1.6deg); }
+.definicion .palabra { font-family: var(--display); font-size: clamp(44px, 6vw, 64px); color: var(--azul); line-height: 1; }
+.definicion .tipo { font-size: 18px; color: var(--ink-soft); }
+.definicion ol { margin: 12px 0 0; padding-left: 28px; display: grid; gap: 8px; font-size: 22px; }
+.definicion .origen { margin-top: 14px; font-size: 18px; color: var(--ink-soft); }
+.estrellita { position: absolute; width: 54px; height: 54px; }
+
+/* talleres */
+.talleres { display: grid; gap: clamp(48px, 7vw, 80px); margin-top: clamp(34px, 5vw, 54px); }
+.taller { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(26px, 5vw, 56px); align-items: center; }
+.taller.al-reves { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+.taller.al-reves .texto { order: 2; }
+.taller h3 { font-size: clamp(36px, 5vw, 50px); }
+.taller h3 .ico { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-right: 6px; }
+.taller .texto p { margin-top: 10px; font-size: 21px; max-width: 42ch; }
+.taller .etiquetas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.taller .etiquetas span { font-family: var(--display); font-size: 19px; padding: 2px 12px 3px; border: 2px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); }
+.taller .etiquetas span:nth-child(5n+1) { background: var(--verde-suave); } .taller .etiquetas span:nth-child(5n+2) { background: var(--rosa-suave); }
+.taller .etiquetas span:nth-child(5n+3) { background: var(--amarillo-suave); } .taller .etiquetas span:nth-child(5n+4) { background: var(--celeste-suave); }
+.collage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 26px 22px; align-items: start; }
+.collage .grande { grid-column: 1 / -1; }
+.foto { position: relative; margin: 0; background: var(--polaroid); padding: 10px 10px 12px; box-shadow: 0 8px 18px var(--sombra); transform: rotate(var(--giro, -1.6deg)); }
+.foto::before { content: ""; position: absolute; top: -14px; left: 50%; width: 104px; height: 28px; margin-left: -52px; background: var(--cinta); transform: rotate(-4deg); }
+.foto img { display: block; width: 100%; height: auto; }
+.foto figcaption { font-family: var(--display); font-size: 20px; line-height: 1.2; color: var(--polaroid-ink); text-align: center; padding-top: 8px; }
+.aviso-caras { margin-top: clamp(34px, 5vw, 50px); display: flex; gap: 12px; align-items: center; font-size: 19px; color: var(--ink-soft); }
+.aviso-caras svg { flex: none; width: 44px; height: 44px; }
+
+/* flyer */
+.flyer-caja { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(30px, 5vw, 64px); align-items: center; }
+.flyer { position: relative; margin: 0; width: 100%; max-width: 380px; justify-self: center; background: var(--polaroid); padding: 10px; box-shadow: 0 10px 24px var(--sombra); transform: rotate(-2deg); }
+.flyer::before { content: ""; position: absolute; top: -15px; left: 50%; width: 110px; height: 30px; margin-left: -55px; background: var(--cinta); transform: rotate(3deg); }
+.flyer a { display: block; }
+.flyer img { display: block; width: 100%; height: auto; }
+.sello { display: inline-block; font-family: var(--display); font-size: clamp(26px, 3.4vw, 34px); color: var(--on-color); background: var(--amarillo); border: 3px solid var(--ink); border-radius: var(--borde-chico); padding: 2px 16px 4px; transform: rotate(-2deg); box-shadow: 3px 4px 0 var(--ink); }
+.flyer-texto h2 { margin-top: 20px; font-size: clamp(40px, 6vw, 64px); }
+.datos { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; font-size: 22px; }
+.datos li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.datos b { font-family: var(--display); font-weight: 400; font-size: 24px; color: var(--rojo); }
+.compartir { margin-top: 16px; }
+
+/* quiénes somos */
+.mv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(26px, 4vw, 44px); margin-top: 38px; }
+.mv article { position: relative; border: 3px solid var(--ink); border-radius: var(--borde); padding: 28px 26px 26px; box-shadow: 0 8px 20px var(--sombra); }
+.mv article::before { content: ""; position: absolute; top: -16px; left: 50%; width: 110px; height: 30px; margin-left: -55px; background: var(--cinta); transform: rotate(-3deg); }
+.mv .mision { background: var(--amarillo-suave); transform: rotate(-1deg); }
+.mv .vision { background: var(--celeste-suave); transform: rotate(0.9deg); }
+.mv h3 { font-size: clamp(36px, 4.8vw, 48px); }
+.mv p { margin-top: 10px; font-size: 21px; }
+.valores-titulo { margin-top: clamp(44px, 6vw, 64px); font-size: clamp(36px, 4.8vw, 48px); }
+.valores { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.valor { background: var(--card); border: 2.5px solid var(--ink); border-radius: var(--borde); padding: 18px 20px 20px; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 2px 14px; align-content: start; }
+.valor svg { width: 56px; height: 56px; grid-row: span 2; }
+.valor h4 { font-family: var(--display); font-weight: 400; font-size: 29px; line-height: 1.1; margin: 0; }
+.valor p { font-size: 19px; }
+.valor:nth-child(6n+1) { border-color: var(--rojo); } .valor:nth-child(6n+2) { border-color: var(--naranja); } .valor:nth-child(6n+3) { border-color: var(--rosa); }
+.valor:nth-child(6n+4) { border-color: var(--azul); } .valor:nth-child(6n+5) { border-color: var(--violeta); } .valor:nth-child(6n+6) { border-color: var(--verde); }
+
+/* dónde estamos */
+.donde { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(26px, 5vw, 56px); align-items: center; margin-top: 30px; }
+.mapa { background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde-chico); padding: 10px; box-shadow: 0 8px 20px var(--sombra); transform: rotate(-1deg); }
+.mapa svg { display: block; width: 100%; height: auto; }
+.mapa-txt { font-family: var(--display); fill: var(--ink); }
+.direccion h3 { font-size: clamp(34px, 4.6vw, 46px); }
+.direccion .calle { font-family: var(--display); font-size: clamp(28px, 3.6vw, 36px); color: var(--rojo); margin-top: 10px; }
+.direccion p { margin-top: 6px; }
+
+/* precios */
+.cuaderno { background-color: var(--paper-alt); background-image: linear-gradient(var(--grid) 1.5px, transparent 1.5px), linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px); background-size: 28px 28px; border-block: 3px solid var(--ink); }
+.precios { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 40px); margin-top: 34px; }
+.etiqueta { position: relative; border: 3px solid var(--ink); border-radius: var(--borde); padding: 24px 24px 22px; box-shadow: 4px 6px 0 var(--ink); text-align: center; }
+.etiqueta.amarilla { background: repeating-linear-gradient(-35deg, var(--amarillo-suave) 0 6px, var(--card) 6px 9px); transform: rotate(-1.2deg); }
+.etiqueta.celeste { background: repeating-linear-gradient(-35deg, var(--celeste-suave) 0 6px, var(--card) 6px 9px); transform: rotate(1deg); }
+.etiqueta h3 { font-size: clamp(30px, 4vw, 40px); }
+.etiqueta .monto { font-family: var(--display); font-size: clamp(54px, 8vw, 84px); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.etiqueta .por { font-size: 21px; }
+.etiqueta .nota-precio { margin-top: 10px; font-size: 19px; color: var(--ink-soft); }
+.reglas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 40px); margin-top: clamp(30px, 4vw, 44px); }
+.regla { position: relative; background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 22px 24px; }
+.regla h3 { font-size: clamp(28px, 3.6vw, 36px); }
+.regla p { margin-top: 8px; font-size: 20px; }
+.regla .chiquito { font-size: 18px; color: var(--ink-soft); }
+.regla.promo { background: var(--verde-suave); padding-right: 118px; }
+.sticker { position: absolute; top: -26px; right: -10px; width: 124px; height: 124px; transform: rotate(10deg); }
+.sticker text { font-family: var(--display); fill: var(--on-color); }
+.cuenta { margin-top: clamp(30px, 4vw, 44px); background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 36px; align-items: start; }
+.cuenta h3 { font-size: clamp(30px, 4vw, 40px); grid-column: 1 / -1; }
+.cuenta .elegir { display: grid; gap: 14px; }
+.filas { display: grid; gap: 6px; font-variant-numeric: tabular-nums; }
+.fila { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; border-bottom: 2px dotted var(--grid); padding-bottom: 4px; }
+.fila b { font-family: var(--display); font-weight: 400; font-size: 28px; white-space: nowrap; }
+.fila.destacada b { color: var(--verde); }
+.fila.tachada b { text-decoration: line-through; text-decoration-color: var(--rojo); color: var(--ink-soft); font-size: 24px; }
+.chiquito { font-size: 18px; color: var(--ink-soft); }
+
+/* opciones tipo botón */
+.opciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.opcion { position: relative; }
+.opcion input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.opcion span { display: inline-block; font-family: var(--display); font-size: 20px; padding: 5px 14px 7px; border: 2.5px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); cursor: pointer; }
+.opcion input:checked + span { background: var(--amarillo); color: var(--on-color); box-shadow: 2px 3px 0 var(--ink); }
+.grupo-nombre { font-family: var(--display); font-size: 21px; margin-bottom: 4px; display: block; }
+
+/* formulario */
+.formulario { margin-top: 30px; display: grid; gap: 26px; }
+.hoja { background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: clamp(18px, 3vw, 28px); margin: 0; min-width: 0; }
+.hoja legend { font-family: var(--display); font-size: clamp(28px, 3.6vw, 34px); padding: 0 10px; background: var(--card); }
+.grilla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; }
+.grilla .ancho { grid-column: 1 / -1; }
+.campo { display: grid; gap: 4px; min-width: 0; align-content: start; }
+.campo > span { font-family: var(--display); font-size: 21px; }
+.campo > span small { font-family: var(--body); font-size: 17px; color: var(--ink-soft); }
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], textarea { font: inherit; font-size: 20px; color: var(--ink); background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--borde-chico); padding: 8px 12px; width: 100%; min-width: 0; }
+textarea { resize: vertical; min-height: 66px; }
+input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); outline-offset: 2px; }
+.mal input, .mal textarea, .mal .opciones span { border-color: var(--rojo); }
+.mal > span { color: var(--rojo); }
+.chico-card { position: relative; background: var(--card); }
+.chico-card:nth-child(4n+1) { border-color: var(--azul); } .chico-card:nth-child(4n+2) { border-color: var(--rosa); }
+.chico-card:nth-child(4n+3) { border-color: var(--verde); } .chico-card:nth-child(4n+4) { border-color: var(--violeta); }
+.chico-card .quitar { position: absolute; top: 10px; right: 14px; }
+.lista-chicos { display: grid; gap: 26px; }
+.check { display: flex; gap: 12px; align-items: flex-start; font-size: 20px; cursor: pointer; }
+.check input { width: 24px; height: 24px; margin-top: 3px; flex: none; accent-color: var(--verde); }
+.pagos { display: grid; gap: 12px; }
+.pago { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border: 2.5px solid var(--ink); border-radius: var(--borde-chico); cursor: pointer; background: var(--paper); }
+.pago input { width: 22px; height: 22px; margin-top: 4px; flex: none; accent-color: var(--naranja); }
+.pago:has(input:checked) { background: var(--amarillo-suave); }
+.pago:has(input:disabled) { opacity: 0.6; cursor: not-allowed; }
+.pago b { font-family: var(--display); font-weight: 400; font-size: 23px; }
+.pago small { display: block; font-size: 18px; color: var(--ink-soft); }
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.resumen { border: 3px dashed var(--naranja); border-radius: var(--borde); padding: 20px 22px; background: var(--card); }
+.resumen h3 { font-size: 32px; margin-bottom: 8px; }
+.resumen ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; }
+.resumen li { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; flex-wrap: wrap; }
+.resumen li span { min-width: 0; }
+.resumen li b { font-family: var(--display); font-weight: 400; font-size: 24px; white-space: nowrap; }
+.enviar { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
+.error { color: var(--rojo); font-size: 20px; }
+.panel { background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: clamp(22px, 4vw, 34px); margin-top: 30px; display: grid; gap: 14px; }
+.panel h3 { font-size: clamp(38px, 5vw, 52px); }
+.panel.ok { border-color: var(--verde); background: var(--verde-suave); }
+.panel .nro { font-family: var(--display); font-size: 30px; color: var(--azul); }
+.panel textarea { min-height: 170px; font-size: 18px; }
+
+/* pie */
+.pie { padding-block: 0 26px; }
+.pie .envoltura { display: flex; flex-wrap: wrap; gap: 10px 26px; justify-content: space-between; align-items: center; }
+.pie .marca { font-size: 30px; }
+.pie p { font-size: 19px; color: var(--ink-soft); }
+.pie .contacto { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+
+@media (max-width: 860px) {
+  .dos, .taller, .taller.al-reves, .reglas, .cuenta, .mv, .donde, .flyer-caja { grid-template-columns: minmax(0, 1fr); }
+  .flyer { max-width: 320px; }
+  .valores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .taller.al-reves .texto { order: 0; }
+  .definicion { transform: rotate(1deg); }
+}
+@media (max-width: 620px) {
+  body { font-size: 19px; }
+  .precios, .grilla, .valores { grid-template-columns: minmax(0, 1fr); }
+  .datos li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .menu { padding-right: 104px; gap: 2px 14px; }
+  .menu .marca { flex-basis: 100%; }
+  .menu a:not(.marca) { font-size: 19px; }
+  .nota { padding: 26px 18px 26px 50px; background-image: linear-gradient(90deg, transparent 34px, var(--rosa-suave) 34px, var(--rosa-suave) 36px, transparent 36px), repeating-linear-gradient(transparent 0 33px, var(--grid) 33px 35px); }
+  .regla.promo { padding-right: 24px; padding-top: 64px; }
+  .sticker { width: 100px; height: 100px; top: -30px; right: -4px; }
+  .collage { gap: 22px 14px; }
+  .foto figcaption { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rayos, .nube { animation: none; }
+  .boton { transition: none; }
+}
+</style>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="lapiz" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="4" xChannelSelector="R" yChannelSelector="G" result="temblor"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="11" result="grano"/>
+      <feColorMatrix in="grano" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  5 0 0 0 -1.3" result="mascara"/>
+      <feComposite in="temblor" in2="mascara" operator="in"/>
+    </filter>
+    <pattern id="rAmarillo" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="4.6" height="7" class="c-amarillo"/></pattern>
+    <pattern id="rRojo" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="4.6" height="7" class="c-rojo"/></pattern>
+    <pattern id="rNaranja" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="4.6" height="7" class="c-naranja"/></pattern>
+    <pattern id="rVerde" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="4.6" height="7" class="c-verde"/></pattern>
+    <pattern id="rAzul" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="4.6" height="7" class="c-azul"/></pattern>
+    <pattern id="rVioleta" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="4.6" height="7" class="c-violeta"/></pattern>
+    <pattern id="rRosa" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><rect width="4.6" height="7" class="c-rosa"/></pattern>
+    <pattern id="rMarron" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(80)"><rect width="4.6" height="7" class="c-marron"/></pattern>
+    <pattern id="rCielo" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-25)"><rect width="5.6" height="8" class="c-cielo"/></pattern>
+    <pattern id="rPasto" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(60)"><rect width="5.6" height="8" class="c-pasto"/></pattern>
+    <pattern id="pastitos" width="30" height="26" patternUnits="userSpaceOnUse"><path class="c-pasto" d="M1 26 L6 5 L11 26 Z M11 26 L18 1 L24 26 Z M22 26 L27 8 L31 26 Z"/></pattern>
+  </defs>
+</svg>
+
+<div class="portada">
+  <svg class="cielo" viewBox="0 0 1200 110" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
+    <g filter="url(#lapiz)">
+      <path fill="url(#rCielo)" d="M0 0H1200V82Q1170 98 1140 84T1080 86T1020 80T960 90T900 82T840 88T780 80T720 90T660 82T600 88T540 80T480 90T420 82T360 88T300 80T240 90T180 82T120 88T60 80T0 86Z"/>
+      <g class="nube"><path class="c-papel" d="M214 62q-24 0-24-16q0-18 24-16q6-20 30-15q18-15 38 2q24-2 24 16q0 17-24 17z"/><path class="t-fino" d="M214 62q-24 0-24-16q0-18 24-16q6-20 30-15q18-15 38 2q24-2 24 16q0 17-24 17z"/></g>
+      <g class="nube otra"><path class="c-papel" d="M624 76q-22 0-22-14q0-16 22-14q6-18 28-13q16-13 34 2q22-2 22 14q0 15-22 15z"/><path class="t-fino" d="M624 76q-22 0-22-14q0-16 22-14q6-18 28-13q16-13 34 2q22-2 22 14q0 15-22 15z"/></g>
+      <g class="nube"><path class="c-papel" d="M884 52q-20 0-20-13q0-15 20-13q5-16 25-12q15-12 31 2q20-2 20 13q0 14-20 14z"/><path class="t-fino" d="M884 52q-20 0-20-13q0-15 20-13q5-16 25-12q15-12 31 2q20-2 20 13q0 14-20 14z"/></g>
+      <path class="t-fino" d="M450 30q8-9 16 0q8-9 16 0M500 46q6-7 12 0q6-7 12 0"/>
+    </g>
+  </svg>
+
+  <svg class="sol" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
+    <g filter="url(#lapiz)">
+      <g class="rayos">
+        <path class="t-naranja" d="M198 120H228M187.5 159L213.5 174M159 187.5L174 213.5M120 198V228M81 187.5L66 213.5M52.5 159L26.5 174M42 120H12M52.5 81L26.5 66M81 52.5L66 26.5M120 42V12M159 52.5L174 26.5M187.5 81L213.5 66"/>
+      </g>
+      <circle cx="120" cy="120" r="64" fill="url(#rAmarillo)"/>
+      <circle cx="120" cy="120" r="64" fill="none" stroke="var(--naranja)" stroke-width="5"/>
+      <ellipse class="c-rosa" cx="86" cy="132" rx="10" ry="6" opacity="0.75"/>
+      <ellipse class="c-rosa" cx="154" cy="132" rx="10" ry="6" opacity="0.75"/>
+      <ellipse class="c-tinta" cx="99" cy="108" rx="5" ry="7"/>
+      <ellipse class="c-tinta" cx="141" cy="108" rx="5" ry="7"/>
+      <path class="t" d="M93 132Q120 158 147 132"/>
+    </g>
+  </svg>
+
+  <header class="envoltura">
+    <nav class="menu" aria-label="Secciones">
+      <a class="marca" href="#arriba" id="arriba">El <b>Candor</b></a>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#que-hacemos">Qué hacemos</a>
+      <a href="#donde">Dónde estamos</a>
+      <a href="#precios">Precios</a>
+      <a href="#inscripcion">Inscripción</a>
+    </nav>
+    <div class="hero">
+      <p class="antetitulo">Colonia de verano 2027 · del 4 de enero al 19 de febrero</p>
+      <h1 class="titulo"><span class="oculto">El Candor</span><span aria-hidden="true"><i>E</i><i>l</i><span class="espacio"></span><i>C</i><i>a</i><i>n</i><i>d</i><i>o</i><i>r</i></span></h1>
+      <p class="eslogan">Que brille lo que sos</p>
+      <p class="bajada">Cocinamos, creamos, sembramos y jugamos. Jornada completa o media jornada, con lugar para cada chico tal como es.</p>
+      <div class="acciones">
+        <a class="boton amarillo" href="#inscripcion">Hacer la inscripción</a>
+        <a class="boton" href="#precios">Ver precios</a>
+      </div>
+    </div>
+  </header>
+
+  <svg class="pasto" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <g filter="url(#lapiz)">
+      <!-- casa -->
+      <rect x="196" y="60" width="18" height="36" fill="url(#rRojo)"/><rect class="t-fino" x="196" y="60" width="18" height="36"/>
+      <path class="t-suave" d="M205 52q-10-10 0-20q10-10 0-20"/>
+      <path fill="url(#rNaranja)" d="M84 108L226 106L224 180L82 180Z"/><path class="t" d="M84 108L226 106L224 180L82 180Z"/>
+      <path fill="url(#rRojo)" d="M68 114L152 44L242 112Z"/><path class="t" d="M68 114L152 44L242 112Z"/>
+      <rect x="132" y="134" width="32" height="46" fill="url(#rAzul)"/><rect class="t" x="132" y="134" width="32" height="46"/>
+      <circle class="c-tinta" cx="157" cy="158" r="3"/>
+      <rect x="178" y="122" width="30" height="28" fill="url(#rCielo)"/><path class="t-fino" d="M178 122H208V150H178ZM193 122V150M178 136H208"/>
+      <rect x="98" y="122" width="24" height="24" fill="url(#rCielo)"/><path class="t-fino" d="M98 122H122V146H98ZM110 122V146M98 134H122"/>
+      <!-- árbol -->
+      <path fill="url(#rMarron)" d="M1080 182L1086 112L1104 112L1110 182Z"/><path class="t" d="M1080 182L1086 112L1104 112L1110 182Z"/>
+      <circle cx="1095" cy="88" r="46" fill="url(#rVerde)"/><circle cx="1058" cy="108" r="28" fill="url(#rVerde)"/><circle cx="1134" cy="106" r="28" fill="url(#rVerde)"/>
+      <path class="t" d="M1052 80Q1060 40 1095 42Q1138 40 1142 82Q1166 92 1158 116Q1150 136 1126 130Q1110 140 1094 132Q1074 140 1062 132Q1030 132 1032 110Q1034 88 1052 80Z"/>
+      <circle class="c-rojo" cx="1074" cy="84" r="6"/><circle class="c-rojo" cx="1112" cy="68" r="6"/><circle class="c-rojo" cx="1124" cy="110" r="6"/><circle class="c-rojo" cx="1066" cy="116" r="6"/>
+      <!-- pasto -->
+      <rect x="0" y="156" width="1200" height="26" fill="url(#pastitos)"/>
+      <rect x="0" y="178" width="1200" height="42" fill="url(#rPasto)"/>
+      <!-- flores -->
+      <g>
+        <path class="t-verde" d="M300 182V140M336 180V146M866 182V142M910 184V150M958 180V140M1180 182V146M26 182V146M402 184V156"/>
+        <g class="c-rosa"><circle cx="300" cy="123" r="8"/><circle cx="309" cy="130" r="8"/><circle cx="305" cy="140" r="8"/><circle cx="295" cy="140" r="8"/><circle cx="291" cy="130" r="8"/></g>
+        <g class="c-violeta"><circle cx="336" cy="129" r="7"/><circle cx="344" cy="135" r="7"/><circle cx="341" cy="144" r="7"/><circle cx="331" cy="144" r="7"/><circle cx="328" cy="135" r="7"/></g>
+        <g class="c-rojo"><circle cx="866" cy="125" r="8"/><circle cx="875" cy="132" r="8"/><circle cx="871" cy="142" r="8"/><circle cx="861" cy="142" r="8"/><circle cx="857" cy="132" r="8"/></g>
+        <g class="c-azul"><circle cx="910" cy="133" r="7"/><circle cx="918" cy="139" r="7"/><circle cx="915" cy="148" r="7"/><circle cx="905" cy="148" r="7"/><circle cx="902" cy="139" r="7"/></g>
+        <g class="c-naranja"><circle cx="958" cy="123" r="8"/><circle cx="967" cy="130" r="8"/><circle cx="963" cy="140" r="8"/><circle cx="953" cy="140" r="8"/><circle cx="949" cy="130" r="8"/></g>
+        <g class="c-rosa"><circle cx="1180" cy="129" r="7"/><circle cx="1188" cy="135" r="7"/><circle cx="1185" cy="144" r="7"/><circle cx="1175" cy="144" r="7"/><circle cx="1172" cy="135" r="7"/></g>
+        <g class="c-violeta"><circle cx="26" cy="129" r="7"/><circle cx="34" cy="135" r="7"/><circle cx="31" cy="144" r="7"/><circle cx="21" cy="144" r="7"/><circle cx="18" cy="135" r="7"/></g>
+        <g class="c-amarillo"><circle cx="300" cy="133" r="5"/><circle cx="336" cy="138" r="4.5"/><circle cx="866" cy="135" r="5"/><circle cx="910" cy="142" r="4.5"/><circle cx="958" cy="133" r="5"/><circle cx="1180" cy="138" r="4.5"/><circle cx="26" cy="138" r="4.5"/></g>
+      </g>
+      <!-- chicos de la mano -->
+      <path class="t" d="M440 124L404 94M440 124L480 140L520 124L560 140L600 124L640 140L680 124L720 140L760 124L796 94"/>
+      <path class="t-fino" d="M796 94L816 46"/>
+      <ellipse cx="818" cy="30" rx="15" ry="19" fill="url(#rRojo)"/><ellipse class="t-fino" cx="818" cy="30" rx="15" ry="19"/>
+      <path fill="url(#rRosa)" d="M420 162L440 114L460 162Z"/><path class="t" d="M420 162L440 114L460 162Z"/>
+      <path fill="url(#rAmarillo)" d="M507 116H533L536 148H504Z"/><path class="t" d="M507 116H533L536 148H504Z"/>
+      <path fill="url(#rVioleta)" d="M580 162L600 114L620 162Z"/><path class="t" d="M580 162L600 114L620 162Z"/>
+      <path fill="url(#rVerde)" d="M667 116H693L696 148H664Z"/><path class="t" d="M667 116H693L696 148H664Z"/>
+      <path fill="url(#rCielo)" d="M740 162L760 114L780 162Z"/><path class="t" d="M740 162L760 114L780 162Z"/>
+      <path class="t" d="M433 162L430 188M447 162L450 188M593 162L590 188M607 162L610 188M753 162L750 188M767 162L770 188M424 188H432M448 188H456M584 188H592M608 188H616M744 188H752M768 188H776"/>
+      <path class="t-azul" d="M513 148L511 186M527 148L529 186M673 148L671 186M687 148L689 186"/>
+      <path class="t" d="M503 188H513M527 188H537M663 188H673M687 188H697"/>
+      <g class="c-papel"><circle cx="440" cy="96" r="17"/><circle cx="520" cy="96" r="17"/><circle cx="600" cy="96" r="17"/><circle cx="680" cy="96" r="17"/><circle cx="760" cy="96" r="17"/></g>
+      <g class="t"><circle cx="440" cy="96" r="17"/><circle cx="520" cy="96" r="17"/><circle cx="600" cy="96" r="17"/><circle cx="680" cy="96" r="17"/><circle cx="760" cy="96" r="17"/></g>
+      <path class="t" d="M424 88L410 100M456 88L470 100M509 82L511 72L516 80L520 70L524 80L529 72L531 82M584 92Q586 72 600 76Q614 72 616 92M588 84Q582 108 586 116M612 84Q618 108 614 116M664 88Q680 70 696 88M664 88H700M746 86Q744 78 752 80Q754 72 762 76Q770 72 772 82Q778 84 776 90"/>
+      <circle class="c-rojo" cx="410" cy="100" r="5"/><circle class="c-rojo" cx="470" cy="100" r="5"/>
+      <g class="c-tinta"><circle cx="434" cy="94" r="2.6"/><circle cx="446" cy="94" r="2.6"/><circle cx="514" cy="94" r="2.6"/><circle cx="526" cy="94" r="2.6"/><circle cx="594" cy="94" r="2.6"/><circle cx="606" cy="94" r="2.6"/><circle cx="674" cy="96" r="2.6"/><circle cx="686" cy="96" r="2.6"/><circle cx="754" cy="94" r="2.6"/><circle cx="766" cy="94" r="2.6"/></g>
+      <path class="t-fino" d="M433 102Q440 109 447 102M513 102Q520 109 527 102M593 102Q600 109 607 102M673 104Q680 111 687 104M753 102Q760 109 767 102"/>
+      <g class="c-tinta"><circle cx="480" cy="140" r="4"/><circle cx="560" cy="140" r="4"/><circle cx="640" cy="140" r="4"/><circle cx="720" cy="140" r="4"/><circle cx="404" cy="94" r="4.5"/><circle cx="796" cy="94" r="4.5"/></g>
+    </g>
+  </svg>
+</div>
+
+<main>
+  <section class="seccion" id="flyer">
+    <div class="envoltura flyer-caja">
+      <figure class="flyer">
+        <a href="fotos/flyer.jpg" target="_blank" rel="noopener"><img src="fotos/flyer.jpg" width="900" height="1600" alt="Flyer de la colonia El Candor: Colonia de verano 2027. Un verano para jugar, descubrir y crecer. Del 4 de enero al 19 de febrero. ¡Inscripciones abiertas! WhatsApp +54 9 11 7122-8824. Arenales 1540, Vicente López."></a>
+      </figure>
+      <div class="flyer-texto">
+        <p class="sello">¡Inscripciones abiertas!</p>
+        <h2>Un verano para jugar, descubrir y crecer</h2>
+        <ul class="datos">
+          <li><b>Cuándo</b> Del 4 de enero al 19 de febrero de 2027</li>
+          <li><b>Dónde</b> Arenales 1540, Florida, Vicente López</li>
+          <li><b>WhatsApp</b> <a class="wa-link wa-num" href="https://wa.me/5491171228824" target="_blank" rel="noopener">+54 9 11 7122-8824</a></li>
+        </ul>
+        <div class="acciones">
+          <a class="boton amarillo" href="#inscripcion">Hacer la inscripción</a>
+          <a class="boton wa-link" href="https://wa.me/5491171228824" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+        </div>
+        <p class="chiquito compartir"><a href="fotos/flyer.jpg" download="Flyer El Candor 2027.jpg">Descargar el flyer</a> · <a id="compartir" href="https://wa.me/?text=Colonia%20de%20verano%20El%20Candor" target="_blank" rel="noopener">Compartilo por WhatsApp con otras familias</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="nombre">
+    <div class="envoltura dos">
+      <div class="nota cinta">
+        <h2>¿Por qué <span>El Candor</span>?</h2>
+        <p><b>Candor</b> viene del latín <i>candere</i>, que quiere decir brillar. Es la blancura que brilla, como la luz del sol.</p>
+        <p>En castellano también es sinceridad, sencillez y pureza de ánimo: la manera de mirar que tienen los chicos cuando juegan sin apuro y dicen lo que sienten.</p>
+        <p>Por eso elegimos este nombre. En la colonia cada chico juega, crea y se anima siendo como es.</p>
+      </div>
+      <div class="definicion" aria-label="Definición de candor">
+        <svg class="estrellita" style="top:-26px;right:18px" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rAmarillo)" d="M12 2L15 9L22 9.5L16.5 14L18.5 21L12 17L5.5 21L7.5 14L2 9.5L9 9Z"/><path class="t-fino" style="stroke-width:1.4" d="M12 2L15 9L22 9.5L16.5 14L18.5 21L12 17L5.5 21L7.5 14L2 9.5L9 9Z"/></g></svg>
+        <p class="palabra">candor</p>
+        <p class="tipo">sustantivo masculino</p>
+        <ol>
+          <li>Blancura que brilla.</li>
+          <li>Sinceridad, sencillez, ingenuidad y pureza del ánimo.</li>
+        </ol>
+        <p class="origen">Del latín <i>candor</i>, de <i>candere</i>: brillar, ser blanco.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="quienes">
+    <div class="envoltura">
+      <h2 class="titular">Quiénes somos</h2>
+      <div class="mv">
+        <article class="mision">
+          <h3>Misión</h3>
+          <p>Acompañar a los chicos en un verano de juego, creatividad y encuentro, en un lugar seguro y cálido donde cada uno pueda expresarse, aprender haciendo y crecer siendo como es.</p>
+        </article>
+        <article class="vision">
+          <h3>Visión</h3>
+          <p>Ser la colonia que las familias de la zona eligen cada verano por su calidez y su sencillez: un lugar donde los chicos juegan, crean con las manos, se conectan con la naturaleza y hacen amigos.</p>
+        </article>
+      </div>
+      <h3 class="valores-titulo">Nuestros valores</h3>
+      <ul class="valores">
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRojo)" d="M28 48C14 38 7 30 7 21A10 10 0 0 1 28 16A10 10 0 0 1 49 21C49 30 42 38 28 48Z"/><path class="t-fino" d="M28 48C14 38 7 30 7 21A10 10 0 0 1 28 16A10 10 0 0 1 49 21C49 30 42 38 28 48Z"/></g></svg>
+          <h4>Sinceridad</h4>
+          <p>Decimos lo que sentimos y escuchamos a los demás. Es lo que quiere decir candor.</p>
+        </li>
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-naranja" style="stroke-width:4" d="M28 3V9M28 47V53M3 28H9M47 28H53M10 10L14 14M42 42L46 46M10 46L14 42M42 14L46 10"/><circle cx="28" cy="28" r="15" fill="url(#rAmarillo)"/><circle cx="28" cy="28" r="15" fill="none" stroke="var(--naranja)" stroke-width="2.6"/><circle class="c-tinta" cx="23" cy="25" r="2"/><circle class="c-tinta" cx="33" cy="25" r="2"/><path class="t-fino" d="M22 32Q28 38 34 32"/></g></svg>
+          <h4>Alegría</h4>
+          <p>El juego está en el centro de cada día. Venir a la colonia tiene que ser una fiesta.</p>
+        </li>
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRosa)" d="M14 34L34 14A8 8 0 0 1 45 25L25 45A8 8 0 0 1 14 34Z"/><path class="t-fino" d="M14 34L34 14A8 8 0 0 1 45 25L25 45A8 8 0 0 1 14 34Z"/><rect class="c-papel" x="23" y="23" width="10" height="10" transform="rotate(45 28 28)"/><rect class="t-fino" x="23" y="23" width="10" height="10" transform="rotate(45 28 28)"/></g></svg>
+          <h4>Cuidado</h4>
+          <p>La seguridad y el bienestar de cada chico van primero, en cada actividad.</p>
+        </li>
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rAzul)" d="M8 42L36 14L44 22L16 50Z"/><path class="t-fino" d="M8 42L36 14L44 22L16 50ZM36 14L48 6L44 22M30 20L38 28"/><path class="c-tinta" d="M48 6L46 13L41 11Z"/></g></svg>
+          <h4>Creatividad</h4>
+          <p>Aprendemos haciendo, con las manos y la imaginación. Equivocarse también vale.</p>
+        </li>
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-verde" style="stroke-width:3.5" d="M28 52V30M28 44Q18 42 16 34M28 40Q36 38 40 32"/><g fill="url(#rVioleta)"><circle cx="28" cy="12" r="7"/><circle cx="37" cy="18" r="7"/><circle cx="34" cy="28" r="7"/><circle cx="22" cy="28" r="7"/><circle cx="19" cy="18" r="7"/></g><circle class="c-amarillo" cx="28" cy="20" r="5"/></g></svg>
+          <h4>Respeto</h4>
+          <p>Cada chico es único. Respetamos sus tiempos, sus gustos y su manera de ser.</p>
+        </li>
+        <li class="valor">
+          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><circle class="c-papel" cx="16" cy="12" r="7"/><circle class="t-fino" cx="16" cy="12" r="7"/><circle class="c-papel" cx="40" cy="12" r="7"/><circle class="t-fino" cx="40" cy="12" r="7"/><path fill="url(#rVerde)" d="M8 38L16 20L24 38Z"/><path fill="url(#rNaranja)" d="M33 21H47V36H33Z"/><path class="t-fino" d="M8 38L16 20L24 38ZM33 21H47V36H33ZM16 24L28 30L40 24M12 38L11 50M20 38L21 50M37 36L36 50M43 36L44 50"/></g></svg>
+          <h4>Compañerismo</h4>
+          <p>Compartimos, nos ayudamos y hacemos amigos. Juntos todo sale mejor.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="seccion" id="que-hacemos">
+    <div class="envoltura">
+      <h2 class="titular">Qué hacemos</h2>
+      <p class="bajada">Talleres para crear con las manos, compartir y descubrir, con mucho juego entre medio.</p>
+      <div class="talleres">
+        <article class="taller">
+          <div class="texto">
+            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRojo)" d="M5 30L25 10L31 16L11 36Z"/><path class="t-fino" d="M5 30L25 10L31 16L11 36ZM25 10L35 4L31 16M20 15L26 21"/></g></svg>Manualidades</h3>
+            <p>Pintamos, recortamos, pegamos y construimos con materiales simples y reciclados. Cada chico crea a su manera, prueba técnicas nuevas y se anima a usar la imaginación.</p>
+            <div class="etiquetas"><span>pintura</span><span>recortes</span><span>reciclado</span><span>imaginación</span></div>
+          </div>
+          <figure class="foto" style="--giro:1.8deg"><img src="fotos/peces.jpg" width="1400" height="1054" loading="lazy" alt="Peces de papel de colores hechos por los chicos, sobre una mesa de madera."><figcaption>Colores y recortes</figcaption></figure>
+        </article>
+
+        <article class="taller al-reves">
+          <div class="texto">
+            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><ellipse cx="13" cy="13" rx="8" ry="10" transform="rotate(-40 13 13)" fill="url(#rNaranja)"/><ellipse class="t-fino" cx="13" cy="13" rx="8" ry="10" transform="rotate(-40 13 13)"/><path class="t" style="stroke-width:3.5" d="M19 19L35 35"/></g></svg>Cocina</h3>
+            <p>Recetas simples, dulces y saladas, pensadas para que los chicos midan, mezclen, decoren y prueben. En la cocina aprenden a esperar su turno, a trabajar en equipo y a compartir lo que hicieron.</p>
+            <div class="etiquetas"><span>recetas simples</span><span>trabajo en equipo</span><span>compartir</span></div>
+          </div>
+          <div class="collage">
+            <figure class="foto grande" style="--giro:-1.4deg"><img src="fotos/cocina-mesa.jpg" width="1400" height="1050" loading="lazy" alt="Chicos alrededor de una mesa en el taller de cocina, con una profesora. Las caras están tapadas con caritas dibujadas."><figcaption>Manos a la obra</figcaption></figure>
+            <figure class="foto" style="--giro:2.2deg"><img src="fotos/chupetines.jpg" width="1054" height="1400" loading="lazy" alt="Una nena decora en el taller de cocina. Su cara está tapada con un sol dibujado."><figcaption>Cada uno a su gusto</figcaption></figure>
+            <figure class="foto" style="--giro:-2.4deg;margin-top:34px"><img src="fotos/cocina-seno.jpg" width="1400" height="1054" loading="lazy" alt="Chicos alrededor de la profesora en el taller de cocina. Las caras de los chicos están tapadas con caritas dibujadas."><figcaption>Aprendemos juntos</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="taller">
+          <div class="texto">
+            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-verde" style="stroke-width:3" d="M20 38V18"/><path fill="url(#rVerde)" d="M20 22Q8 22 6 10Q18 10 20 22ZM20 18Q30 18 34 6Q22 6 20 18Z"/><path class="t-fino" d="M20 22Q8 22 6 10Q18 10 20 22ZM20 18Q30 18 34 6Q22 6 20 18Z"/></g></svg>Plantines</h3>
+            <p>Sembramos semillas, armamos almácigos y cuidamos los plantines todos los días. Así los chicos descubren de dónde vienen los alimentos y aprenden a cuidar lo que crece.</p>
+            <div class="etiquetas"><span>semillas</span><span>riego</span><span>huerta</span><span>naturaleza</span></div>
+          </div>
+          <figure class="foto" style="--giro:-1.8deg"><img src="fotos/huerta.jpg" width="1400" height="1054" loading="lazy" alt="Almácigos en un maple de huevos con carteles pintados a mano."><figcaption>Sembrar y cuidar</figcaption></figure>
+        </article>
+      </div>
+      <p class="aviso-caras"><svg viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><circle cx="22" cy="22" r="18" fill="url(#rAmarillo)"/><circle cx="22" cy="22" r="18" fill="none" stroke="var(--naranja)" stroke-width="3"/><circle class="c-tinta" cx="16" cy="19" r="2.4"/><circle class="c-tinta" cx="28" cy="19" r="2.4"/><path class="t-fino" d="M15 27Q22 33 29 27"/></g></svg>Para cuidar a los chicos, en las fotos les tapamos la cara con caritas dibujadas.</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="donde">
+    <div class="envoltura">
+      <h2 class="titular">Dónde estamos</h2>
+      <div class="donde">
+        <div class="mapa">
+          <svg viewBox="0 0 560 360" role="img" aria-label="Mapa dibujado: el Colegio Armenio sobre la calle Arenales, en Florida.">
+            <g filter="url(#lapiz)">
+              <g fill="url(#rPasto)">
+                <rect x="20" y="20" width="150" height="130" rx="14"/><rect x="210" y="20" width="140" height="130" rx="14"/><rect x="390" y="20" width="150" height="130" rx="14"/>
+                <rect x="20" y="200" width="150" height="140" rx="14"/><rect x="210" y="200" width="140" height="140" rx="14"/><rect x="390" y="200" width="150" height="140" rx="14"/>
+              </g>
+              <g class="t-fino">
+                <rect x="20" y="20" width="150" height="130" rx="14"/><rect x="210" y="20" width="140" height="130" rx="14"/><rect x="390" y="20" width="150" height="130" rx="14"/>
+                <rect x="20" y="200" width="150" height="140" rx="14"/><rect x="210" y="200" width="140" height="140" rx="14"/><rect x="390" y="200" width="150" height="140" rx="14"/>
+              </g>
+              <path d="M180 175H540" fill="none" stroke="var(--amarillo)" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 12"/>
+              <!-- colegio -->
+              <rect class="c-papel" x="222" y="24" width="116" height="26" rx="6"/><rect class="t-fino" x="222" y="24" width="116" height="26" rx="6"/>
+              <path fill="url(#rNaranja)" d="M228 82H332V142H228Z"/><path class="t-fino" d="M228 82H332V142H228Z"/>
+              <path fill="url(#rRojo)" d="M220 84L280 56L340 84Z"/><path class="t-fino" d="M220 84L280 56L340 84Z"/>
+              <rect x="268" y="112" width="24" height="30" fill="url(#rAzul)"/><rect class="t-fino" x="268" y="112" width="24" height="30"/>
+              <rect x="240" y="94" width="20" height="16" fill="url(#rCielo)"/><rect class="t-fino" x="240" y="94" width="20" height="16"/>
+              <rect x="300" y="94" width="20" height="16" fill="url(#rCielo)"/><rect class="t-fino" x="300" y="94" width="20" height="16"/>
+              <!-- árboles y casitas -->
+              <g fill="url(#rVerde)"><circle cx="62" cy="70" r="24"/><circle cx="128" cy="108" r="20"/><circle cx="440" cy="64" r="24"/><circle cx="504" cy="110" r="20"/><circle cx="72" cy="258" r="24"/><circle cx="500" cy="296" r="22"/></g>
+              <g class="t-fino"><circle cx="62" cy="70" r="24"/><circle cx="128" cy="108" r="20"/><circle cx="440" cy="64" r="24"/><circle cx="504" cy="110" r="20"/><circle cx="72" cy="258" r="24"/><circle cx="500" cy="296" r="22"/></g>
+              <path fill="url(#rAmarillo)" d="M410 300V256H462V300Z"/><path fill="url(#rRojo)" d="M404 258L436 232L468 258Z"/><path class="t-fino" d="M410 300V256H462V300ZM404 258L436 232L468 258ZM430 300V280H442V300"/>
+              <path fill="url(#rRosa)" d="M110 322V284H156V322Z"/><path fill="url(#rAzul)" d="M104 286L133 262L162 286Z"/><path class="t-fino" d="M110 322V284H156V322ZM104 286L133 262L162 286Z"/>
+              <!-- auto -->
+              <path fill="url(#rAzul)" d="M422 182V170Q426 160 438 160H462Q472 160 476 170V182Z"/><path class="t-fino" d="M422 182V170Q426 160 438 160H462Q472 160 476 170V182Z"/>
+              <circle class="c-tinta" cx="434" cy="186" r="6"/><circle class="c-tinta" cx="466" cy="186" r="6"/>
+              <!-- marcador -->
+              <path fill="url(#rRojo)" d="M280 196C268 182 262 174 262 166A18 18 0 0 1 298 166C298 174 292 182 280 196Z"/><path class="t" style="stroke-width:3" d="M280 196C268 182 262 174 262 166A18 18 0 0 1 298 166C298 174 292 182 280 196Z"/>
+              <circle class="c-papel" cx="280" cy="165" r="6"/>
+              <path class="t" style="stroke-width:3" d="M300 262Q318 236 296 210M290 214L296 208L302 216"/>
+            </g>
+            <text class="mapa-txt" x="280" y="43" text-anchor="middle" font-size="16">Colegio Armenio</text>
+            <text class="mapa-txt" x="34" y="184" font-size="24">Arenales</text>
+            <text class="mapa-txt" x="280" y="292" text-anchor="middle" font-size="21">¡Acá estamos!</text>
+          </svg>
+        </div>
+        <div class="direccion">
+          <h3>En el Colegio Armenio</h3>
+          <p class="calle">Arenales 1540, Florida</p>
+          <p>Vicente López, provincia de Buenos Aires.</p>
+          <p>WhatsApp: <a class="wa-link wa-num" href="https://wa.me/5491171228824" target="_blank" rel="noopener">+54 9 11 7122-8824</a></p>
+          <div class="acciones">
+            <a class="boton amarillo" href="https://www.google.com/maps/search/?api=1&amp;query=Arenales%201540%2C%20Florida%2C%20Vicente%20L%C3%B3pez%2C%20Buenos%20Aires" target="_blank" rel="noopener">Ver en Google Maps</a>
+            <a class="boton" href="https://www.google.com/maps/dir/?api=1&amp;destination=Arenales%201540%2C%20Florida%2C%20Vicente%20L%C3%B3pez%2C%20Buenos%20Aires" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion cuaderno" id="precios">
+    <div class="envoltura">
+      <h2 class="titular">Precios</h2>
+      <p class="bajada">Por chico y por mes. La colonia va del 4 de enero al 19 de febrero de 2027: podés venir en enero, en febrero o los dos meses.</p>
+      <div class="precios">
+        <article class="etiqueta amarilla">
+          <h3>Jornada completa</h3>
+          <p class="monto">$600.000</p>
+          <p class="por">por mes</p>
+        </article>
+        <article class="etiqueta celeste">
+          <h3>Media jornada</h3>
+          <p class="monto">$400.000</p>
+          <p class="por">por mes</p>
+        </article>
+      </div>
+      <div class="reglas">
+        <div class="regla">
+          <h3>Reservá con el 30%</h3>
+          <p>Para guardar el lugar abonás el 30% de la cuota de cada mes que elegís.</p>
+          <p class="chiquito">Jornada completa: $180.000 por mes · Media jornada: $120.000 por mes.</p>
+        </div>
+        <div class="regla promo">
+          <svg class="sticker" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="var(--amarillo)" d="M60 4L72 22L93 14L95 36L116 42L104 60L116 78L95 84L93 106L72 98L60 116L48 98L27 106L25 84L4 78L16 60L4 42L25 36L27 14L48 22Z"/><path class="t" style="stroke-width:3" d="M60 4L72 22L93 14L95 36L116 42L104 60L116 78L95 84L93 106L72 98L60 116L48 98L27 106L25 84L4 78L16 60L4 42L25 36L27 14L48 22Z"/></g><text x="60" y="60" text-anchor="middle" font-size="34">15%</text><text x="60" y="84" text-anchor="middle" font-size="20">menos</text></svg>
+          <h3>Pagá los dos meses antes de diciembre</h3>
+          <p>Si abonás enero y febrero completos antes del 1 de diciembre, tenés 15% de descuento.</p>
+          <p class="chiquito">Jornada completa: $1.020.000 en vez de $1.200.000 · Media jornada: $680.000 en vez de $800.000.</p>
+        </div>
+      </div>
+      <div class="cuenta" id="cuenta">
+        <h3>Hacé la cuenta</h3>
+        <div class="elegir">
+          <div>
+            <span class="grupo-nombre" id="calc-enero-l">Enero</span>
+            <div class="opciones" role="radiogroup" aria-labelledby="calc-enero-l">
+              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-no" value=""><span>No va</span></label>
+              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-jc" value="jc" checked><span>Jornada completa</span></label>
+              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-mj" value="mj"><span>Media jornada</span></label>
+            </div>
+          </div>
+          <div>
+            <span class="grupo-nombre" id="calc-febrero-l">Febrero</span>
+            <div class="opciones" role="radiogroup" aria-labelledby="calc-febrero-l">
+              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-no" value=""><span>No va</span></label>
+              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-jc" value="jc" checked><span>Jornada completa</span></label>
+              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-mj" value="mj"><span>Media jornada</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="filas" id="calc-salida" aria-live="polite">
+          <div class="fila"><span>Cuota de los dos meses</span><b>$1.200.000</b></div>
+          <div class="fila"><span>Para reservar (30%)</span><b>$360.000</b></div>
+          <div class="fila destacada"><span>Pagando todo antes del 1/12</span><b>$1.020.000</b></div>
+          <p class="chiquito">Ahorrás $180.000.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="inscripcion">
+    <div class="envoltura">
+      <h2 class="titular">Inscripción</h2>
+      <p class="bajada">Completá los datos y te escribimos para coordinar el pago. Si son hermanos, sumalos en la misma inscripción.</p>
+
+      <form class="formulario" id="form" novalidate autocomplete="on">
+        <fieldset class="hoja">
+          <legend>Adulto responsable</legend>
+          <div class="grilla">
+            <label class="campo ancho"><span>Nombre y apellido</span><input type="text" id="r-nombre" autocomplete="name" required maxlength="80"></label>
+            <label class="campo"><span>Teléfono <small>(WhatsApp)</small></span><input type="tel" id="r-telefono" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="11 1234-5678"></label>
+            <label class="campo"><span>Email</span><input type="email" id="r-email" autocomplete="email" required maxlength="100"></label>
+          </div>
+        </fieldset>
+
+        <div class="lista-chicos" id="chicos"></div>
+        <div><button type="button" class="boton" id="sumar">+ Sumar otro chico</button></div>
+
+        <fieldset class="hoja">
+          <legend>Para emergencias</legend>
+          <div class="grilla">
+            <label class="campo ancho"><span>Otro adulto para llamar <small>(nombre y teléfono)</small></span><input type="text" id="e-contacto" required maxlength="120" placeholder="Ej.: abuela Marta, 11 5555-0000"></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="hoja">
+          <legend>¿Cómo querés pagar?</legend>
+          <div class="pagos">
+            <label class="pago"><input type="radio" name="pago" id="pago-reserva" value="reserva" checked><span><b id="pago-reserva-t">Reservo con el 30%</b><small id="pago-reserva-s">Y el resto lo coordinamos.</small></span></label>
+            <label class="pago"><input type="radio" name="pago" id="pago-total" value="total"><span><b id="pago-total-t">Pago todo antes del 1 de diciembre</b><small id="pago-total-s">Con 15% de descuento para quien va enero y febrero.</small></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="hoja">
+          <legend>Para terminar</legend>
+          <div class="grilla">
+            <label class="campo ancho"><span>¿Algo más que quieras contarnos? <small>(opcional)</small></span><textarea id="comentarios" rows="3" maxlength="800"></textarea></label>
+            <label class="check ancho" id="acepta-l"><input type="checkbox" id="acepta" required><span>Acepto que la colonia guarde estos datos para la inscripción y para cuidar a los chicos durante la colonia.</span></label>
+          </div>
+          <div class="trampa" aria-hidden="true"><label>No completar <input type="text" id="web" tabindex="-1" autocomplete="off"></label></div>
+        </fieldset>
+
+        <div class="resumen" id="resumen" aria-live="polite"></div>
+
+        <div class="enviar">
+          <button type="submit" class="boton amarillo grande" id="enviar">Enviar inscripción</button>
+          <p class="error" id="error" role="alert" hidden></p>
+        </div>
+        <p class="chiquito">Antes de empezar te vamos a pedir la ficha médica, el apto físico y la autorización firmada.</p>
+      </form>
+
+      <div class="panel ok" id="listo" hidden tabindex="-1">
+        <h3>¡Listo!</h3>
+        <p class="nro" id="listo-nro"></p>
+        <p id="listo-txt"></p>
+        <div><button type="button" class="boton" id="otra">Hacer otra inscripción</button></div>
+      </div>
+
+      <div class="panel" id="alternativa" hidden tabindex="-1">
+        <h3 id="alt-titulo">Mandanos los datos</h3>
+        <p id="alt-txt"></p>
+        <label class="campo"><span>Tu inscripción</span><textarea id="alt-datos" readonly></textarea></label>
+        <div class="acciones" style="margin-top:0">
+          <button type="button" class="boton amarillo" id="alt-copiar">Copiar los datos</button>
+          <a class="boton" id="alt-wa" href="#" target="_blank" rel="noopener" hidden>Mandar por WhatsApp</a>
+          <a class="boton" id="alt-mail" href="#" hidden>Mandar por mail</a>
+          <button type="button" class="boton" id="alt-volver">Volver al formulario</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <svg class="pasto" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false" style="height:clamp(56px,7vw,90px)">
+    <g filter="url(#lapiz)">
+      <rect x="0" y="52" width="1200" height="26" fill="url(#pastitos)"/>
+      <rect x="0" y="74" width="1200" height="46" fill="url(#rPasto)"/>
+      <path class="t-verde" d="M150 78V44M560 80V48M980 78V42"/>
+      <g class="c-rojo"><circle cx="150" cy="27" r="8"/><circle cx="159" cy="34" r="8"/><circle cx="155" cy="44" r="8"/><circle cx="145" cy="44" r="8"/><circle cx="141" cy="34" r="8"/></g>
+      <g class="c-azul"><circle cx="560" cy="31" r="8"/><circle cx="569" cy="38" r="8"/><circle cx="565" cy="48" r="8"/><circle cx="555" cy="48" r="8"/><circle cx="551" cy="38" r="8"/></g>
+      <g class="c-violeta"><circle cx="980" cy="25" r="8"/><circle cx="989" cy="32" r="8"/><circle cx="985" cy="42" r="8"/><circle cx="975" cy="42" r="8"/><circle cx="971" cy="32" r="8"/></g>
+      <g class="c-amarillo"><circle cx="150" cy="37" r="5"/><circle cx="560" cy="41" r="5"/><circle cx="980" cy="35" r="5"/></g>
+    </g>
+  </svg>
+  <div class="envoltura">
+    <a class="marca" href="#arriba">El <b>Candor</b></a>
+    <p>Colonia de verano 2027 · del 4 de enero al 19 de febrero · Colegio Armenio, Arenales 1540, Florida</p>
+    <div class="contacto" id="contacto"><a href="familias.html">Fotos para las familias</a></div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ===== Ajustes de la colonia (la dirección del Apps Script y el contacto van en config.js) ===== */
+  var AJ = window.EL_CANDOR || {};
+  var API_URL = AJ.api || "";
+  var WHATSAPP = String(AJ.whatsapp || "").replace(/\D/g, "");
+  var EMAIL = AJ.email || "";
+  var PRECIO = { jc: 600000, mj: 400000 };
+  var RESERVA = 0.30;      // 30% de la cuota de cada mes elegido
+  var DESC_TOTAL = 0.15;   // pagando enero y febrero completos antes de LIMITE_DESC
+  var LIMITE_DESC = "2026-12-01";
+  var MAX_CHICOS = 6;
+  /* ================================= */
+
+  try { var mApi = /[?&]api=([^&]+)/.exec(location.search); if (mApi) API_URL = decodeURIComponent(mApi[1]); } catch (e) {}
+
+  var MOD = { "": "No va", jc: "Jornada completa", mj: "Media jornada" };
+  function $(id) { return document.getElementById(id); }
+  function plata(n) { return "$" + Math.round(n || 0).toLocaleString("es-AR"); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function hoyAR() {
+    try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Argentina/Buenos_Aires", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); }
+    catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+  var promoVigente = hoyAR() < LIMITE_DESC;
+  function marcado(nombre) { var r = document.querySelector('input[name="' + nombre + '"]:checked'); return r ? r.value : ""; }
+
+  // La misma cuenta que hace el Apps Script al recibir la inscripción.
+  function cotizar(chicos, pago) {
+    var total = 0, descuento = 0;
+    var filas = chicos.map(function (c) {
+      var cuota = (PRECIO[c.enero] || 0) + (PRECIO[c.febrero] || 0);
+      var dos = !!(c.enero && c.febrero);
+      var desc = pago === "total" && dos && promoVigente ? Math.round(cuota * DESC_TOTAL) : 0;
+      total += cuota; descuento += desc;
+      return { cuota: cuota, descuento: desc, dosMeses: dos };
+    });
+    return { filas: filas, total: total, descuento: descuento, aPagar: total - descuento, reserva: Math.round(total * RESERVA) };
+  }
+
+  /* ---------- Hacé la cuenta ---------- */
+  function calcular() {
+    var c = { enero: marcado("calc-enero"), febrero: marcado("calc-febrero") };
+    var q = cotizar([c], "total");
+    var out = $("calc-salida");
+    if (!q.total) { out.innerHTML = '<p class="chiquito">Elegí al menos un mes para ver la cuenta.</p>'; return; }
+    var meses = c.enero && c.febrero ? "Cuota de los dos meses" : "Cuota de " + (c.enero ? "enero" : "febrero");
+    var h = '<div class="fila"><span>' + meses + '</span><b>' + plata(q.total) + '</b></div>' +
+      '<div class="fila"><span>Para reservar (30%)</span><b>' + plata(q.reserva) + '</b></div>';
+    if (q.descuento) {
+      h += '<div class="fila destacada"><span>Pagando todo antes del 1/12</span><b>' + plata(q.aPagar) + '</b></div><p class="chiquito">Ahorrás ' + plata(q.descuento) + '.</p>';
+    } else if (c.enero && c.febrero) {
+      h += '<p class="chiquito">El 15% de descuento era para los pagos hechos hasta el 30 de noviembre.</p>';
+    } else {
+      h += '<p class="chiquito">El 15% de descuento es para quien va enero y febrero y paga todo antes del 1 de diciembre.</p>';
+    }
+    out.innerHTML = h;
+  }
+  $("cuenta").addEventListener("change", calcular);
+  calcular();
+
+  /* ---------- Chicos del formulario ---------- */
+  var lista = $("chicos"), seq = 0;
+  function opciones(k, mes) {
+    var base = "c" + k + "-" + mes;
+    return '<div class="campo" data-campo="' + mes + '"><span id="' + base + '-l">' + (mes === "enero" ? "Enero" : "Febrero") + '</span>' +
+      '<div class="opciones" role="radiogroup" aria-labelledby="' + base + '-l">' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-no" value="" checked><span>No va</span></label>' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-jc" value="jc"><span>Jornada completa</span></label>' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-mj" value="mj"><span>Media jornada</span></label>' +
+      '</div></div>';
+  }
+  function agregarChico(foco) {
+    if (lista.children.length >= MAX_CHICOS) return;
+    seq++;
+    var k = seq, p = "c" + k + "-";
+    var html = '<fieldset class="hoja chico-card" data-k="' + k + '"><legend>Chico <span class="n"></span></legend>' +
+      '<button type="button" class="boton link quitar" data-quitar="' + k + '">Quitar</button>' +
+      '<div class="grilla">' +
+      '<label class="campo ancho"><span>Nombre y apellido</span><input type="text" id="' + p + 'nombre" maxlength="80" required autocomplete="off"></label>' +
+      '<label class="campo"><span>Fecha de nacimiento</span><input type="date" id="' + p + 'nacimiento" required min="2008-01-01" max="' + hoyAR() + '"></label>' +
+      '<label class="campo"><span>DNI <small>(para el seguro)</small></span><input type="text" id="' + p + 'dni" inputmode="numeric" maxlength="12" autocomplete="off"></label>' +
+      opciones(k, "enero") + opciones(k, "febrero") +
+      '<label class="campo"><span>Obra social o prepaga <small>(opcional)</small></span><input type="text" id="' + p + 'obra" maxlength="80" autocomplete="off"></label>' +
+      '<label class="campo ancho"><span>Alergias, medicación o algo que tengamos que saber <small>(opcional)</small></span><textarea id="' + p + 'salud" rows="2" maxlength="600"></textarea></label>' +
+      '</div></fieldset>';
+    lista.insertAdjacentHTML("beforeend", html);
+    numerar();
+    if (foco) $(p + "nombre").focus();
+  }
+  function numerar() {
+    var cards = lista.querySelectorAll(".chico-card");
+    cards.forEach(function (c, i) {
+      c.querySelector(".n").textContent = cards.length > 1 ? String(i + 1) : "";
+      c.querySelector(".quitar").hidden = cards.length < 2;
+    });
+    $("sumar").hidden = cards.length >= MAX_CHICOS;
+    resumen();
+  }
+  lista.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-quitar]");
+    if (!b) return;
+    var card = lista.querySelector('.chico-card[data-k="' + b.getAttribute("data-quitar") + '"]');
+    if (card) card.remove();
+    numerar();
+  });
+  $("sumar").addEventListener("click", function () { agregarChico(true); });
+
+  function leerChicos() {
+    return Array.prototype.map.call(lista.querySelectorAll(".chico-card"), function (card) {
+      var p = "c" + card.getAttribute("data-k") + "-";
+      return {
+        k: card.getAttribute("data-k"),
+        nombre: $(p + "nombre").value.trim(),
+        nacimiento: $(p + "nacimiento").value,
+        dni: $(p + "dni").value.replace(/\D/g, ""),
+        obra: $(p + "obra").value.trim(),
+        salud: $(p + "salud").value.trim(),
+        enero: marcado(p + "enero"),
+        febrero: marcado(p + "febrero")
+      };
+    });
+  }
+
+  /* ---------- Resumen en vivo ---------- */
+  function resumen() {
+    var chicos = leerChicos(), pago = marcado("pago");
+    var q = cotizar(chicos, pago);
+    var hayDos = chicos.some(function (c) { return c.enero && c.febrero; });
+    var qt = cotizar(chicos, "total");
+    $("pago-reserva-t").textContent = "Reservo con el 30%" + (q.total ? ": " + plata(q.reserva) : "");
+    $("pago-reserva-s").textContent = "Abonás la reserva para guardar el lugar y el resto lo coordinamos.";
+    $("pago-total-t").textContent = "Pago todo antes del 1 de diciembre" + (qt.total ? ": " + plata(qt.aPagar) : "");
+    $("pago-total-s").textContent = !promoVigente ? "La promo del 15% terminó el 30 de noviembre."
+      : qt.descuento ? "Con 15% de descuento: ahorrás " + plata(qt.descuento) + "."
+      : hayDos ? "" : "El 15% de descuento es para quien va enero y febrero.";
+    var items = chicos.map(function (c, i) {
+      var meses = [];
+      if (c.enero) meses.push("enero " + (c.enero === "jc" ? "completa" : "media"));
+      if (c.febrero) meses.push("febrero " + (c.febrero === "jc" ? "completa" : "media"));
+      var nom = c.nombre || "Chico " + (i + 1);
+      return '<li><span>' + esc(nom) + (meses.length ? " · " + esc(meses.join(" y ")) : ' · <i>elegí los meses</i>') + '</span><b>' + plata(q.filas[i].cuota) + '</b></li>';
+    }).join("");
+    var pie = "";
+    if (q.total) {
+      pie = '<div class="filas"><div class="fila"><span>Total de cuotas</span><b>' + plata(q.total) + '</b></div>';
+      if (pago === "total") {
+        if (q.descuento) pie += '<div class="fila"><span>Descuento del 15%</span><b>−' + plata(q.descuento) + '</b></div>';
+        pie += '<div class="fila destacada"><span>A pagar antes del 1/12</span><b>' + plata(q.aPagar) + '</b></div>';
+      } else {
+        pie += '<div class="fila destacada"><span>Reserva (30%)</span><b>' + plata(q.reserva) + '</b></div><div class="fila"><span>Saldo</span><b>' + plata(q.total - q.reserva) + '</b></div>';
+      }
+      pie += "</div>";
+    }
+    $("resumen").innerHTML = '<h3>Tu inscripción</h3><ul>' + items + '</ul>' + pie;
+  }
+  $("form").addEventListener("input", resumen);
+  $("form").addEventListener("change", resumen);
+
+  /* ---------- Validación ---------- */
+  function marcar(el, mal) { var c = el.closest(".campo, .check"); if (c) c.classList.toggle("mal", mal); }
+  function validar() {
+    document.querySelectorAll("#form .mal").forEach(function (c) { c.classList.remove("mal"); });
+    var problemas = [];
+    function falta(el, msg) { marcar(el, true); problemas.push({ el: el, msg: msg }); }
+    if ($("r-nombre").value.trim().length < 3) falta($("r-nombre"), "Falta tu nombre y apellido.");
+    if ($("r-telefono").value.replace(/\D/g, "").length < 8) falta($("r-telefono"), "Revisá el teléfono: tiene que tener al menos 8 números.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($("r-email").value.trim())) falta($("r-email"), "Revisá el email.");
+    leerChicos().forEach(function (c, i) {
+      var p = "c" + c.k + "-", quien = lista.querySelectorAll(".chico-card").length > 1 ? " del chico " + (i + 1) : " del chico";
+      if (c.nombre.length < 3) falta($(p + "nombre"), "Falta el nombre y apellido" + quien + ".");
+      if (!c.nacimiento || c.nacimiento > hoyAR() || c.nacimiento < "2008-01-01") falta($(p + "nacimiento"), "Revisá la fecha de nacimiento" + quien + ".");
+      if (!c.enero && !c.febrero) { var g = $(p + "enero-no"); marcar(g, true); problemas.push({ el: g, msg: "Elegí enero, febrero o los dos" + quien + "." }); }
+    });
+    if ($("e-contacto").value.trim().length < 6) falta($("e-contacto"), "Falta un contacto para emergencias.");
+    if (!$("acepta").checked) falta($("acepta"), "Para mandar la inscripción tenés que aceptar que guardemos los datos.");
+    return problemas;
+  }
+
+  /* ---------- Envío ---------- */
+  function datos() {
+    var chicos = leerChicos().map(function (c) { delete c.k; return c; });
+    var pago = marcado("pago");
+    return {
+      tipo: "el-candor-inscripcion", version: 1, enviado: new Date().toISOString(),
+      responsable: { nombre: $("r-nombre").value.trim(), telefono: $("r-telefono").value.trim(), email: $("r-email").value.trim() },
+      emergencia: $("e-contacto").value.trim(),
+      chicos: chicos, pago: pago, comentarios: $("comentarios").value.trim(), acepta: $("acepta").checked,
+      web: $("web").value, cotizacion: cotizar(chicos, pago)
+    };
+  }
+  function textoPlano(d) {
+    var q = d.cotizacion, l = ["Inscripción a la colonia El Candor", "", "Adulto responsable: " + d.responsable.nombre, "Teléfono: " + d.responsable.telefono, "Email: " + d.responsable.email, ""];
+    d.chicos.forEach(function (c, i) {
+      l.push((d.chicos.length > 1 ? "Chico " + (i + 1) + ": " : "Chico: ") + c.nombre);
+      l.push("  Nacimiento: " + c.nacimiento.split("-").reverse().join("/") + (c.dni ? " · DNI " + c.dni : ""));
+      l.push("  Enero: " + MOD[c.enero] + " · Febrero: " + MOD[c.febrero]);
+      if (c.obra) l.push("  Obra social: " + c.obra);
+      if (c.salud) l.push("  Salud: " + c.salud);
+    });
+    l.push("", "Emergencias: " + d.emergencia);
+    l.push("Pago: " + (d.pago === "total" ? "todo antes del 1/12, " + plata(q.aPagar) + (q.descuento ? " (con 15% de descuento)" : "") : "reserva del 30%, " + plata(q.reserva) + " de " + plata(q.total)));
+    if (d.comentarios) l.push("Comentarios: " + d.comentarios);
+    return l.join("\n");
+  }
+  function mostrarAlternativa(titulo, msg, d) {
+    $("alt-titulo").textContent = titulo;
+    $("alt-txt").textContent = msg;
+    $("alt-datos").value = textoPlano(d);
+    var wa = $("alt-wa");
+    if (WHATSAPP) { wa.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(textoPlano(d)); wa.hidden = false; } else wa.hidden = true;
+    var mail = $("alt-mail");
+    if (EMAIL) { mail.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Inscripción a El Candor") + "&body=" + encodeURIComponent(textoPlano(d)); mail.hidden = false; } else mail.hidden = true;
+    $("form").hidden = true;
+    $("alternativa").hidden = false;
+    $("alternativa").focus();
+  }
+  function aDonde() {
+    var c = [];
+    if (WHATSAPP) c.push("por WhatsApp");
+    if (EMAIL) c.push("a " + EMAIL);
+    return c.length ? " " + c.join(" o ") + "." : ".";
+  }
+  function cargando(on) { var b = $("enviar"); b.disabled = on; b.textContent = on ? "Enviando…" : "Enviar inscripción"; }
+  function error(msg) { var e = $("error"); e.textContent = msg || ""; e.hidden = !msg; }
+
+  $("form").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var probs = validar();
+    if (probs.length) {
+      error(probs[0].msg + (probs.length > 1 ? " (y " + (probs.length - 1) + (probs.length === 2 ? " cosa más)" : " cosas más)") : ""));
+      try { probs[0].el.focus({ preventScroll: true }); probs[0].el.scrollIntoView({ block: "center" }); } catch (e) { probs[0].el.focus(); }
+      return;
+    }
+    error("");
+    var d = datos();
+    if (!API_URL) {
+      mostrarAlternativa("Mandanos los datos", "Para terminar la inscripción, mandanos estos datos" + aDonde() + " Te respondemos para coordinar el pago.", d);
+      return;
+    }
+    cargando(true);
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var corte = setTimeout(function () { if (ctrl) ctrl.abort(); }, 30000);
+    fetch(API_URL, { method: "POST", body: JSON.stringify(d), signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (res) {
+        clearTimeout(corte);
+        if (!res || !res.ok) throw new Error((res && res.error) || "sin respuesta");
+        listo(d, res);
+      })
+      .catch(function () {
+        clearTimeout(corte);
+        cargando(false);
+        mostrarAlternativa("No se pudo enviar", "Hubo un problema con la conexión. Probá de nuevo en un rato, o mandanos estos datos" + aDonde(), d);
+      });
+  });
+
+  function listo(d, res) {
+    cargando(false);
+    var q = res.cotizacion || d.cotizacion;
+    var nombre = d.responsable.nombre.split(" ")[0];
+    var quienes = d.chicos.map(function (c) { return c.nombre.split(" ")[0]; });
+    var a = quienes.length > 1 ? quienes.slice(0, -1).join(", ") + " y " + quienes[quienes.length - 1] : quienes[0];
+    $("listo-nro").textContent = res.id ? "Inscripción " + res.id : "";
+    $("listo-txt").textContent = "Gracias, " + nombre + ". Ya tenemos los datos de " + a + ". Te escribimos a " + d.responsable.email + " o al " + d.responsable.telefono + " para coordinar " +
+      (d.pago === "total" ? "el pago de " + plata(q.aPagar) + "." : "el pago de la reserva de " + plata(q.reserva) + ".");
+    $("form").hidden = true;
+    $("listo").hidden = false;
+    $("listo").focus();
+  }
+  $("otra").addEventListener("click", function () {
+    $("form").reset();
+    lista.innerHTML = ""; agregarChico(false);
+    $("listo").hidden = true; $("form").hidden = false;
+    $("r-nombre").focus();
+  });
+  $("alt-volver").addEventListener("click", function () { $("alternativa").hidden = true; $("form").hidden = false; $("enviar").focus(); });
+  $("alt-copiar").addEventListener("click", function () {
+    var t = $("alt-datos"), b = $("alt-copiar");
+    function hecho() { b.textContent = "¡Copiado!"; setTimeout(function () { b.textContent = "Copiar los datos"; }, 2200); }
+    function aMano() { t.focus(); t.select(); b.textContent = "Seleccionado: copialo con Ctrl+C"; }
+    try { navigator.clipboard.writeText(t.value).then(hecho, aMano); } catch (e) { aMano(); }
+  });
+
+  /* ---------- Contacto en el pie ---------- */
+  function waVisible(n) { var m = /^549(11)(\d{4})(\d{4})$/.exec(n); return m ? "+54 9 " + m[1] + " " + m[2] + "-" + m[3] : "+" + n; }
+  document.querySelectorAll(".wa-link").forEach(function (a) { if (WHATSAPP) a.href = "https://wa.me/" + WHATSAPP; else a.hidden = true; });
+  document.querySelectorAll(".wa-num").forEach(function (a) { if (WHATSAPP) a.textContent = waVisible(WHATSAPP); });
+  try { $("compartir").href = "https://wa.me/?text=" + encodeURIComponent("Mirá la colonia de verano El Candor: " + location.origin + location.pathname); } catch (e) {}
+  var cont = [];
+  if (WHATSAPP) cont.push('<a href="https://wa.me/' + esc(WHATSAPP) + '" target="_blank" rel="noopener">WhatsApp ' + esc(waVisible(WHATSAPP)) + '</a>');
+  if (EMAIL) cont.push('<a href="mailto:' + esc(EMAIL) + '">' + esc(EMAIL) + '</a>');
+  if (cont.length) $("contacto").insertAdjacentHTML("afterbegin", cont.join(""));
+
+  agregarChico(false);
+})();
+</script>
