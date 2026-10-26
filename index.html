@@ -5,9 +5,9 @@
 <!-- vista previa: desde acá -->
 <title>Colonia El Candor</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Colonia de verano El Candor en el Colegio Armenio de Florida, Vicente López: del 4 de enero al 19 de febrero de 2027, jornada completa o media jornada. Manualidades, cocina, plantines y juego. Que brille lo que sos.">
+<meta name="description" content="Colonia de verano El Candor en el Colegio Armenio de Florida, Vicente López: del 4 de enero al 19 de febrero de 2027, jornada completa o media jornada, para niños de 2 a 6 años. Cocina, arte, música, manualidades, juegos, deporte y huerta.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Colonia El Candor · Que brille lo que sos">
+<meta property="og:title" content="Colonia El Candor · Un verano para jugar, descubrir y crecer">
 <meta property="og:description" content="Colonia de verano 2027, del 4 de enero al 19 de febrero en Florida, Vicente López. Un verano para jugar, descubrir y crecer. Inscripciones abiertas.">
 <meta property="og:image" content="https://espacioelcandor.github.io/fotos/cocina-mesa.jpg">
 <meta name="theme-color" content="#8fcdfb">
@@ -138,41 +138,48 @@ p { margin: 0; }
 .seccion > .envoltura > h2, .titular { font-size: clamp(42px, 6.4vw, 66px); }
 .titular { display: inline-block; text-decoration: underline wavy var(--naranja) 3px; text-underline-offset: 12px; text-decoration-skip-ink: none; }
 .bajada { margin-top: 14px; max-width: 60ch; font-size: 21px; color: var(--ink-soft); }
-.dos { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(28px, 5vw, 56px); align-items: center; }
 
-/* ¿por qué El Candor? */
+/* nota de cuaderno */
 .nota { position: relative; background-color: var(--card); background-image: linear-gradient(90deg, transparent 46px, var(--rosa-suave) 46px, var(--rosa-suave) 48px, transparent 48px), repeating-linear-gradient(transparent 0 33px, var(--grid) 33px 35px); border: 3px solid var(--ink); border-radius: var(--borde); padding: 30px 26px 30px 64px; box-shadow: 0 8px 20px var(--sombra); transform: rotate(-0.8deg); }
-.nota h2 { font-size: clamp(38px, 5.4vw, 56px); margin-bottom: 14px; }
-.nota h2 span { color: var(--rojo); }
+.nota h3 { font-size: clamp(34px, 4.6vw, 46px); line-height: 70px; }
+.nota h3 + p { margin-top: 0; }
 .nota p { line-height: 35px; font-size: 21px; }
 .nota p + p { margin-top: 35px; }
 .cinta::before { content: ""; position: absolute; top: -16px; left: 50%; width: 120px; height: 30px; margin-left: -60px; background: var(--cinta); transform: rotate(-3deg); }
-.definicion { position: relative; background: var(--celeste-suave); border: 3px dashed var(--azul); border-radius: var(--borde); padding: 26px 24px; transform: rotate(1.6deg); }
-.definicion .palabra { font-family: var(--display); font-size: clamp(44px, 6vw, 64px); color: var(--azul); line-height: 1; }
-.definicion .tipo { font-size: 18px; color: var(--ink-soft); }
-.definicion ol { margin: 12px 0 0; padding-left: 28px; display: grid; gap: 8px; font-size: 22px; }
-.definicion .origen { margin-top: 14px; font-size: 18px; color: var(--ink-soft); }
-.estrellita { position: absolute; width: 54px; height: 54px; }
 
-/* talleres */
-.talleres { display: grid; gap: clamp(48px, 7vw, 80px); margin-top: clamp(34px, 5vw, 54px); }
-.taller { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(26px, 5vw, 56px); align-items: center; }
-.taller.al-reves { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
-.taller.al-reves .texto { order: 2; }
-.taller h3 { font-size: clamp(36px, 5vw, 50px); }
-.taller h3 .ico { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-right: 6px; }
-.taller .texto p { margin-top: 10px; font-size: 21px; max-width: 42ch; }
-.taller .etiquetas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.taller .etiquetas span { font-family: var(--display); font-size: 19px; padding: 2px 12px 3px; border: 2px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); }
-.taller .etiquetas span:nth-child(5n+1) { background: var(--verde-suave); } .taller .etiquetas span:nth-child(5n+2) { background: var(--rosa-suave); }
-.taller .etiquetas span:nth-child(5n+3) { background: var(--amarillo-suave); } .taller .etiquetas span:nth-child(5n+4) { background: var(--celeste-suave); }
-.collage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 26px 22px; align-items: start; }
-.collage .grande { grid-column: 1 / -1; }
+/* actividades */
+.actividades { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; }
+.actividades li { font-family: var(--display); font-size: clamp(22px, 2.8vw, 28px); line-height: 1.1; padding: 4px 16px 6px; border: 2.5px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); transform: rotate(-1.5deg); }
+.actividades li:nth-child(7n+1) { background: var(--naranja-suave, var(--amarillo-suave)); transform: rotate(1.2deg); }
+.actividades li:nth-child(7n+2) { background: var(--rosa-suave); }
+.actividades li:nth-child(7n+3) { background: var(--celeste-suave); transform: rotate(1.8deg); }
+.actividades li:nth-child(7n+4) { background: var(--amarillo-suave); }
+.actividades li:nth-child(7n+5) { background: var(--verde-suave); transform: rotate(1deg); }
+.actividades li:nth-child(7n+6) { background: var(--rosa-suave); transform: rotate(-2deg); }
+.actividades li:nth-child(7n+7) { background: var(--verde-suave); transform: rotate(2deg); }
+.galeria { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 30px 18px; margin-top: clamp(30px, 4vw, 44px); }
+.galeria .foto { padding: 7px 7px 9px; }
+.galeria .foto::before { width: 64px; height: 20px; margin-left: -32px; top: -10px; }
+.galeria .foto img { aspect-ratio: 1; object-fit: cover; }
+.galeria .foto:nth-child(4n+1) { --giro: -2deg; } .galeria .foto:nth-child(4n+2) { --giro: 1.6deg; }
+.galeria .foto:nth-child(4n+3) { --giro: -1deg; } .galeria .foto:nth-child(4n+4) { --giro: 2.2deg; }
 .foto { position: relative; margin: 0; background: var(--polaroid); padding: 10px 10px 12px; box-shadow: 0 8px 18px var(--sombra); transform: rotate(var(--giro, -1.6deg)); }
 .foto::before { content: ""; position: absolute; top: -14px; left: 50%; width: 104px; height: 28px; margin-left: -52px; background: var(--cinta); transform: rotate(-4deg); }
 .foto img { display: block; width: 100%; height: auto; }
 .foto figcaption { font-family: var(--display); font-size: 20px; line-height: 1.2; color: var(--polaroid-ink); text-align: center; padding-top: 8px; }
-.aviso-caras { margin-top: clamp(34px, 5vw, 50px); display: flex; gap: 12px; align-items: center; font-size: 19px; color: var(--ink-soft); }
+.ver-foto { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.ver-foto:focus-visible { outline: 3px dashed var(--azul); outline-offset: 4px; }
+.galeria:not(.abierta) .extra { display: none; }
+.mas-fotos { margin-top: 28px; text-align: center; }
+dialog.visor { border: 0; padding: 0; background: transparent; width: min(900px, calc(100vw - 20px)); max-height: calc(100vh - 20px); overflow: visible; }
+dialog.visor::backdrop { background: rgba(20, 24, 22, 0.85); }
+.visor-hoja { background: var(--polaroid); padding: 10px 10px 12px; display: grid; gap: 10px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
+.visor-hoja img { display: block; max-width: 100%; max-height: calc(100vh - 130px); width: auto; height: auto; margin: 0 auto; }
+.visor-barra { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.visor-barra .texto { font-family: var(--display); font-size: 20px; color: var(--polaroid-ink); }
+.visor-barra .botones { display: flex; flex-wrap: wrap; gap: 8px; }
+.visor .boton { font-size: 19px; padding: 5px 14px 7px; color: #2b2733; background: #ffffff; border-color: #2b2733; box-shadow: 2px 3px 0 #2b2733; }
+.aviso-caras { margin-top: clamp(30px, 4vw, 44px); display: flex; gap: 12px; align-items: center; font-size: 19px; color: var(--ink-soft); }
 .aviso-caras svg { flex: none; width: 44px; height: 44px; }
 
 /* flyer */
@@ -189,21 +196,11 @@ p { margin: 0; }
 .compartir { margin-top: 16px; }
 
 /* quiénes somos */
-.mv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(26px, 4vw, 44px); margin-top: 38px; }
-.mv article { position: relative; border: 3px solid var(--ink); border-radius: var(--borde); padding: 28px 26px 26px; box-shadow: 0 8px 20px var(--sombra); }
-.mv article::before { content: ""; position: absolute; top: -16px; left: 50%; width: 110px; height: 30px; margin-left: -55px; background: var(--cinta); transform: rotate(-3deg); }
-.mv .mision { background: var(--amarillo-suave); transform: rotate(-1deg); }
-.mv .vision { background: var(--celeste-suave); transform: rotate(0.9deg); }
-.mv h3 { font-size: clamp(36px, 4.8vw, 48px); }
-.mv p { margin-top: 10px; font-size: 21px; }
-.valores-titulo { margin-top: clamp(44px, 6vw, 64px); font-size: clamp(36px, 4.8vw, 48px); }
-.valores { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-.valor { background: var(--card); border: 2.5px solid var(--ink); border-radius: var(--borde); padding: 18px 20px 20px; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 2px 14px; align-content: start; }
-.valor svg { width: 56px; height: 56px; grid-row: span 2; }
-.valor h4 { font-family: var(--display); font-weight: 400; font-size: 29px; line-height: 1.1; margin: 0; }
-.valor p { font-size: 19px; }
-.valor:nth-child(6n+1) { border-color: var(--rojo); } .valor:nth-child(6n+2) { border-color: var(--naranja); } .valor:nth-child(6n+3) { border-color: var(--rosa); }
-.valor:nth-child(6n+4) { border-color: var(--azul); } .valor:nth-child(6n+5) { border-color: var(--violeta); } .valor:nth-child(6n+6) { border-color: var(--verde); }
+.quienes-caja { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: clamp(30px, 5vw, 60px); align-items: center; margin-top: 38px; }
+.retrato { max-width: 340px; width: 100%; justify-self: center; }
+.retrato img { aspect-ratio: 3 / 4; object-fit: cover; }
+.retrato-dibujo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; background: var(--celeste-suave); }
+.valores-titulo { margin-top: 35px; }
 
 /* dónde estamos */
 .donde { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(26px, 5vw, 56px); align-items: center; margin-top: 30px; }
@@ -224,17 +221,8 @@ p { margin: 0; }
 .etiqueta .monto { font-family: var(--display); font-size: clamp(54px, 8vw, 84px); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
 .etiqueta .por { font-size: 21px; }
 .etiqueta .nota-precio { margin-top: 10px; font-size: 19px; color: var(--ink-soft); }
-.reglas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 40px); margin-top: clamp(30px, 4vw, 44px); }
-.regla { position: relative; background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 22px 24px; }
-.regla h3 { font-size: clamp(28px, 3.6vw, 36px); }
-.regla p { margin-top: 8px; font-size: 20px; }
-.regla .chiquito { font-size: 18px; color: var(--ink-soft); }
-.regla.promo { background: var(--verde-suave); padding-right: 118px; }
-.sticker { position: absolute; top: -26px; right: -10px; width: 124px; height: 124px; transform: rotate(10deg); }
-.sticker text { font-family: var(--display); fill: var(--on-color); }
-.cuenta { margin-top: clamp(30px, 4vw, 44px); background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 24px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 36px; align-items: start; }
-.cuenta h3 { font-size: clamp(30px, 4vw, 40px); grid-column: 1 / -1; }
-.cuenta .elegir { display: grid; gap: 14px; }
+.condiciones { list-style: none; margin: clamp(24px, 3vw, 34px) 0 0; padding: 0; display: grid; gap: 8px; font-size: 21px; }
+.condiciones b { font-family: var(--display); font-weight: 400; font-size: 24px; color: var(--rojo); }
 .filas { display: grid; gap: 6px; font-variant-numeric: tabular-nums; }
 .fila { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; border-bottom: 2px dotted var(--grid); padding-bottom: 4px; }
 .fila b { font-family: var(--display); font-weight: 400; font-size: 28px; white-space: nowrap; }
@@ -301,23 +289,20 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
 .pie .contacto { display: flex; flex-wrap: wrap; gap: 6px 20px; }
 
 @media (max-width: 860px) {
-  .dos, .taller, .taller.al-reves, .reglas, .cuenta, .mv, .donde, .flyer-caja { grid-template-columns: minmax(0, 1fr); }
+  .donde, .flyer-caja, .quienes-caja { grid-template-columns: minmax(0, 1fr); }
+  .galeria { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .flyer { max-width: 320px; }
-  .valores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .taller.al-reves .texto { order: 0; }
-  .definicion { transform: rotate(1deg); }
 }
 @media (max-width: 620px) {
   body { font-size: 19px; }
-  .precios, .grilla, .valores { grid-template-columns: minmax(0, 1fr); }
+  .precios, .grilla { grid-template-columns: minmax(0, 1fr); }
+  .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+  .nota h3 { line-height: 52px; }
   .datos li { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .menu { padding-right: 104px; gap: 2px 14px; }
   .menu .marca { flex-basis: 100%; }
   .menu a:not(.marca) { font-size: 19px; }
   .nota { padding: 26px 18px 26px 50px; background-image: linear-gradient(90deg, transparent 34px, var(--rosa-suave) 34px, var(--rosa-suave) 36px, transparent 36px), repeating-linear-gradient(transparent 0 33px, var(--grid) 33px 35px); }
-  .regla.promo { padding-right: 24px; padding-top: 64px; }
-  .sticker { width: 100px; height: 100px; top: -30px; right: -4px; }
-  .collage { gap: 22px 14px; }
   .foto figcaption { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -380,7 +365,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     <nav class="menu" aria-label="Secciones">
       <a class="marca" href="#arriba" id="arriba">El <b>Candor</b></a>
       <a href="#quienes">Quiénes somos</a>
-      <a href="#que-hacemos">Qué hacemos</a>
+      <a href="#que-hacemos">Actividades</a>
       <a href="#donde">Dónde estamos</a>
       <a href="#precios">Precios</a>
       <a href="#inscripcion">Inscripción</a>
@@ -388,8 +373,8 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     <div class="hero">
       <p class="antetitulo">Colonia de verano 2027 · del 4 de enero al 19 de febrero</p>
       <h1 class="titulo"><span class="oculto">El Candor</span><span aria-hidden="true"><i>E</i><i>l</i><span class="espacio"></span><i>C</i><i>a</i><i>n</i><i>d</i><i>o</i><i>r</i></span></h1>
-      <p class="eslogan">Que brille lo que sos</p>
-      <p class="bajada">Cocinamos, creamos, sembramos y jugamos. Jornada completa o media jornada, con lugar para cada chico tal como es.</p>
+      <p class="eslogan">Un verano para jugar, descubrir y crecer</p>
+      <p class="bajada">Para niños de 2 a 6 años. Jornada completa o media jornada.</p>
       <div class="acciones">
         <a class="boton amarillo" href="#inscripcion">Hacer la inscripción</a>
         <a class="boton" href="#precios">Ver precios</a>
@@ -459,9 +444,10 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       </figure>
       <div class="flyer-texto">
         <p class="sello">¡Inscripciones abiertas!</p>
-        <h2>Un verano para jugar, descubrir y crecer</h2>
+        <h2>¡Te esperamos este verano!</h2>
         <ul class="datos">
           <li><b>Cuándo</b> Del 4 de enero al 19 de febrero de 2027</li>
+          <li><b>Para</b> Niños de 2 a 6 años</li>
           <li><b>Dónde</b> Arenales 1540, Florida, Vicente López</li>
           <li><b>WhatsApp</b> <a class="wa-link wa-num" href="https://wa.me/5491171228824" target="_blank" rel="noopener">+54 9 11 7122-8824</a></li>
         </ul>
@@ -474,112 +460,67 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     </div>
   </section>
 
-  <section class="seccion" id="nombre">
-    <div class="envoltura dos">
-      <div class="nota cinta">
-        <h2>¿Por qué <span>El Candor</span>?</h2>
-        <p><b>Candor</b> viene del latín <i>candere</i>, que quiere decir brillar. Es la blancura que brilla, como la luz del sol.</p>
-        <p>En castellano también es sinceridad, sencillez y pureza de ánimo: la manera de mirar que tienen los chicos cuando juegan sin apuro y dicen lo que sienten.</p>
-        <p>Por eso elegimos este nombre. En la colonia cada chico juega, crea y se anima siendo como es.</p>
-      </div>
-      <div class="definicion" aria-label="Definición de candor">
-        <svg class="estrellita" style="top:-26px;right:18px" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rAmarillo)" d="M12 2L15 9L22 9.5L16.5 14L18.5 21L12 17L5.5 21L7.5 14L2 9.5L9 9Z"/><path class="t-fino" style="stroke-width:1.4" d="M12 2L15 9L22 9.5L16.5 14L18.5 21L12 17L5.5 21L7.5 14L2 9.5L9 9Z"/></g></svg>
-        <p class="palabra">candor</p>
-        <p class="tipo">sustantivo masculino</p>
-        <ol>
-          <li>Blancura que brilla.</li>
-          <li>Sinceridad, sencillez, ingenuidad y pureza del ánimo.</li>
-        </ol>
-        <p class="origen">Del latín <i>candor</i>, de <i>candere</i>: brillar, ser blanco.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="seccion" id="quienes">
     <div class="envoltura">
       <h2 class="titular">Quiénes somos</h2>
-      <div class="mv">
-        <article class="mision">
-          <h3>Misión</h3>
-          <p>Acompañar a los chicos en un verano de juego, creatividad y encuentro, en un lugar seguro y cálido donde cada uno pueda expresarse, aprender haciendo y crecer siendo como es.</p>
-        </article>
-        <article class="vision">
-          <h3>Visión</h3>
-          <p>Ser la colonia que las familias de la zona eligen cada verano por su calidez y su sencillez: un lugar donde los chicos juegan, crean con las manos, se conectan con la naturaleza y hacen amigos.</p>
-        </article>
+      <div class="quienes-caja">
+        <figure class="foto retrato" style="--giro:-2deg">
+          <svg class="retrato-dibujo" viewBox="0 0 300 380" role="img" aria-label="Dibujo de Luli"><g filter="url(#lapiz)"><circle cx="150" cy="70" r="40" fill="url(#rAmarillo)"/><path class="t-naranja" style="stroke-width:6" d="M150 8V18M150 122V132M88 70H98M202 70H212M106 26L113 33M187 107L194 114M106 114L113 107M187 33L194 26"/><path fill="url(#rMarron)" d="M98 210Q96 150 150 148Q204 150 202 210Q206 252 190 266L110 266Q94 252 98 210Z"/><circle class="c-papel" cx="150" cy="212" r="44"/><circle class="t" cx="150" cy="212" r="44"/><path class="t" d="M98 210Q96 150 150 148Q204 150 202 210"/><circle class="c-tinta" cx="135" cy="206" r="4"/><circle class="c-tinta" cx="165" cy="206" r="4"/><path class="t-fino" d="M136 226Q150 238 164 226"/><circle class="c-rosa" cx="124" cy="222" r="7"/><circle class="c-rosa" cx="176" cy="222" r="7"/><path fill="url(#rRosa)" d="M96 372Q98 268 150 262Q202 268 204 372Z"/><path class="t" d="M96 372Q98 268 150 262Q202 268 204 372"/><path fill="url(#rRojo)" d="M150 326C136 316 128 308 128 299A9 9 0 0 1 150 295A9 9 0 0 1 172 299C172 308 164 316 150 326Z"/></g></svg>
+          <figcaption>Luli</figcaption>
+        </figure>
+        <div class="nota cinta">
+          <h3>Soy Luli</h3>
+          <p>Mamá, enfermera y doula.</p>
+          <h3 class="valores-titulo">Nuestros valores</h3>
+          <p>Sabemos, como padres, la importancia de confiar el cuidado de nuestros hijos a otra persona y de que los cuiden como los cuidaríamos nosotros.</p>
+          <p>Por eso queremos garantizar la diversión y el cuidado de cada niño, con mucho amor y paciencia, enalteciendo sus logros y acompañando cada proceso.</p>
+        </div>
       </div>
-      <h3 class="valores-titulo">Nuestros valores</h3>
-      <ul class="valores">
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRojo)" d="M28 48C14 38 7 30 7 21A10 10 0 0 1 28 16A10 10 0 0 1 49 21C49 30 42 38 28 48Z"/><path class="t-fino" d="M28 48C14 38 7 30 7 21A10 10 0 0 1 28 16A10 10 0 0 1 49 21C49 30 42 38 28 48Z"/></g></svg>
-          <h4>Sinceridad</h4>
-          <p>Decimos lo que sentimos y escuchamos a los demás. Es lo que quiere decir candor.</p>
-        </li>
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-naranja" style="stroke-width:4" d="M28 3V9M28 47V53M3 28H9M47 28H53M10 10L14 14M42 42L46 46M10 46L14 42M42 14L46 10"/><circle cx="28" cy="28" r="15" fill="url(#rAmarillo)"/><circle cx="28" cy="28" r="15" fill="none" stroke="var(--naranja)" stroke-width="2.6"/><circle class="c-tinta" cx="23" cy="25" r="2"/><circle class="c-tinta" cx="33" cy="25" r="2"/><path class="t-fino" d="M22 32Q28 38 34 32"/></g></svg>
-          <h4>Alegría</h4>
-          <p>El juego está en el centro de cada día. Venir a la colonia tiene que ser una fiesta.</p>
-        </li>
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRosa)" d="M14 34L34 14A8 8 0 0 1 45 25L25 45A8 8 0 0 1 14 34Z"/><path class="t-fino" d="M14 34L34 14A8 8 0 0 1 45 25L25 45A8 8 0 0 1 14 34Z"/><rect class="c-papel" x="23" y="23" width="10" height="10" transform="rotate(45 28 28)"/><rect class="t-fino" x="23" y="23" width="10" height="10" transform="rotate(45 28 28)"/></g></svg>
-          <h4>Cuidado</h4>
-          <p>La seguridad y el bienestar de cada chico van primero, en cada actividad.</p>
-        </li>
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rAzul)" d="M8 42L36 14L44 22L16 50Z"/><path class="t-fino" d="M8 42L36 14L44 22L16 50ZM36 14L48 6L44 22M30 20L38 28"/><path class="c-tinta" d="M48 6L46 13L41 11Z"/></g></svg>
-          <h4>Creatividad</h4>
-          <p>Aprendemos haciendo, con las manos y la imaginación. Equivocarse también vale.</p>
-        </li>
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-verde" style="stroke-width:3.5" d="M28 52V30M28 44Q18 42 16 34M28 40Q36 38 40 32"/><g fill="url(#rVioleta)"><circle cx="28" cy="12" r="7"/><circle cx="37" cy="18" r="7"/><circle cx="34" cy="28" r="7"/><circle cx="22" cy="28" r="7"/><circle cx="19" cy="18" r="7"/></g><circle class="c-amarillo" cx="28" cy="20" r="5"/></g></svg>
-          <h4>Respeto</h4>
-          <p>Cada chico es único. Respetamos sus tiempos, sus gustos y su manera de ser.</p>
-        </li>
-        <li class="valor">
-          <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><circle class="c-papel" cx="16" cy="12" r="7"/><circle class="t-fino" cx="16" cy="12" r="7"/><circle class="c-papel" cx="40" cy="12" r="7"/><circle class="t-fino" cx="40" cy="12" r="7"/><path fill="url(#rVerde)" d="M8 38L16 20L24 38Z"/><path fill="url(#rNaranja)" d="M33 21H47V36H33Z"/><path class="t-fino" d="M8 38L16 20L24 38ZM33 21H47V36H33ZM16 24L28 30L40 24M12 38L11 50M20 38L21 50M37 36L36 50M43 36L44 50"/></g></svg>
-          <h4>Compañerismo</h4>
-          <p>Compartimos, nos ayudamos y hacemos amigos. Juntos todo sale mejor.</p>
-        </li>
-      </ul>
     </div>
   </section>
 
   <section class="seccion" id="que-hacemos">
     <div class="envoltura">
-      <h2 class="titular">Qué hacemos</h2>
-      <p class="bajada">Talleres para crear con las manos, compartir y descubrir, con mucho juego entre medio.</p>
-      <div class="talleres">
-        <article class="taller">
-          <div class="texto">
-            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="url(#rRojo)" d="M5 30L25 10L31 16L11 36Z"/><path class="t-fino" d="M5 30L25 10L31 16L11 36ZM25 10L35 4L31 16M20 15L26 21"/></g></svg>Manualidades</h3>
-            <p>Pintamos, recortamos, pegamos y construimos con materiales simples y reciclados. Cada chico crea a su manera, prueba técnicas nuevas y se anima a usar la imaginación.</p>
-            <div class="etiquetas"><span>pintura</span><span>recortes</span><span>reciclado</span><span>imaginación</span></div>
-          </div>
-          <figure class="foto" style="--giro:1.8deg"><img src="fotos/peces.jpg" width="1400" height="1054" loading="lazy" alt="Peces de papel de colores hechos por los chicos, sobre una mesa de madera."><figcaption>Colores y recortes</figcaption></figure>
-        </article>
-
-        <article class="taller al-reves">
-          <div class="texto">
-            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><ellipse cx="13" cy="13" rx="8" ry="10" transform="rotate(-40 13 13)" fill="url(#rNaranja)"/><ellipse class="t-fino" cx="13" cy="13" rx="8" ry="10" transform="rotate(-40 13 13)"/><path class="t" style="stroke-width:3.5" d="M19 19L35 35"/></g></svg>Cocina</h3>
-            <p>Recetas simples, dulces y saladas, pensadas para que los chicos midan, mezclen, decoren y prueben. En la cocina aprenden a esperar su turno, a trabajar en equipo y a compartir lo que hicieron.</p>
-            <div class="etiquetas"><span>recetas simples</span><span>trabajo en equipo</span><span>compartir</span></div>
-          </div>
-          <div class="collage">
-            <figure class="foto grande" style="--giro:-1.4deg"><img src="fotos/cocina-mesa.jpg" width="1400" height="1050" loading="lazy" alt="Chicos alrededor de una mesa en el taller de cocina, con una profesora. Las caras están tapadas con caritas dibujadas."><figcaption>Manos a la obra</figcaption></figure>
-            <figure class="foto" style="--giro:2.2deg"><img src="fotos/chupetines.jpg" width="1054" height="1400" loading="lazy" alt="Una nena decora en el taller de cocina. Su cara está tapada con un sol dibujado."><figcaption>Cada uno a su gusto</figcaption></figure>
-            <figure class="foto" style="--giro:-2.4deg;margin-top:34px"><img src="fotos/cocina-seno.jpg" width="1400" height="1054" loading="lazy" alt="Chicos alrededor de la profesora en el taller de cocina. Las caras de los chicos están tapadas con caritas dibujadas."><figcaption>Aprendemos juntos</figcaption></figure>
-          </div>
-        </article>
-
-        <article class="taller">
-          <div class="texto">
-            <h3><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path class="t-verde" style="stroke-width:3" d="M20 38V18"/><path fill="url(#rVerde)" d="M20 22Q8 22 6 10Q18 10 20 22ZM20 18Q30 18 34 6Q22 6 20 18Z"/><path class="t-fino" d="M20 22Q8 22 6 10Q18 10 20 22ZM20 18Q30 18 34 6Q22 6 20 18Z"/></g></svg>Plantines</h3>
-            <p>Sembramos semillas, armamos almácigos y cuidamos los plantines todos los días. Así los chicos descubren de dónde vienen los alimentos y aprenden a cuidar lo que crece.</p>
-            <div class="etiquetas"><span>semillas</span><span>riego</span><span>huerta</span><span>naturaleza</span></div>
-          </div>
-          <figure class="foto" style="--giro:-1.8deg"><img src="fotos/huerta.jpg" width="1400" height="1054" loading="lazy" alt="Almácigos en un maple de huevos con carteles pintados a mano."><figcaption>Sembrar y cuidar</figcaption></figure>
-        </article>
+      <h2 class="titular">Actividades</h2>
+      <ul class="actividades">
+        <li>Cocina</li><li>Arte</li><li>Música</li><li>Manualidades</li><li>Juegos</li><li>Deporte</li><li>Huerta</li>
+      </ul>
+      <div class="galeria" id="galeria">
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/masa.jpg"><img src="fotos/galeria/masa-mini.jpg" width="450" height="598" loading="lazy" alt="Dos chicos amasan en una mesa de madera. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/galeria/20.jpg"><img src="fotos/galeria/20-mini.jpg" width="450" height="598" loading="lazy" alt="Chicos dibujando con fibras de colores alrededor de la mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/plantines.jpg"><img src="fotos/galeria/plantines-mini.jpg" width="450" height="598" loading="lazy" alt="Chicos plantan suculentas en macetas junto a una profesora. Las caras de los chicos están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/galeria/05.jpg"><img src="fotos/galeria/05-mini.jpg" width="450" height="600" loading="lazy" alt="Chicos juegan a la rayuela dibujada con tiza en la calle. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/galeria/03.jpg"><img src="fotos/galeria/03-mini.jpg" width="450" height="600" loading="lazy" alt="Dos chicos decoran cupcakes con merengue y granas. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/pelota.jpg"><img src="fotos/galeria/pelota-mini.jpg" width="450" height="598" loading="lazy" alt="Una nena muestra un muñeco hecho con una pelota y lana. Su cara está tapada con una carita dibujada."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/galeria/21.jpg"><img src="fotos/galeria/21-mini.jpg" width="450" height="598" loading="lazy" alt="Merienda en grupo alrededor de la mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/dibujo.jpg"><img src="fotos/galeria/dibujo-mini.jpg" width="598" height="450" loading="lazy" alt="Un nene pinta peces de papel con fibras de colores. Su cara está tapada con un sol dibujado."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/galeria/16.jpg"><img src="fotos/galeria/16-mini.jpg" width="450" height="598" loading="lazy" alt="Una nena decora chupetines de galletita con granas. Su cara está tapada con una carita dibujada."></button></figure>
+        <figure class="foto"><button type="button" class="ver-foto" data-full="fotos/huerta.jpg"><img src="fotos/galeria/huerta-mini.jpg" width="598" height="450" loading="lazy" alt="Almácigos en un maple de huevos con carteles pintados a mano."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/oreos.jpg"><img src="fotos/galeria/oreos-mini.jpg" width="598" height="450" loading="lazy" alt="Chicos decoran chupetines de galletitas con granas de colores. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/01.jpg"><img src="fotos/galeria/01-mini.jpg" width="450" height="600" loading="lazy" alt="Chicos juegan con masa de colores alrededor de una mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/06.jpg"><img src="fotos/galeria/06-mini.jpg" width="450" height="598" loading="lazy" alt="Una nena muestra el cupcake que decoró. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/17.jpg"><img src="fotos/galeria/17-mini.jpg" width="450" height="600" loading="lazy" alt="Merienda con jugo y budín alrededor de la mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/cocina-mesa.jpg"><img src="fotos/galeria/cocina-mesa-mini.jpg" width="600" height="450" loading="lazy" alt="Chicos alrededor de una mesa en el taller de cocina. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/08.jpg"><img src="fotos/galeria/08-mini.jpg" width="450" height="600" loading="lazy" alt="Dos cupcakes decorados con chips de chocolate y granas. La cara de la nena está tapada con una carita dibujada."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/11.jpg"><img src="fotos/galeria/11-mini.jpg" width="450" height="598" loading="lazy" alt="Un nene decora chupetines de galletita con granas. Su cara está tapada con una carita dibujada."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/09.jpg"><img src="fotos/galeria/09-mini.jpg" width="450" height="600" loading="lazy" alt="Chicos alrededor de la mesa con dibujos y cupcakes. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/chupetines.jpg"><img src="fotos/galeria/chupetines-mini.jpg" width="450" height="598" loading="lazy" alt="Una nena decora chupetines de galletitas. Su cara está tapada con un sol dibujado."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/10.jpg"><img src="fotos/galeria/10-mini.jpg" width="450" height="598" loading="lazy" alt="Una nena muestra el cupcake que decoró. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/02.jpg"><img src="fotos/galeria/02-mini.jpg" width="450" height="600" loading="lazy" alt="Chicos con masa de colores en la mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/12.jpg"><img src="fotos/galeria/12-mini.jpg" width="450" height="598" loading="lazy" alt="Un nene baña un chupetín de galletita en chocolate. Su cara está tapada con una carita dibujada."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/22.jpg"><img src="fotos/galeria/22-mini.jpg" width="450" height="600" loading="lazy" alt="Merienda en grupo alrededor de una mesa redonda. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/peces.jpg"><img src="fotos/galeria/peces-mini.jpg" width="598" height="450" loading="lazy" alt="Peces de papel de colores hechos por los chicos, sobre una mesa de madera."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/14.jpg"><img src="fotos/galeria/14-mini.jpg" width="450" height="598" loading="lazy" alt="La seño ayuda a un nene a bañar galletitas en chocolate. La cara del nene está tapada con una carita dibujada."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/04.jpg"><img src="fotos/galeria/04-mini.jpg" width="450" height="598" loading="lazy" alt="Masas de colores sobre la mesa."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/19.jpg"><img src="fotos/galeria/19-mini.jpg" width="450" height="600" loading="lazy" alt="Chicos sentados a la mesa para la merienda. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/cocina-seno.jpg"><img src="fotos/galeria/cocina-seno-mini.jpg" width="598" height="450" loading="lazy" alt="Chicos alrededor de la profesora en el taller de cocina. Las caras de los chicos están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/13.jpg"><img src="fotos/galeria/13-mini.jpg" width="450" height="598" loading="lazy" alt="Un nene baña una galletita en chocolate. Su cara está tapada con una carita dibujada."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/23.jpg"><img src="fotos/galeria/23-mini.jpg" width="450" height="598" loading="lazy" alt="Merienda en grupo alrededor de la mesa. Las caras están tapadas con caritas dibujadas."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/07.jpg"><img src="fotos/galeria/07-mini.jpg" width="450" height="598" loading="lazy" alt="Cupcakes decorados sobre un plato, junto al brazo de un chico."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/15.jpg"><img src="fotos/galeria/15-mini.jpg" width="450" height="598" loading="lazy" alt="La seño ayuda a un nene a bañar galletitas en chocolate."></button></figure>
+        <figure class="foto extra"><button type="button" class="ver-foto" data-full="fotos/galeria/18.jpg"><img src="fotos/galeria/18-mini.jpg" width="450" height="598" loading="lazy" alt="La seño y un nene bañan galletitas en chocolate. La cara del nene está tapada con una carita dibujada."></button></figure>
       </div>
+      <div class="mas-fotos"><button type="button" class="boton" id="mas-fotos" aria-controls="galeria" aria-expanded="false">Ver todas las fotos (33)</button></div>
       <p class="aviso-caras"><svg viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><circle cx="22" cy="22" r="18" fill="url(#rAmarillo)"/><circle cx="22" cy="22" r="18" fill="none" stroke="var(--naranja)" stroke-width="3"/><circle class="c-tinta" cx="16" cy="19" r="2.4"/><circle class="c-tinta" cx="28" cy="19" r="2.4"/><path class="t-fino" d="M15 27Q22 33 29 27"/></g></svg>Para cuidar a los chicos, en las fotos les tapamos la cara con caritas dibujadas.</p>
     </div>
   </section>
@@ -642,7 +583,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   <section class="seccion cuaderno" id="precios">
     <div class="envoltura">
       <h2 class="titular">Precios</h2>
-      <p class="bajada">Por chico y por mes. La colonia va del 4 de enero al 19 de febrero de 2027: podés venir en enero, en febrero o los dos meses.</p>
+      <p class="bajada">Por chico y por mes. Podés venir en enero, en febrero o los dos meses.</p>
       <div class="precios">
         <article class="etiqueta amarilla">
           <h3>Jornada completa</h3>
@@ -655,46 +596,11 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
           <p class="por">por mes</p>
         </article>
       </div>
-      <div class="reglas">
-        <div class="regla">
-          <h3>Reservá con el 30%</h3>
-          <p>Para guardar el lugar abonás el 30% de la cuota de cada mes que elegís.</p>
-          <p class="chiquito">Jornada completa: $180.000 por mes · Media jornada: $120.000 por mes.</p>
-        </div>
-        <div class="regla promo">
-          <svg class="sticker" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><g filter="url(#lapiz)"><path fill="var(--amarillo)" d="M60 4L72 22L93 14L95 36L116 42L104 60L116 78L95 84L93 106L72 98L60 116L48 98L27 106L25 84L4 78L16 60L4 42L25 36L27 14L48 22Z"/><path class="t" style="stroke-width:3" d="M60 4L72 22L93 14L95 36L116 42L104 60L116 78L95 84L93 106L72 98L60 116L48 98L27 106L25 84L4 78L16 60L4 42L25 36L27 14L48 22Z"/></g><text x="60" y="60" text-anchor="middle" font-size="34">15%</text><text x="60" y="84" text-anchor="middle" font-size="20">menos</text></svg>
-          <h3>Pagá los dos meses antes de diciembre</h3>
-          <p>Si abonás enero y febrero completos antes del 1 de diciembre, tenés 15% de descuento.</p>
-          <p class="chiquito">Jornada completa: $1.020.000 en vez de $1.200.000 · Media jornada: $680.000 en vez de $800.000.</p>
-        </div>
-      </div>
-      <div class="cuenta" id="cuenta">
-        <h3>Hacé la cuenta</h3>
-        <div class="elegir">
-          <div>
-            <span class="grupo-nombre" id="calc-enero-l">Enero</span>
-            <div class="opciones" role="radiogroup" aria-labelledby="calc-enero-l">
-              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-no" value=""><span>No va</span></label>
-              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-jc" value="jc" checked><span>Jornada completa</span></label>
-              <label class="opcion"><input type="radio" name="calc-enero" id="calc-enero-mj" value="mj"><span>Media jornada</span></label>
-            </div>
-          </div>
-          <div>
-            <span class="grupo-nombre" id="calc-febrero-l">Febrero</span>
-            <div class="opciones" role="radiogroup" aria-labelledby="calc-febrero-l">
-              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-no" value=""><span>No va</span></label>
-              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-jc" value="jc" checked><span>Jornada completa</span></label>
-              <label class="opcion"><input type="radio" name="calc-febrero" id="calc-febrero-mj" value="mj"><span>Media jornada</span></label>
-            </div>
-          </div>
-        </div>
-        <div class="filas" id="calc-salida" aria-live="polite">
-          <div class="fila"><span>Cuota de los dos meses</span><b>$1.200.000</b></div>
-          <div class="fila"><span>Para reservar (30%)</span><b>$360.000</b></div>
-          <div class="fila destacada"><span>Pagando todo antes del 1/12</span><b>$1.020.000</b></div>
-          <p class="chiquito">Ahorrás $180.000.</p>
-        </div>
-      </div>
+      <ul class="condiciones">
+        <li><b>Incluye:</b> snack de desayuno y/o merienda, y todos los materiales para las actividades.</li>
+        <li><b>Reserva:</b> para guardar el lugar abonás el 30% de la cuota de cada mes que elegís.</li>
+        <li><b>15% de descuento</b> pagando enero y febrero completos antes del 1 de diciembre.</li>
+      </ul>
     </div>
   </section>
 
@@ -790,6 +696,20 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   </div>
 </footer>
 
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <div class="visor-hoja">
+    <img id="visor-img" alt="">
+    <div class="visor-barra">
+      <span class="texto" id="visor-txt"></span>
+      <span class="botones">
+        <button type="button" class="boton" id="visor-ant" aria-label="Foto anterior">← Anterior</button>
+        <button type="button" class="boton" id="visor-sig" aria-label="Foto siguiente">Siguiente →</button>
+        <button type="button" class="boton" id="visor-cerrar">Cerrar</button>
+      </span>
+    </div>
+  </div>
+</dialog>
+
 <script src="config.js"></script>
 <script>
 (function () {
@@ -833,26 +753,37 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     return { filas: filas, total: total, descuento: descuento, aPagar: total - descuento, reserva: Math.round(total * RESERVA) };
   }
 
-  /* ---------- Hacé la cuenta ---------- */
-  function calcular() {
-    var c = { enero: marcado("calc-enero"), febrero: marcado("calc-febrero") };
-    var q = cotizar([c], "total");
-    var out = $("calc-salida");
-    if (!q.total) { out.innerHTML = '<p class="chiquito">Elegí al menos un mes para ver la cuenta.</p>'; return; }
-    var meses = c.enero && c.febrero ? "Cuota de los dos meses" : "Cuota de " + (c.enero ? "enero" : "febrero");
-    var h = '<div class="fila"><span>' + meses + '</span><b>' + plata(q.total) + '</b></div>' +
-      '<div class="fila"><span>Para reservar (30%)</span><b>' + plata(q.reserva) + '</b></div>';
-    if (q.descuento) {
-      h += '<div class="fila destacada"><span>Pagando todo antes del 1/12</span><b>' + plata(q.aPagar) + '</b></div><p class="chiquito">Ahorrás ' + plata(q.descuento) + '.</p>';
-    } else if (c.enero && c.febrero) {
-      h += '<p class="chiquito">El 15% de descuento era para los pagos hechos hasta el 30 de noviembre.</p>';
-    } else {
-      h += '<p class="chiquito">El 15% de descuento es para quien va enero y febrero y paga todo antes del 1 de diciembre.</p>';
-    }
-    out.innerHTML = h;
+  /* ---------- Galería: ver todas y ampliar ---------- */
+  var botonesFoto = Array.prototype.slice.call(document.querySelectorAll(".ver-foto"));
+  var visor = $("visor"), fotoActual = -1;
+  function verFoto(i) {
+    if (i < 0 || i >= botonesFoto.length) return;
+    fotoActual = i;
+    var b = botonesFoto[i];
+    $("visor-img").src = b.getAttribute("data-full");
+    $("visor-img").alt = b.querySelector("img").alt;
+    $("visor-txt").textContent = (i + 1) + " de " + botonesFoto.length;
+    $("visor-ant").disabled = i === 0;
+    $("visor-sig").disabled = i === botonesFoto.length - 1;
+    if (!visor.open) { if (visor.showModal) visor.showModal(); else visor.setAttribute("open", ""); }
   }
-  $("cuenta").addEventListener("change", calcular);
-  calcular();
+  function cerrarFoto() { fotoActual = -1; if (visor.close) visor.close(); else visor.removeAttribute("open"); }
+  botonesFoto.forEach(function (b, i) { b.addEventListener("click", function () { verFoto(i); }); });
+  $("visor-ant").addEventListener("click", function () { verFoto(fotoActual - 1); });
+  $("visor-sig").addEventListener("click", function () { verFoto(fotoActual + 1); });
+  $("visor-cerrar").addEventListener("click", cerrarFoto);
+  visor.addEventListener("click", function (ev) { if (ev.target === visor) cerrarFoto(); });
+  document.addEventListener("keydown", function (ev) {
+    if (!visor.open) return;
+    if (ev.key === "ArrowLeft") verFoto(fotoActual - 1);
+    if (ev.key === "ArrowRight") verFoto(fotoActual + 1);
+  });
+  $("mas-fotos").addEventListener("click", function () {
+    var g = $("galeria"), abierta = g.classList.toggle("abierta");
+    this.setAttribute("aria-expanded", abierta ? "true" : "false");
+    this.textContent = abierta ? "Ver menos fotos" : "Ver todas las fotos (" + botonesFoto.length + ")";
+    if (!abierta) g.scrollIntoView({ block: "start" });
+  });
 
   /* ---------- Chicos del formulario ---------- */
   var lista = $("chicos"), seq = 0;
