@@ -199,7 +199,6 @@ dialog.visor::backdrop { background: rgba(20, 24, 22, 0.85); }
 .quienes-caja { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: clamp(30px, 5vw, 60px); align-items: center; margin-top: 38px; }
 .retrato { max-width: 340px; width: 100%; justify-self: center; }
 .retrato img { aspect-ratio: 3 / 4; object-fit: cover; }
-.retrato-dibujo { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; background: var(--celeste-suave); }
 .valores-titulo { margin-top: 35px; }
 
 /* dónde estamos */
@@ -465,7 +464,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       <h2 class="titular">Quiénes somos</h2>
       <div class="quienes-caja">
         <figure class="foto retrato" style="--giro:-2deg">
-          <svg class="retrato-dibujo" viewBox="0 0 300 380" role="img" aria-label="Dibujo de Luli"><g filter="url(#lapiz)"><circle cx="150" cy="70" r="40" fill="url(#rAmarillo)"/><path class="t-naranja" style="stroke-width:6" d="M150 8V18M150 122V132M88 70H98M202 70H212M106 26L113 33M187 107L194 114M106 114L113 107M187 33L194 26"/><path fill="url(#rMarron)" d="M98 210Q96 150 150 148Q204 150 202 210Q206 252 190 266L110 266Q94 252 98 210Z"/><circle class="c-papel" cx="150" cy="212" r="44"/><circle class="t" cx="150" cy="212" r="44"/><path class="t" d="M98 210Q96 150 150 148Q204 150 202 210"/><circle class="c-tinta" cx="135" cy="206" r="4"/><circle class="c-tinta" cx="165" cy="206" r="4"/><path class="t-fino" d="M136 226Q150 238 164 226"/><circle class="c-rosa" cx="124" cy="222" r="7"/><circle class="c-rosa" cx="176" cy="222" r="7"/><path fill="url(#rRosa)" d="M96 372Q98 268 150 262Q202 268 204 372Z"/><path class="t" d="M96 372Q98 268 150 262Q202 268 204 372"/><path fill="url(#rRojo)" d="M150 326C136 316 128 308 128 299A9 9 0 0 1 150 295A9 9 0 0 1 172 299C172 308 164 316 150 326Z"/></g></svg>
+          <img src="fotos/luli.jpg" width="600" height="800" alt="Luli, sonriendo, con ambo de enfermera.">
           <figcaption>Luli</figcaption>
         </figure>
         <div class="nota cinta">
