@@ -3,14 +3,51 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- vista previa: desde acá -->
-<title>Colonia El Candor</title>
+<title>Colonia de verano El Candor · Florida, Vicente López</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Colonia de verano El Candor en Arenales 1540, Florida, Vicente López: del 4 de enero al 19 de febrero de 2027, jornada completa o media jornada, para niños de 2 a 6 años (menores de 2, según disponibilidad). Cocina, arte, música, manualidades, juegos, deporte y huerta.">
+<link rel="canonical" href="https://espacioelcandor.github.io/">
+<meta name="description" content="Colonia de verano El Candor en Arenales 1540, Florida, Vicente López: del 4 de enero al 26 de febrero de 2027, jornada completa (8 a 17 h), jornada simple (8 a 12 h) o a medida, para niños de 2 a 6 años (menores de 2, según disponibilidad). Cocina, arte, música, manualidades, juegos, deporte y huerta.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Colonia El Candor · Un verano para jugar, descubrir y crecer">
-<meta property="og:description" content="Colonia de verano 2027, del 4 de enero al 19 de febrero en Florida, Vicente López. Un verano para jugar, descubrir y crecer. Inscripciones abiertas.">
+<meta property="og:description" content="Colonia de verano 2027, del 4 de enero al 26 de febrero en Florida, Vicente López. Un verano para jugar, descubrir y crecer. Inscripciones abiertas.">
 <meta property="og:image" content="https://espacioelcandor.github.io/fotos/cocina-mesa.jpg">
+<meta property="og:url" content="https://espacioelcandor.github.io/">
+<meta property="og:site_name" content="El Candor">
+<meta property="og:locale" content="es_AR">
 <meta name="theme-color" content="#8fcdfb">
+<!-- Datos para Google: qué es, dónde queda y en qué horario (se muestran en la ficha de búsqueda) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "name": "Colonia de verano El Candor",
+  "alternateName": "El Candor",
+  "description": "Colonia de verano para niños de 2 a 6 años en Florida, Vicente López, del 4 de enero al 26 de febrero de 2027. Jornada completa (8 a 17 h), jornada simple (8 a 12 h) o a medida. Cocina, arte, música, manualidades, juegos, deporte y huerta.",
+  "slogan": "Un verano para jugar, descubrir y crecer",
+  "url": "https://espacioelcandor.github.io/",
+  "image": "https://espacioelcandor.github.io/fotos/cocina-mesa.jpg",
+  "telephone": "+54 9 11 7122-8824",
+  "email": "espacioelcandor@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Arenales 1540",
+    "addressLocality": "Florida",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "B1602",
+    "addressCountry": "AR"
+  },
+  "areaServed": "Vicente López",
+  "priceRange": "$400.000 a $600.000 por mes",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00",
+    "validFrom": "2027-01-04",
+    "validThrough": "2027-02-26"
+  }]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
@@ -171,6 +208,11 @@ p { margin: 0; }
 .ver-foto:focus-visible { outline: 3px dashed var(--azul); outline-offset: 4px; }
 .galeria:not(.abierta) .extra { display: none; }
 .mas-fotos { margin-top: 28px; text-align: center; }
+.espacio { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 44px); max-width: 720px; margin: 34px auto 0; }
+.foto.video video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #ddd; }
+.medida .horas { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 10px; font-size: 19px; }
+.medida .horas label { display: flex; gap: 8px; align-items: center; }
+input[type="time"] { font: inherit; font-size: 20px; color: var(--ink); background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--borde-chico); padding: 6px 10px; }
 dialog.visor { border: 0; padding: 0; background: transparent; width: min(900px, calc(100vw - 20px)); max-height: calc(100vh - 20px); overflow: visible; }
 dialog.visor::backdrop { background: rgba(20, 24, 22, 0.85); }
 .visor-hoja { background: var(--polaroid); padding: 10px 10px 12px; display: grid; gap: 10px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
@@ -212,12 +254,16 @@ dialog.visor::backdrop { background: rgba(20, 24, 22, 0.85); }
 
 /* precios */
 .cuaderno { background-color: var(--paper-alt); background-image: linear-gradient(var(--grid) 1.5px, transparent 1.5px), linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px); background-size: 28px 28px; border-block: 3px solid var(--ink); }
-.precios { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 40px); margin-top: 34px; }
+.precios { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 34px); margin-top: 34px; align-items: stretch; }
+.etiqueta.verde { background: repeating-linear-gradient(-35deg, var(--verde-suave) 0 6px, var(--card) 6px 9px); transform: rotate(-0.6deg); }
+.etiqueta .horario { font-size: 20px; color: var(--ink-soft); margin-top: 2px; }
+.etiqueta .monto.chico { font-size: clamp(32px, 3.4vw, 40px); margin-top: 18px; }
+.etiqueta .promo-precio { display: inline-block; margin-top: 10px; font-family: var(--display); font-size: 22px; padding: 1px 12px 3px; background: var(--card); border: 2px dashed var(--verde); border-radius: var(--borde-chico); }
 .etiqueta { position: relative; border: 3px solid var(--ink); border-radius: var(--borde); padding: 24px 24px 22px; box-shadow: 4px 6px 0 var(--ink); text-align: center; }
 .etiqueta.amarilla { background: repeating-linear-gradient(-35deg, var(--amarillo-suave) 0 6px, var(--card) 6px 9px); transform: rotate(-1.2deg); }
 .etiqueta.celeste { background: repeating-linear-gradient(-35deg, var(--celeste-suave) 0 6px, var(--card) 6px 9px); transform: rotate(1deg); }
-.etiqueta h3 { font-size: clamp(30px, 4vw, 40px); }
-.etiqueta .monto { font-family: var(--display); font-size: clamp(54px, 8vw, 84px); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.etiqueta h3 { font-size: clamp(28px, 2.9vw, 34px); }
+.etiqueta .monto { font-family: var(--display); font-size: clamp(50px, 5.6vw, 68px); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
 .etiqueta .por { font-size: 21px; }
 .etiqueta .nota-precio { margin-top: 10px; font-size: 19px; color: var(--ink-soft); }
 .condiciones { list-style: none; margin: clamp(24px, 3vw, 34px) 0 0; padding: 0; display: grid; gap: 8px; font-size: 21px; }
@@ -290,6 +336,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
 @media (max-width: 860px) {
   .donde, .flyer-caja, .quienes-caja { grid-template-columns: minmax(0, 1fr); }
   .galeria { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .precios { grid-template-columns: minmax(0, 1fr); max-width: 520px; }
   .flyer { max-width: 320px; }
 }
 @media (max-width: 620px) {
@@ -364,16 +411,17 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     <nav class="menu" aria-label="Secciones">
       <a class="marca" href="#arriba" id="arriba">El <b>Candor</b></a>
       <a href="#quienes">Quiénes somos</a>
+      <a href="#espacio">El espacio</a>
       <a href="#que-hacemos">Actividades</a>
       <a href="#donde">Dónde estamos</a>
       <a href="#precios">Precios</a>
       <a href="#inscripcion">Inscripción</a>
     </nav>
     <div class="hero">
-      <p class="antetitulo">Colonia de verano 2027 · del 4 de enero al 19 de febrero</p>
+      <p class="antetitulo">Colonia de verano 2027 · del 4 de enero al 26 de febrero</p>
       <h1 class="titulo"><span class="oculto">El Candor</span><span aria-hidden="true"><i>E</i><i>l</i><span class="espacio"></span><i>C</i><i>a</i><i>n</i><i>d</i><i>o</i><i>r</i></span></h1>
       <p class="eslogan">Un verano para jugar, descubrir y crecer</p>
-      <p class="bajada">Para niños de 2 a 6 años (menores de 2, según disponibilidad). Jornada completa o media jornada.</p>
+      <p class="bajada">Para niños de 2 a 6 años (menores de 2, según disponibilidad). Jornada completa (8 a 17 h), jornada simple (8 a 12 h) o a tu medida.</p>
       <div class="acciones">
         <a class="boton amarillo" href="#inscripcion">Hacer la inscripción</a>
         <a class="boton" href="#precios">Ver precios</a>
@@ -439,13 +487,14 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   <section class="seccion" id="flyer">
     <div class="envoltura flyer-caja">
       <figure class="flyer">
-        <a href="fotos/flyer.jpg" target="_blank" rel="noopener"><img src="fotos/flyer.jpg" width="900" height="1600" alt="Flyer de la colonia El Candor: Colonia de verano 2027. Un verano para jugar, descubrir y crecer. Del 4 de enero al 19 de febrero. ¡Inscripciones abiertas! WhatsApp +54 9 11 7122-8824. Arenales 1540, Vicente López."></a>
+        <a href="fotos/flyer.jpg" target="_blank" rel="noopener"><img src="fotos/flyer.jpg" width="900" height="1600" alt="Flyer de la colonia El Candor: Colonia de verano 2027. Un verano para jugar, descubrir y crecer. Del 4 de enero al 26 de febrero. ¡Inscripciones abiertas! WhatsApp +54 9 11 7122-8824. Arenales 1540, Vicente López."></a>
       </figure>
       <div class="flyer-texto">
         <p class="sello">¡Inscripciones abiertas!</p>
         <h2>¡Te esperamos este verano!</h2>
         <ul class="datos">
-          <li><b>Cuándo</b> Del 4 de enero al 19 de febrero de 2027</li>
+          <li><b>Cuándo</b> Del 4 de enero al 26 de febrero de 2027</li>
+          <li><b>Horarios</b> Jornada simple de 8 a 12 h · jornada completa de 8 a 17 h · o a tu medida</li>
           <li><b>Para</b> Niños de 2 a 6 años. Menores de 2, según disponibilidad.</li>
           <li><b>Dónde</b> Arenales 1540, Florida, Vicente López</li>
           <li><b>WhatsApp</b> <a class="wa-link wa-num" href="https://wa.me/5491171228824" target="_blank" rel="noopener">+54 9 11 7122-8824</a></li>
@@ -474,6 +523,17 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
           <p>Sabemos, como padres, la importancia de confiar el cuidado de nuestros hijos a otra persona y de que los cuiden como los cuidaríamos nosotros.</p>
           <p>Por eso queremos garantizar la diversión y el cuidado de cada niño, con mucho amor y paciencia, enalteciendo sus logros y acompañando cada proceso.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="espacio">
+    <div class="envoltura">
+      <h2 class="titular">El espacio</h2>
+      <p class="bajada">Un lugar amplio y cubierto: un salón con piso de madera para jugar y moverse, y una cancha de básquet.</p>
+      <div class="espacio">
+        <figure class="foto video" style="--giro:-1.6deg"><video src="fotos/espacio/salon.mp4" poster="fotos/espacio/salon.jpg" width="576" height="1024" muted loop playsinline autoplay preload="metadata" aria-label="Video del salón con piso de madera, espalderas y espejos"></video><figcaption>El salón</figcaption></figure>
+        <figure class="foto video" style="--giro:1.4deg"><video src="fotos/espacio/cancha.mp4" poster="fotos/espacio/cancha.jpg" width="576" height="1024" muted loop playsinline autoplay preload="metadata" aria-label="Video de la cancha de básquet"></video><figcaption>La cancha</figcaption></figure>
       </div>
     </div>
   </section>
@@ -586,19 +646,29 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       <div class="precios">
         <article class="etiqueta amarilla">
           <h3>Jornada completa</h3>
+          <p class="horario">de 8 a 17 h</p>
           <p class="monto">$600.000</p>
           <p class="por">por mes</p>
+          <p class="promo-precio solo-promo">$510.000 con la promo</p>
         </article>
         <article class="etiqueta celeste">
-          <h3>Media jornada</h3>
+          <h3>Jornada simple</h3>
+          <p class="horario">de 8 a 12 h</p>
           <p class="monto">$400.000</p>
           <p class="por">por mes</p>
+          <p class="promo-precio solo-promo">$340.000 con la promo</p>
+        </article>
+        <article class="etiqueta verde">
+          <h3>A tu medida</h3>
+          <p class="horario">los días y horarios que necesites</p>
+          <p class="monto chico">Te lo cotizamos</p>
+          <p class="por">elegilo en la inscripción</p>
         </article>
       </div>
       <ul class="condiciones">
+        <li class="solo-promo"><b>Precio promocional:</b> 15% de descuento inscribiéndote hasta el 5 de diciembre.</li>
         <li><b>Incluye:</b> snack de desayuno y/o merienda, y todos los materiales para las actividades.</li>
         <li><b>Reserva:</b> para guardar el lugar abonás el 30% de la cuota de cada mes que elegís.</li>
-        <li><b>15% de descuento</b> pagando enero y febrero completos antes del 1 de diciembre.</li>
       </ul>
     </div>
   </section>
@@ -631,8 +701,9 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
         <fieldset class="hoja">
           <legend>¿Cómo querés pagar?</legend>
           <div class="pagos">
-            <label class="pago"><input type="radio" name="pago" id="pago-reserva" value="reserva" checked><span><b id="pago-reserva-t">Reservo con el 30%</b><small id="pago-reserva-s">Y el resto lo coordinamos.</small></span></label>
-            <label class="pago"><input type="radio" name="pago" id="pago-total" value="total"><span><b id="pago-total-t">Pago todo antes del 1 de diciembre</b><small id="pago-total-s">Con 15% de descuento para quien va enero y febrero.</small></span></label>
+            <label class="pago"><input type="radio" name="pago" id="pago-reserva" value="reserva" checked><span><b id="pago-reserva-t">Reservo con el 30%</b><small id="pago-reserva-s">Abonás la reserva para guardar el lugar y el resto lo coordinamos.</small></span></label>
+            <label class="pago"><input type="radio" name="pago" id="pago-total" value="total"><span><b id="pago-total-t">Pago el total</b><small id="pago-total-s">Abonás todo de una vez.</small></span></label>
+            <p class="chiquito solo-promo" id="pago-promo">Inscribiéndote hasta el 5 de diciembre, los precios tienen 15% de descuento.</p>
           </div>
         </fieldset>
 
@@ -690,7 +761,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   </svg>
   <div class="envoltura">
     <a class="marca" href="#arriba">El <b>Candor</b></a>
-    <p>Colonia de verano 2027 · del 4 de enero al 19 de febrero · Arenales 1540, Florida</p>
+    <p>Colonia de verano 2027 · del 4 de enero al 26 de febrero · Arenales 1540, Florida</p>
     <div class="contacto" id="contacto"><a href="familias.html">Fotos para las familias</a></div>
   </div>
 </footer>
@@ -719,16 +790,17 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   var API_URL = AJ.api || "";
   var WHATSAPP = String(AJ.whatsapp || "").replace(/\D/g, "");
   var EMAIL = AJ.email || "";
-  var PRECIO = { jc: 600000, mj: 400000 };
-  var RESERVA = 0.30;      // 30% de la cuota de cada mes elegido
-  var DESC_TOTAL = 0.15;   // pagando enero y febrero completos antes de LIMITE_DESC
-  var LIMITE_DESC = "2026-12-01";
+  var PRECIO = { jc: 600000, mj: 400000 };   // jc: jornada completa (8 a 17 h) · mj: jornada simple (8 a 12 h) · pe: a medida, se cotiza
+  var RESERVA = 0.30;      // 30% de la cuota de cada mes elegido (con la promo, si corresponde)
+  var DESC_PROMO = 0.15;   // precio promocional para las inscripciones hasta el 5/12 inclusive
+  var LIMITE_PROMO = "2026-12-06";
   var MAX_CHICOS = 6;
   /* ================================= */
 
   try { var mApi = /[?&]api=([^&]+)/.exec(location.search); if (mApi) API_URL = decodeURIComponent(mApi[1]); } catch (e) {}
 
-  var MOD = { "": "No va", jc: "Jornada completa", mj: "Media jornada" };
+  var MOD = { "": "No va", jc: "Jornada completa (8 a 17 h)", mj: "Jornada simple (8 a 12 h)", pe: "A medida" };
+  var DIAS = [["lun", "Lun"], ["mar", "Mar"], ["mie", "Mié"], ["jue", "Jue"], ["vie", "Vie"]];
   function $(id) { return document.getElementById(id); }
   function plata(n) { return "$" + Math.round(n || 0).toLocaleString("es-AR"); }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
@@ -736,21 +808,35 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Argentina/Buenos_Aires", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); }
     catch (e) { return new Date().toISOString().slice(0, 10); }
   }
-  var promoVigente = hoyAR() < LIMITE_DESC;
+  var promoVigente = hoyAR() < LIMITE_PROMO;
+  if (!promoVigente) document.querySelectorAll(".solo-promo").forEach(function (el) { el.hidden = true; });
   function marcado(nombre) { var r = document.querySelector('input[name="' + nombre + '"]:checked'); return r ? r.value : ""; }
 
-  // La misma cuenta que hace el Apps Script al recibir la inscripción.
+  // La misma cuenta que hace el Apps Script al recibir la inscripción. Lo «a medida» no suma: se cotiza aparte.
   function cotizar(chicos, pago) {
-    var total = 0, descuento = 0;
+    var total = 0, descuento = 0, aCotizar = false;
     var filas = chicos.map(function (c) {
       var cuota = (PRECIO[c.enero] || 0) + (PRECIO[c.febrero] || 0);
-      var dos = !!(c.enero && c.febrero);
-      var desc = pago === "total" && dos && promoVigente ? Math.round(cuota * DESC_TOTAL) : 0;
-      total += cuota; descuento += desc;
-      return { cuota: cuota, descuento: desc, dosMeses: dos };
+      var medida = c.enero === "pe" || c.febrero === "pe";
+      var desc = promoVigente ? Math.round(cuota * DESC_PROMO) : 0;
+      total += cuota; descuento += desc; if (medida) aCotizar = true;
+      return { cuota: cuota, descuento: desc, aMedida: medida };
     });
-    return { filas: filas, total: total, descuento: descuento, aPagar: total - descuento, reserva: Math.round(total * RESERVA) };
+    var aPagar = total - descuento;
+    return { filas: filas, total: total, descuento: descuento, aPagar: aPagar, reserva: Math.round(aPagar * RESERVA), aCotizar: aCotizar, promo: promoVigente };
   }
+  function textoMedida(c) {
+    var p = c.medida || {};
+    var dias = DIAS.filter(function (d) { return (p.dias || []).indexOf(d[0]) >= 0; }).map(function (d) { return d[1].toLowerCase(); });
+    return (dias.length ? dias.join(", ") : "días a definir") + (p.desde && p.hasta ? " de " + p.desde + " a " + p.hasta + " h" : "");
+  }
+
+  /* ---------- Videos del espacio: sin movimiento automático si la persona lo pidió ---------- */
+  try {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".espacio video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+    }
+  } catch (e) {}
 
   /* ---------- Galería: ver todas y ampliar ---------- */
   var botonesFoto = Array.prototype.slice.call(document.querySelectorAll(".ver-foto"));
@@ -791,9 +877,18 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     return '<div class="campo" data-campo="' + mes + '"><span id="' + base + '-l">' + (mes === "enero" ? "Enero" : "Febrero") + '</span>' +
       '<div class="opciones" role="radiogroup" aria-labelledby="' + base + '-l">' +
       '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-no" value="" checked><span>No va</span></label>' +
-      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-jc" value="jc"><span>Jornada completa</span></label>' +
-      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-mj" value="mj"><span>Media jornada</span></label>' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-jc" value="jc"><span>Completa (8 a 17 h)</span></label>' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-mj" value="mj"><span>Simple (8 a 12 h)</span></label>' +
+      '<label class="opcion"><input type="radio" name="' + base + '" id="' + base + '-pe" value="pe"><span>A medida</span></label>' +
       '</div></div>';
+  }
+  function bloqueMedida(k) {
+    var p = "c" + k + "-";
+    return '<div class="campo ancho medida" id="' + p + 'medida" hidden><span id="' + p + 'dias-l">A medida: ¿qué días y en qué horario? <small>(te lo cotizamos)</small></span>' +
+      '<div class="opciones" role="group" aria-labelledby="' + p + 'dias-l">' +
+      DIAS.map(function (d) { return '<label class="opcion"><input type="checkbox" id="' + p + 'dia-' + d[0] + '" value="' + d[0] + '"><span>' + d[1] + '</span></label>'; }).join("") +
+      '</div><div class="horas"><label>Desde <input type="time" id="' + p + 'desde" value="08:00" min="08:00" max="17:00" step="1800"></label>' +
+      '<label>Hasta <input type="time" id="' + p + 'hasta" value="12:00" min="08:00" max="17:00" step="1800"></label></div></div>';
   }
   function agregarChico(foco) {
     if (lista.children.length >= MAX_CHICOS) return;
@@ -805,7 +900,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       '<label class="campo ancho"><span>Nombre y apellido</span><input type="text" id="' + p + 'nombre" maxlength="80" required autocomplete="off"></label>' +
       '<label class="campo"><span>Fecha de nacimiento</span><input type="date" id="' + p + 'nacimiento" required min="2008-01-01" max="' + hoyAR() + '"></label>' +
       '<label class="campo"><span>DNI <small>(para el seguro)</small></span><input type="text" id="' + p + 'dni" inputmode="numeric" maxlength="12" autocomplete="off"></label>' +
-      opciones(k, "enero") + opciones(k, "febrero") +
+      opciones(k, "enero") + opciones(k, "febrero") + bloqueMedida(k) +
       '<label class="campo"><span>Obra social o prepaga <small>(opcional)</small></span><input type="text" id="' + p + 'obra" maxlength="80" autocomplete="off"></label>' +
       '<label class="campo ancho"><span>Alergias, medicación o algo que tengamos que saber <small>(opcional)</small></span><textarea id="' + p + 'salud" rows="2" maxlength="600"></textarea></label>' +
       '</div></fieldset>';
@@ -834,7 +929,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   function leerChicos() {
     return Array.prototype.map.call(lista.querySelectorAll(".chico-card"), function (card) {
       var p = "c" + card.getAttribute("data-k") + "-";
-      return {
+      var c = {
         k: card.getAttribute("data-k"),
         nombre: $(p + "nombre").value.trim(),
         nacimiento: $(p + "nacimiento").value,
@@ -844,6 +939,10 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
         enero: marcado(p + "enero"),
         febrero: marcado(p + "febrero")
       };
+      var conMedida = c.enero === "pe" || c.febrero === "pe";
+      $(p + "medida").hidden = !conMedida;
+      if (conMedida) c.medida = { dias: DIAS.map(function (d) { return d[0]; }).filter(function (d) { return $(p + "dia-" + d).checked; }), desde: $(p + "desde").value, hasta: $(p + "hasta").value };
+      return c;
     });
   }
 
@@ -851,32 +950,29 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
   function resumen() {
     var chicos = leerChicos(), pago = marcado("pago");
     var q = cotizar(chicos, pago);
-    var hayDos = chicos.some(function (c) { return c.enero && c.febrero; });
-    var qt = cotizar(chicos, "total");
+    var nombreMod = { jc: "completa", mj: "simple", pe: "a medida" };
     $("pago-reserva-t").textContent = "Reservo con el 30%" + (q.total ? ": " + plata(q.reserva) : "");
-    $("pago-reserva-s").textContent = "Abonás la reserva para guardar el lugar y el resto lo coordinamos.";
-    $("pago-total-t").textContent = "Pago todo antes del 1 de diciembre" + (qt.total ? ": " + plata(qt.aPagar) : "");
-    $("pago-total-s").textContent = !promoVigente ? "La promo del 15% terminó el 30 de noviembre."
-      : qt.descuento ? "Con 15% de descuento: ahorrás " + plata(qt.descuento) + "."
-      : hayDos ? "" : "El 15% de descuento es para quien va enero y febrero.";
+    $("pago-total-t").textContent = "Pago el total" + (q.total ? ": " + plata(q.aPagar) : "");
     var items = chicos.map(function (c, i) {
       var meses = [];
-      if (c.enero) meses.push("enero " + (c.enero === "jc" ? "completa" : "media"));
-      if (c.febrero) meses.push("febrero " + (c.febrero === "jc" ? "completa" : "media"));
-      var nom = c.nombre || "Chico " + (i + 1);
-      return '<li><span>' + esc(nom) + (meses.length ? " · " + esc(meses.join(" y ")) : ' · <i>elegí los meses</i>') + '</span><b>' + plata(q.filas[i].cuota) + '</b></li>';
+      if (c.enero) meses.push("enero " + nombreMod[c.enero]);
+      if (c.febrero) meses.push("febrero " + nombreMod[c.febrero]);
+      var nom = c.nombre || "Chico " + (i + 1), f = q.filas[i];
+      var monto = f.cuota ? plata(f.cuota) + (f.aMedida ? " + a cotizar" : "") : f.aMedida ? "a cotizar" : plata(0);
+      return '<li><span>' + esc(nom) + (meses.length ? " · " + esc(meses.join(" y ")) : ' · <i>elegí los meses</i>') + '</span><b>' + monto + '</b></li>';
     }).join("");
     var pie = "";
     if (q.total) {
       pie = '<div class="filas"><div class="fila"><span>Total de cuotas</span><b>' + plata(q.total) + '</b></div>';
+      if (q.descuento) pie += '<div class="fila"><span>Precio promocional (−15%)</span><b>−' + plata(q.descuento) + '</b></div>';
       if (pago === "total") {
-        if (q.descuento) pie += '<div class="fila"><span>Descuento del 15%</span><b>−' + plata(q.descuento) + '</b></div>';
-        pie += '<div class="fila destacada"><span>A pagar antes del 1/12</span><b>' + plata(q.aPagar) + '</b></div>';
+        pie += '<div class="fila destacada"><span>A pagar</span><b>' + plata(q.aPagar) + '</b></div>';
       } else {
-        pie += '<div class="fila destacada"><span>Reserva (30%)</span><b>' + plata(q.reserva) + '</b></div><div class="fila"><span>Saldo</span><b>' + plata(q.total - q.reserva) + '</b></div>';
+        pie += '<div class="fila destacada"><span>Reserva (30%)</span><b>' + plata(q.reserva) + '</b></div><div class="fila"><span>Saldo</span><b>' + plata(q.aPagar - q.reserva) + '</b></div>';
       }
       pie += "</div>";
     }
+    if (q.aCotizar) pie += '<p class="chiquito">Lo que elegiste «a medida» te lo cotizamos y te lo mandamos con el resto.</p>';
     $("resumen").innerHTML = '<h3>Tu inscripción</h3><ul>' + items + '</ul>' + pie;
   }
   $("form").addEventListener("input", resumen);
@@ -896,6 +992,10 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       if (c.nombre.length < 3) falta($(p + "nombre"), "Falta el nombre y apellido" + quien + ".");
       if (!c.nacimiento || c.nacimiento > hoyAR() || c.nacimiento < "2008-01-01") falta($(p + "nacimiento"), "Revisá la fecha de nacimiento" + quien + ".");
       if (!c.enero && !c.febrero) { var g = $(p + "enero-no"); marcar(g, true); problemas.push({ el: g, msg: "Elegí enero, febrero o los dos" + quien + "." }); }
+      if (c.medida) {
+        if (!c.medida.dias.length) { var d = $(p + "dia-lun"); marcar(d, true); problemas.push({ el: d, msg: "Marcá qué días querés «a medida»" + quien + "." }); }
+        if (!c.medida.desde || !c.medida.hasta || c.medida.desde >= c.medida.hasta) { var h = $(p + "desde"); marcar(h, true); problemas.push({ el: h, msg: "Revisá el horario «a medida»" + quien + ": el «hasta» tiene que ser después del «desde»." }); }
+      }
     });
     if ($("e-contacto").value.trim().length < 6) falta($("e-contacto"), "Falta un contacto para emergencias.");
     if (!$("acepta").checked) falta($("acepta"), "Para mandar la inscripción tenés que aceptar que guardemos los datos.");
@@ -920,11 +1020,13 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       l.push((d.chicos.length > 1 ? "Chico " + (i + 1) + ": " : "Chico: ") + c.nombre);
       l.push("  Nacimiento: " + c.nacimiento.split("-").reverse().join("/") + (c.dni ? " · DNI " + c.dni : ""));
       l.push("  Enero: " + MOD[c.enero] + " · Febrero: " + MOD[c.febrero]);
+      if (c.medida) l.push("  A medida: " + textoMedida(c) + " (a cotizar)");
       if (c.obra) l.push("  Obra social: " + c.obra);
       if (c.salud) l.push("  Salud: " + c.salud);
     });
     l.push("", "Emergencias: " + d.emergencia);
-    l.push("Pago: " + (d.pago === "total" ? "todo antes del 1/12, " + plata(q.aPagar) + (q.descuento ? " (con 15% de descuento)" : "") : "reserva del 30%, " + plata(q.reserva) + " de " + plata(q.total)));
+    var conPromo = q.descuento ? " con el precio promocional (15% de descuento)" : "";
+    l.push("Pago: " + (d.pago === "total" ? "el total, " + plata(q.aPagar) + conPromo : "reserva del 30%, " + plata(q.reserva) + " de " + plata(q.aPagar) + conPromo) + (q.aCotizar ? ", más lo que va a medida" : ""));
     if (d.comentarios) l.push("Comentarios: " + d.comentarios);
     return l.join("\n");
   }
@@ -988,7 +1090,9 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
     var a = quienes.length > 1 ? quienes.slice(0, -1).join(", ") + " y " + quienes[quienes.length - 1] : quienes[0];
     $("listo-nro").textContent = res.id ? "Inscripción " + res.id : "";
     $("listo-txt").textContent = "Gracias, " + nombre + ". Ya tenemos los datos de " + a + ". Te escribimos a " + d.responsable.email + " o al " + d.responsable.telefono + " para coordinar " +
-      (d.pago === "total" ? "el pago de " + plata(q.aPagar) + "." : "el pago de la reserva de " + plata(q.reserva) + ".");
+      (!q.total ? "el pago y pasarte la cotización de lo que va a medida." :
+        (d.pago === "total" ? "el pago de " + plata(q.aPagar) : "el pago de la reserva de " + plata(q.reserva)) +
+        (q.aCotizar ? " y pasarte la cotización de lo que va a medida." : "."));
     $("form").hidden = true;
     $("listo").hidden = false;
     $("listo").focus();
