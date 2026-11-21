@@ -208,8 +208,13 @@ p { margin: 0; }
 .ver-foto:focus-visible { outline: 3px dashed var(--azul); outline-offset: 4px; }
 .galeria:not(.abierta) .extra { display: none; }
 .mas-fotos { margin-top: 28px; text-align: center; }
-.espacio { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 44px); max-width: 720px; margin: 34px auto 0; }
-.foto.video video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #ddd; }
+.espacio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 4vw, 44px); max-width: 980px; margin: 34px auto 0; }
+.foto.video video, .espacio .foto img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #ddd; }
+@media (max-width: 700px) {
+  .espacio { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .espacio .foto.ancha { grid-column: 1 / -1; }
+  .espacio .foto.ancha img { aspect-ratio: 4 / 3; object-position: 50% 74%; }
+}
 .medida .horas { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 10px; font-size: 19px; }
 .medida .horas label { display: flex; gap: 8px; align-items: center; }
 input[type="time"] { font: inherit; font-size: 20px; color: var(--ink); background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--borde-chico); padding: 6px 10px; }
@@ -534,6 +539,7 @@ input:focus-visible, textarea:focus-visible { outline: 3px dashed var(--azul); o
       <div class="espacio">
         <figure class="foto video" style="--giro:-1.6deg"><video src="fotos/espacio/salon.mp4" poster="fotos/espacio/salon.jpg" width="576" height="1024" muted loop playsinline autoplay preload="metadata" aria-label="Video del salón con piso de madera, espalderas y espejos"></video><figcaption>El salón</figcaption></figure>
         <figure class="foto video" style="--giro:1.4deg"><video src="fotos/espacio/cancha.mp4" poster="fotos/espacio/cancha.jpg" width="576" height="1024" muted loop playsinline autoplay preload="metadata" aria-label="Video de la cancha de básquet"></video><figcaption>La cancha</figcaption></figure>
+        <figure class="foto ancha" style="--giro:-0.8deg"><img src="fotos/espacio/cancha-arriba.jpg" width="720" height="1280" loading="lazy" alt="La cancha de básquet cubierta vista desde arriba, con piso de madera"><figcaption>La cancha desde arriba</figcaption></figure>
       </div>
     </div>
   </section>
