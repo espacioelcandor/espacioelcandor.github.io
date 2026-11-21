@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Subir fotos · El Candor</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#8fcdfb">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
+<style>
+/* Layout: la misma hoja de dibujo del álbum. Para el equipo: entrar con la contraseña, elegir semana y grupo, y tocar un botón grande para elegir fotos de la galería. Abajo, cada foto como una polaroid con su estado. */
+:root {
+  --paper: #fffefb; --card: #ffffff; --ink: #2b2733; --ink-soft: #5d5868;
+  --rojo: #c92a36; --naranja: #f2780c; --amarillo: #ffc22e; --verde: #2f7d3a; --azul: #2f7fd8; --rosa: #f2609a;
+  --cielo: #8fcdfb; --amarillo-suave: #ffe7a3; --verde-suave: #d4f2d2; --rosa-suave: #ffd3e4;
+  --cinta: rgba(244, 222, 150, 0.8); --polaroid: #ffffff; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(43, 39, 51, 0.16);
+  --display: "Gochi Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --body: "Patrick Hand", "Comic Sans MS", "Chalkboard SE", "Segoe Print", cursive;
+  --borde: 255px 18px 225px 18px / 18px 225px 18px 255px;
+  --borde-chico: 8px 22px 10px 26px / 22px 8px 26px 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1e2b25; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3;
+    --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --rosa: #ffa9cb;
+    --cielo: #3f6f93; --amarillo-suave: #4d4628; --verde-suave: #2f4d36; --rosa-suave: #553342;
+    --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1e2b25; --card: #283a32; --ink: #f3f0e6; --ink-soft: #c2cbc3;
+  --rojo: #ff8f8f; --naranja: #ffb46b; --amarillo: #ffe07a; --verde: #9be29f; --azul: #93c9ff; --rosa: #ffa9cb;
+  --cielo: #3f6f93; --amarillo-suave: #4d4628; --verde-suave: #2f4d36; --rosa-suave: #553342;
+  --cinta: rgba(244, 222, 150, 0.55); --polaroid: #f4f1e8; --polaroid-ink: #2b2733; --on-color: #2b2733; --sombra: rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 20px; line-height: 1.45; overflow-x: hidden; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--azul); text-underline-offset: 3px; }
+.envoltura { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.oculto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+.cielo { display: block; width: 100%; height: clamp(46px, 6vw, 74px); background: repeating-linear-gradient(-25deg, var(--cielo) 0 6px, transparent 6px 9px); border-bottom: 3px solid var(--ink); border-radius: 0 0 50% 40% / 0 0 14px 10px; }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; padding-block: 12px 0; }
+.marca { font-family: var(--display); font-size: 28px; color: var(--ink); text-decoration: none; margin-right: auto; }
+.marca b { color: var(--rojo); font-weight: 400; }
+.menu a:not(.marca) { font-family: var(--display); font-size: 22px; color: var(--ink); text-decoration: underline wavy var(--verde) 2px; text-underline-offset: 6px; }
+
+main { padding-block: clamp(22px, 4vw, 40px) 64px; }
+.titular { font-size: clamp(44px, 7vw, 70px); display: inline-block; text-decoration: underline wavy var(--naranja) 3px; text-underline-offset: 12px; text-decoration-skip-ink: none; }
+.bajada { margin-top: 14px; max-width: 60ch; font-size: 21px; color: var(--ink-soft); }
+.chiquito { font-size: 18px; color: var(--ink-soft); }
+
+.hoja { position: relative; margin-top: 28px; max-width: 620px; background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: clamp(20px, 4vw, 32px); box-shadow: 0 8px 20px var(--sombra); display: grid; gap: 18px; }
+.hoja::before { content: ""; position: absolute; top: -16px; left: 50%; width: 120px; height: 30px; margin-left: -60px; background: var(--cinta); transform: rotate(-3deg); }
+.campo { display: grid; gap: 6px; }
+.campo > span, .paso { font-family: var(--display); font-size: 23px; }
+.paso b { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-right: 8px; background: var(--amarillo); color: var(--on-color); border: 2.5px solid var(--ink); border-radius: 50%; font-weight: 400; font-size: 20px; }
+input[type="password"], input[type="text"], select { font: inherit; font-size: 21px; color: var(--ink); background: var(--paper); border: 2.5px solid var(--ink); border-radius: var(--borde-chico); padding: 8px 12px; width: 100%; min-width: 0; }
+input:focus-visible, select:focus-visible { outline: 3px dashed var(--azul); outline-offset: 2px; }
+.fila { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.fila input { flex: 1 1 200px; }
+.check { display: flex; gap: 10px; align-items: center; font-size: 19px; cursor: pointer; }
+.check input { width: 20px; height: 20px; accent-color: var(--verde); }
+.error { color: var(--rojo); font-size: 20px; }
+
+.boton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--display); font-size: 24px; line-height: 1.1; color: var(--ink); background: var(--card); border: 3px solid var(--ink); border-radius: var(--borde); padding: 9px 22px 11px; text-decoration: none; cursor: pointer; box-shadow: 3px 4px 0 var(--ink); transition: transform 0.15s; }
+.boton:hover { transform: translate(-1px, -2px) rotate(-1.5deg); }
+.boton:active { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.boton.amarillo { background: var(--amarillo); color: var(--on-color); }
+.boton:disabled { opacity: 0.55; cursor: wait; transform: none; }
+.boton.grande { font-size: 30px; padding: 16px 28px 18px; width: 100%; }
+.boton:focus-visible, .solapa:focus-visible, .check input:focus-visible, .menu a:focus-visible, label.boton:focus-within { outline: 3px dashed var(--azul); outline-offset: 3px; }
+
+.solapas { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.solapa { font-family: var(--display); font-size: 21px; padding: 4px 16px 6px; border: 2.5px solid var(--ink); border-radius: var(--borde-chico); background: var(--card); color: var(--ink); cursor: pointer; }
+.solapa[aria-pressed="true"] { background: var(--verde-suave); box-shadow: 2px 3px 0 var(--ink); }
+.cuidado { font-size: 18px; background: var(--rosa-suave); border: 2px dashed var(--ink-soft); border-radius: var(--borde-chico); padding: 10px 14px; }
+.cuidado b { font-family: var(--display); font-weight: 400; font-size: 20px; }
+
+.estado { margin-top: 26px; font-family: var(--display); font-size: 24px; min-height: 1.4em; }
+.estado.listo { color: var(--verde); }
+.lista { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 22px 16px; padding: 0; list-style: none; }
+.item { background: var(--polaroid); color: var(--polaroid-ink); padding: 7px 7px 9px; box-shadow: 0 6px 14px var(--sombra); display: grid; gap: 6px; transform: rotate(var(--giro, -1deg)); }
+.item .marco { aspect-ratio: 1 / 1; background: repeating-linear-gradient(-35deg, #eef4fb 0 6px, #ffffff 6px 10px); overflow: hidden; }
+.item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.item .est { font-family: var(--display); font-size: 17px; text-align: center; line-height: 1.15; }
+.item.ok .est { color: #2f7d3a; } .item.mal .est { color: #c92a36; } .item.fuera { opacity: 0.45; }
+.item .acciones { display: flex; justify-content: center; }
+.item .acciones button { font-family: var(--display); font-size: 16px; color: #2b2733; background: #fff; border: 2px solid #2b2733; border-radius: var(--borde-chico); padding: 2px 10px 3px; cursor: pointer; }
+.item .acciones button.armado { background: #ffd3e4; }
+.pie-ayuda { margin-top: 30px; }
+
+@media (max-width: 560px) { .lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; } .boton.grande { font-size: 27px; } }
+@media (prefers-reduced-motion: reduce) { .boton { transition: none; } }
+</style>
+
+<div class="cielo" aria-hidden="true"></div>
+<header class="envoltura">
+  <nav class="menu" aria-label="Secciones">
+    <a class="marca" href="index.html">El <b>Candor</b></a>
+    <a href="familias.html">Ver el álbum</a>
+  </nav>
+</header>
+
+<main class="envoltura">
+  <section id="entrar">
+    <h1 class="titular">Subir fotos</h1>
+    <p class="bajada">Para el equipo de El Candor. Las fotos que subas acá aparecen enseguida en el álbum de las familias, ordenadas por semana y grupo.</p>
+    <form class="hoja" id="form-clave" autocomplete="off">
+      <label class="campo"><span>Contraseña del equipo</span>
+        <span class="fila"><input type="password" id="clave" autocomplete="current-password" required maxlength="100"><button type="submit" class="boton amarillo" id="btn-entrar">Entrar</button></span>
+      </label>
+      <label class="check"><input type="checkbox" id="recordar" checked> Recordarla en este celular</label>
+      <p class="error" id="error" role="alert" hidden></p>
+      <p class="chiquito">No es la misma contraseña que usan las familias para ver el álbum.</p>
+    </form>
+  </section>
+
+  <section id="panel" hidden>
+    <div class="fila" style="justify-content:space-between;align-items:flex-end">
+      <h1 class="titular">Subir fotos</h1>
+      <button type="button" class="boton" id="salir">Salir</button>
+    </div>
+    <div class="hoja">
+      <label class="campo"><span class="paso"><b>1</b>Semana</span>
+        <select id="semana"></select>
+        <span class="chiquito" id="semana-hoy" aria-live="polite"></span>
+      </label>
+      <div class="campo" id="bloque-grupo">
+        <span class="paso" id="grupo-l"><b>2</b>Grupo</span>
+        <div class="solapas" id="grupos" role="group" aria-labelledby="grupo-l"></div>
+      </div>
+      <p class="chiquito" id="sin-grupos" hidden>Todavía no hay grupos cargados: las fotos van a «Todos».</p>
+      <label class="boton amarillo grande" id="elegir"><span id="elegir-txt">Elegir fotos</span><input type="file" id="archivos" class="oculto" accept="image/*" multiple></label>
+      <p class="cuidado"><b>Antes de subir</b>, mirá que no haya chicos cambiándose, en el baño o en una situación que a su familia no le gustaría ver. Las familias pueden descargar las fotos.</p>
+    </div>
+    <p class="estado" id="estado" aria-live="polite"></p>
+    <ul class="lista" id="lista"></ul>
+    <p class="chiquito pie-ayuda">Si subiste una foto por error, tocá «Sacar» debajo de la foto: tenés 48 horas. Después se saca desde Google Drive, en la carpeta «Colonia El Candor - Fotos para las familias».</p>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var AJ = window.EL_CANDOR || {};
+  var API_URL = AJ.api || "";
+  try { var mApi = /[?&]api=([^&]+)/.exec(location.search); if (mApi) API_URL = decodeURIComponent(mApi[1]); } catch (e) {}
+  var GUARDADA = "elcandor-equipo";
+  var LADO = 2000, CALIDAD = 0.85, A_LA_VEZ = 2;
+
+  var clave = "", datos = null, grupoSel = "", cola = [], activas = 0, items = [], contador = 0;
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function guardar(v, recordar) {
+    try {
+      localStorage.removeItem(GUARDADA); sessionStorage.removeItem(GUARDADA);
+      if (v) (recordar ? localStorage : sessionStorage).setItem(GUARDADA, v);
+    } catch (e) {}
+  }
+  function leer() { try { return localStorage.getItem(GUARDADA) || sessionStorage.getItem(GUARDADA) || ""; } catch (e) { return ""; } }
+  function error(msg) { $("error").textContent = msg || ""; $("error").hidden = !msg; }
+
+  function llamar(cuerpo) {
+    cuerpo.clave = clave;
+    return fetch(API_URL, { method: "POST", body: JSON.stringify(cuerpo) })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (res) {
+        if (!res || !res.ok) { var e = new Error((res && res.error) || "sin respuesta"); e.codigo = res && res.codigo; throw e; }
+        return res;
+      });
+  }
+  function mensaje(e) {
+    if (e && e.codigo === "clave") return "La contraseña no es correcta. Revisala y probá de nuevo.";
+    if (e && e.codigo === "bloqueado") return "Hubo muchos intentos seguidos. Esperá 15 minutos y probá de nuevo.";
+    return "No pudimos conectar. Revisá la conexión y probá de nuevo en un rato.";
+  }
+
+  /* ---------- entrar y salir ---------- */
+  function entrar(v, silencioso) {
+    if (!API_URL) { error("La subida de fotos todavía no está conectada."); return; }
+    clave = v;
+    $("btn-entrar").disabled = true; $("btn-entrar").textContent = "Entrando…"; error("");
+    llamar({ accion: "equipo" }).then(function (res) {
+      datos = res;
+      if (!silencioso) guardar(v, $("recordar").checked);
+      pintarOpciones();
+      $("entrar").hidden = true; $("panel").hidden = false;
+    }).catch(function (e) {
+      if (e.codigo === "clave") guardar("");
+      if (!silencioso || e.codigo !== "clave") error(mensaje(e));
+      $("clave").focus();
+    }).then(function () { $("btn-entrar").disabled = false; $("btn-entrar").textContent = "Entrar"; });
+  }
+  $("form-clave").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var v = $("clave").value.trim();
+    if (!v) { error("Escribí la contraseña."); $("clave").focus(); return; }
+    entrar(v, false);
+  });
+  function salir() {
+    cola = []; guardar(""); clave = ""; datos = null;
+    $("panel").hidden = true; $("entrar").hidden = false; $("clave").value = ""; $("clave").focus();
+  }
+  $("salir").addEventListener("click", function () {
+    if (pendientes() && !confirm("Todavía hay fotos subiéndose. ¿Salir igual?")) return;
+    salir();
+  });
+
+  /* ---------- semana y grupo ---------- */
+  // La semana de hoy; entre semanas o el fin de semana, la última que empezó; antes de la temporada, la primera.
+  function semanaDeHoy(semanas, hoy) {
+    var elegida = semanas[0];
+    semanas.forEach(function (s) { if (s.desde <= hoy) elegida = s; });
+    return elegida ? elegida.nombre : "";
+  }
+  function pintarOpciones() {
+    var semanas = datos.semanas || [], hoy = datos.hoy || "";
+    var actual = semanaDeHoy(semanas, hoy);
+    $("semana").innerHTML = semanas.map(function (s) {
+      return '<option value="' + esc(s.nombre) + '"' + (s.nombre === actual ? " selected" : "") + ">" + esc(s.nombre) + "</option>";
+    }).join("");
+    avisoSemana();
+    var grupos = datos.grupos || [];
+    if (grupos.indexOf(grupoSel) < 0) grupoSel = "";
+    $("bloque-grupo").hidden = !grupos.length;
+    $("sin-grupos").hidden = !!grupos.length;
+    pintarGrupos();
+  }
+  function avisoSemana() {
+    var hoy = (datos && datos.hoy) || "", s = ((datos && datos.semanas) || []).filter(function (x) { return x.nombre === $("semana").value; })[0];
+    $("semana-hoy").textContent = !s ? "" : s.desde <= hoy && hoy <= s.hasta ? "Es la semana de hoy." : hoy < s.desde ? "Ojo: esta semana todavía no empezó." : "Es una semana que ya pasó.";
+  }
+  $("semana").addEventListener("change", avisoSemana);
+  function pintarGrupos() {
+    var grupos = datos.grupos || [];
+    $("grupos").innerHTML = [""].concat(grupos).map(function (g) {
+      return '<button type="button" class="solapa" data-v="' + esc(g) + '" aria-pressed="' + (g === grupoSel) + '">' + esc(g || "Todos") + "</button>";
+    }).join("");
+  }
+  $("grupos").addEventListener("click", function (ev) { var b = ev.target.closest(".solapa"); if (b) { grupoSel = b.getAttribute("data-v"); pintarGrupos(); } });
+
+  /* ---------- elegir, achicar y subir ---------- */
+  $("archivos").addEventListener("change", function () {
+    var archivos = Array.prototype.slice.call(this.files || []);
+    this.value = "";
+    if (!archivos.length) return;
+    var semana = $("semana").value, grupo = grupoSel;
+    archivos.forEach(function (f) {
+      var it = { n: ++contador, archivo: f, semana: semana, grupo: grupo, estado: "espera", fotoId: "", url: "" };
+      items.push(it); cola.push(it);
+      $("lista").insertAdjacentHTML("afterbegin", '<li class="item" id="item-' + it.n + '" style="--giro:' + [-1.4, 1.1, -0.5, 1.6][it.n % 4] + 'deg"><span class="marco"><img alt=""></span><span class="est">En espera</span><span class="acciones"></span></li>');
+    });
+    resumen();
+    seguir();
+  });
+
+  function seguir() {
+    while (activas < A_LA_VEZ && cola.length) {
+      var it = cola.shift();
+      activas++;
+      procesar(it).then(function () { activas--; resumen(); seguir(); });
+    }
+  }
+  function marcar(it, estado, texto) {
+    it.estado = estado;
+    var li = $("item-" + it.n); if (!li) return;
+    li.className = "item" + (estado === "lista" ? " ok" : estado === "error" || estado === "invalida" ? " mal" : estado === "sacada" ? " fuera" : "");
+    li.querySelector(".est").textContent = texto;
+    var acc = li.querySelector(".acciones");
+    acc.innerHTML = estado === "lista" ? '<button type="button" data-sacar="' + it.n + '">Sacar</button>' : estado === "error" ? '<button type="button" data-reintentar="' + it.n + '">Reintentar</button>' : "";
+  }
+  function procesar(it) {
+    marcar(it, "achicando", "Preparando…");
+    var paso = it.datos ? Promise.resolve(it.datos) : achicar(it.archivo).then(function (r) {
+      it.url = r.url;
+      var img = $("item-" + it.n) && $("item-" + it.n).querySelector("img"); if (img) img.src = r.url;
+      return aBase64(r.blob);
+    }).then(function (b64) { it.datos = b64; return b64; });
+    return paso.then(function (b64) {
+      marcar(it, "subiendo", "Subiendo…");
+      return llamar({ accion: "subir", semana: it.semana, grupo: it.grupo, nombre: it.archivo.name || "foto.jpg", datos: b64 });
+    }).then(function (res) {
+      it.fotoId = res.id; it.datos = null;
+      marcar(it, "lista", "Subida ✓");
+    }).catch(function (e) {
+      if (e && e.codigo === "clave") { marcar(it, "error", "La contraseña cambió"); if (clave) { salir(); error("La contraseña del equipo cambió. Pedí la nueva."); } return; }
+      if (e && e.message === "formato") { marcar(it, "invalida", "No se puede leer este archivo"); return; }
+      marcar(it, "error", e && e.codigo ? e.message : "No se subió");
+    });
+  }
+  // La achica a LADO px del lado mayor y la pasa a JPEG (el navegador ya la endereza según el EXIF).
+  function achicar(archivo) {
+    return new Promise(function (ok, mal) {
+      var url = URL.createObjectURL(archivo), img = new Image();
+      img.onload = function () {
+        var w = img.naturalWidth, h = img.naturalHeight, k = Math.min(1, LADO / Math.max(w, h));
+        var c = document.createElement("canvas");
+        c.width = Math.round(w * k); c.height = Math.round(h * k);
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, c.width, c.height);
+        ctx.drawImage(img, 0, 0, c.width, c.height);
+        URL.revokeObjectURL(url);
+        c.toBlob(function (b) {
+          if (!b) { mal(new Error("formato")); return; }
+          ok({ blob: b, url: URL.createObjectURL(b) });
+        }, "image/jpeg", CALIDAD);
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); mal(new Error("formato")); };
+      img.src = url;
+    });
+  }
+  function aBase64(blob) {
+    return new Promise(function (ok, mal) {
+      var r = new FileReader();
+      r.onload = function () { ok(String(r.result).replace(/^data:[^,]*,/, "")); };
+      r.onerror = function () { mal(new Error("lectura")); };
+      r.readAsDataURL(blob);
+    });
+  }
+
+  function pendientes() { return cola.length + activas; }
+  function resumen() {
+    var subidas = items.filter(function (i) { return i.estado === "lista"; }).length;
+    var errores = items.filter(function (i) { return i.estado === "error"; }).length;
+    var invalidas = items.filter(function (i) { return i.estado === "invalida"; }).length;
+    var total = items.filter(function (i) { return i.estado !== "sacada" && i.estado !== "invalida"; }).length;
+    var est = $("estado");
+    est.classList.toggle("listo", !pendientes() && !errores && !invalidas && subidas > 0);
+    if (!items.length) { est.textContent = ""; $("elegir-txt").textContent = "Elegir fotos"; return; }
+    var extra = invalidas ? " " + (invalidas === 1 ? "Un archivo no se pudo leer: elegilo" : invalidas + " archivos no se pudieron leer: elegilos") + " de nuevo desde la galería del celular." : "";
+    if (pendientes()) est.textContent = "Subiendo: " + subidas + " de " + total + ". No cierres esta página hasta que termine.";
+    else if (errores) est.textContent = subidas + (subidas === 1 ? " foto subida" : " fotos subidas") + " y " + errores + " sin subir: tocá «Reintentar»." + extra;
+    else if (!subidas) est.textContent = extra.trim();
+    else est.textContent = "¡Listo! " + (subidas === 1 ? "Se subió 1 foto." : "Se subieron " + subidas + " fotos.") + " Las familias ya las pueden ver." + extra;
+    $("elegir-txt").textContent = "Elegir más fotos";
+  }
+
+  $("lista").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button"); if (!b) return;
+    var n = +(b.getAttribute("data-sacar") || b.getAttribute("data-reintentar"));
+    var it = items.filter(function (i) { return i.n === n; })[0]; if (!it) return;
+    if (b.hasAttribute("data-reintentar")) { cola.push(it); marcar(it, "espera", "En espera"); resumen(); seguir(); return; }
+    if (!b.classList.contains("armado")) { b.classList.add("armado"); b.textContent = "¿Seguro? Tocá de nuevo"; return; }
+    b.disabled = true; b.textContent = "Sacando…";
+    llamar({ accion: "sacar", id: it.fotoId }).then(function () { marcar(it, "sacada", "Sacada del álbum"); resumen(); })
+      .catch(function (e) { b.disabled = false; b.classList.remove("armado"); b.textContent = "Sacar"; alert(e && e.codigo ? e.message : "No se pudo sacar. Probá de nuevo."); });
+  });
+
+  window.addEventListener("beforeunload", function (ev) { if (pendientes()) { ev.preventDefault(); ev.returnValue = ""; } });
+
+  var previa = leer();
+  if (previa) entrar(previa, true);
+  else if (!API_URL) error("La subida de fotos todavía no está conectada.");
+})();
+</script>
